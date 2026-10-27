@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#03060d" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="description" content="The Science of Voice — How Air Becomes Sound. Animasi saintifik 3D interaktif: aliran udara, getaran lipatan vokal, pic dan resonans." />
+  <title>The Science of Voice</title>
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/icon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <canvas id="scene" aria-label="Animasi 3D sistem suara / 3D voice animation"></canvas>
+  <div id="vignette" aria-hidden="true"></div>
+  <svg id="leaders" aria-hidden="true"></svg>
+  <div id="labels" aria-hidden="true"></div>
+  <div id="fade" aria-hidden="true"></div>
+
+  <div id="top">
+  <!-- Header -->
+  <header id="topbar">
+    <div class="brand">
+      <h1>THE SCIENCE OF VOICE</h1>
+      <p>How Air Becomes Sound <span class="ms">· Bagaimana Udara Menjadi Bunyi</span></p>
+    </div>
+    <div class="top-actions">
+      <button id="btnLang" class="icon-btn pill" aria-pressed="true" title="Papar sari kata Inggeris / Show English">EN</button>
+      <button id="btnSound" class="icon-btn" aria-pressed="false" title="Bunyi / Sound" aria-label="Bunyi / Sound">
+        <svg viewBox="0 0 24 24" class="ico"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path class="wave" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12"/><path class="mute" d="M16 9l6 6M22 9l-6 6"/></svg>
+      </button>
+      <button id="btnChapters" class="icon-btn" title="Babak / Chapters" aria-label="Babak / Chapters">
+        <svg viewBox="0 0 24 24" class="ico"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <button id="btnInfo" class="icon-btn" title="Maklumat / Info" aria-label="Maklumat / Info">
+        <svg viewBox="0 0 24 24" class="ico"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div id="disclaimer" role="note">Model 3D ilustrasi, bukan imej perubatan sebenar <span class="en">· Illustrative 3D model, not actual medical imaging</span></div>
+
+  <!-- Scene card -->
+  <section id="sceneCard" aria-live="polite">
+    <div class="scene-num"><span id="sceneNum">01</span><span class="of">/ <span id="sceneTotal">10</span></span></div>
+    <h2 id="sceneTitle"></h2>
+    <p id="sceneTitleEn" class="en"></p>
+    <p id="sceneDesc"></p>
+    <p id="sceneDescEn" class="en small"></p>
+  </section>
+  </div>
+
+  <div id="bottom">
+  <!-- HUD: meters and waveform scopes -->
+  <section id="hud" aria-hidden="true">
+    <div id="meters"></div>
+    <div id="scopes"></div>
+  </section>
+
+  <!-- Subtitles -->
+  <section id="subs" aria-live="polite">
+    <p id="subMs"></p>
+    <p id="subEn" class="en"></p>
+  </section>
+
+  <!-- Controls -->
+  <nav id="controls" aria-label="Kawalan / Controls">
+    <div class="timeline">
+      <span id="timeNow" class="time">0:00</span>
+      <div class="track-wrap">
+        <div id="chapterTicks"></div>
+        <input id="timeline" type="range" min="0" max="100" step="0.05" value="0" aria-label="Garis masa / Timeline" />
+      </div>
+      <span id="timeTotal" class="time">0:00</span>
+    </div>
+    <div class="buttons">
+      <button id="btnRestart" class="ctrl" aria-label="Mula semula / Restart">
+        <svg viewBox="0 0 24 24" class="ico"><path d="M4 12a8 8 0 1 0 2.4-5.7"/><path d="M4 4v4.5h4.5"/></svg>
+        <span>Ulang</span>
+      </button>
+      <button id="btnPlay" class="ctrl primary" aria-label="Main / Play">
+        <svg viewBox="0 0 24 24" class="ico play"><path d="M7 5l12 7-12 7z"/></svg>
+        <svg viewBox="0 0 24 24" class="ico pause"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg>
+        <span id="playLabel">Main</span>
+      </button>
+      <button id="btnNext" class="ctrl" aria-label="Babak seterusnya / Next scene">
+        <svg viewBox="0 0 24 24" class="ico"><path d="M5 5l10 7-10 7zM17 5h2.5v14H17z"/></svg>
+        <span>Seterusnya</span>
+      </button>
+      <label class="speed ctrl" title="Kelajuan / Speed">
+        <span class="sr">Kelajuan / Speed</span>
+        <select id="speed" aria-label="Kelajuan main / Playback speed">
+          <option value="0.25">0.25×</option>
+          <option value="0.5">0.5×</option>
+          <option value="0.75">0.75×</option>
+          <option value="1" selected>1×</option>
+          <option value="1.5">1.5×</option>
+          <option value="2">2×</option>
+        </select>
+      </label>
+    </div>
+  </nav>
+  </div>
+
+  <!-- Start screen -->
+  <div id="startScreen" class="overlay">
+    <div class="start-inner">
+      <p class="kicker">Animasi Saintifik 3D · 3D Scientific Animation</p>
+      <h1 class="hero">THE SCIENCE<br />OF VOICE</h1>
+      <p class="hero-sub">How Air Becomes Sound</p>
+      <p class="hero-ms">Sains Suara: Bagaimana Udara Menjadi Bunyi</p>
+      <button id="btnStart" class="cta">▶ Mula / Start</button>
+      <label class="start-sound"><input type="checkbox" id="startSound" /> Hidupkan bunyi sintetik <span class="en">(turn on synthesized sound)</span></label>
+      <p class="fineprint">Model 3D dalam aplikasi ini ialah ilustrasi pendidikan, bukan imej perubatan sebenar.<br /><span class="en">The 3D models are educational illustrations, not actual medical imaging.</span></p>
+      <p id="loadStatus" class="fineprint">Memuatkan… / Loading…</p>
+    </div>
+  </div>
+
+  <!-- Health card (final scene) -->
+  <aside id="healthCard" class="card hidden" role="note">
+    <button class="close" data-close="healthCard" aria-label="Tutup / Close">×</button>
+    <h3>⚕︎ Nasihat Kesihatan <span class="en">· Health note</span></h3>
+    <p>Jika suara serak berterusan <b>lebih daripada 3–4 minggu</b>, dapatkan pemeriksaan doktor (pakar Telinga, Hidung &amp; Tekak / ENT). Dapatkan rawatan <b>segera</b> jika disertai kesukaran bernafas, sakit ketika menelan, batuk berdarah, benjolan di leher atau kehilangan suara secara tiba-tiba.</p>
+    <p class="en">If hoarseness persists for <b>more than 3–4 weeks</b>, seek a medical evaluation (ENT specialist). Seek care <b>urgently</b> if it comes with difficulty breathing, painful swallowing, coughing blood, a neck lump or sudden loss of voice.</p>
+    <p class="small">Aplikasi ini untuk pendidikan sahaja dan bukan pengganti nasihat perubatan. <span class="en">For education only — not a substitute for medical advice.</span></p>
+  </aside>
+
+  <!-- Chapters sheet -->
+  <div id="chaptersSheet" class="sheet hidden" role="dialog" aria-label="Babak / Chapters">
+    <div class="sheet-inner">
+      <div class="sheet-head"><h3>Babak <span class="en">· Chapters</span></h3><button class="close" data-close="chaptersSheet" aria-label="Tutup / Close">×</button></div>
+      <ol id="chapterList"></ol>
+    </div>
+  </div>
+
+  <!-- Info sheet -->
+  <div id="infoSheet" class="sheet hidden" role="dialog" aria-label="Maklumat / Information">
+    <div class="sheet-inner">
+      <div class="sheet-head"><h3>Tentang Sains Suara <span class="en">· About</span></h3><button class="close" data-close="infoSheet" aria-label="Tutup / Close">×</button></div>
+      <div class="sheet-body">
+        <h4>Empat konsep utama <span class="en">· Four key ideas</span></h4>
+        <dl class="concepts">
+          <dt>💨 Aliran udara <span class="en">Airflow</span></dt>
+          <dd>Udara dari paru-paru — sumber tenaga suara. Aliran udara sahaja tidak berbunyi.<br /><span class="en">Air from the lungs — the energy source. Airflow alone makes no voice.</span></dd>
+          <dt>〰️ Getaran lipatan vokal <span class="en">Vocal-fold vibration</span></dt>
+          <dd>Lipatan vokal terbuka dan tertutup berulang kali, menukar aliran udara yang stabil kepada denyutan bunyi.<br /><span class="en">The folds open and close repeatedly, turning steady airflow into pulses of sound.</span></dd>
+          <dt>🎚️ Pic <span class="en">Pitch</span></dt>
+          <dd>Kadar getaran (berapa kali sesaat). Dikawal terutamanya oleh panjang, ketegangan dan ketebalan lipatan vokal. Nada tinggi tidak semestinya memerlukan tekanan udara yang lebih besar — tekanan lebih mempengaruhi kelantangan.<br /><span class="en">The vibration rate (cycles per second). Controlled mainly by fold length, tension and thickness. High pitch does not always require greater air pressure — pressure mostly affects loudness.</span></dd>
+          <dt>🔔 Resonans <span class="en">Resonance</span></dt>
+          <dd>Farinks, mulut dan hidung membentuk serta menguatkan bunyi (forman). Resonans mengubah kualiti suara tetapi bukan punca getaran.<br /><span class="en">The pharynx, mouth and nose shape and boost the sound (formants). Resonance changes voice quality but does not cause the vibration.</span></dd>
+        </dl>
+
+        <h4>Suara kasar &amp; bacaan bernada tinggi <span class="en">· Rough voice &amp; high-pitched recitation</span></h4>
+        <p>Usaha berlebihan — menolak udara terlalu kuat, tekak tegang, lipatan vokal dihimpit rapat — boleh mengganggu getaran yang lancar dan menyumbang kepada suara kasar semasa bacaan al-Quran bernada tinggi. Namun, <b>tidak semua</b> suara serak pada nada tinggi disebabkan oleh ketegangan: jangkitan, refluks, alahan, nodul, polip, sista, masalah saraf, ubat-ubatan, dehidrasi dan keletihan juga boleh menjadi punca.</p>
+        <p class="en">Excessive effort — pushing air too hard, a tense throat, folds pressed tightly — can disrupt smooth vibration and contribute to a rough voice during high-pitched Quran recitation. However, <b>not all</b> hoarseness at high pitch is caused by strain: infection, reflux, allergies, nodules, polyps, cysts, nerve problems, medications, dehydration and fatigue can also be causes.</p>
+
+        <h4>Tentang model ini <span class="en">· About these models</span></h4>
+        <p>Semua visual ialah model 3D ilustrasi yang dipermudahkan dan diinspirasikan oleh anatomi — <b>bukan</b> imej perubatan sebenar (seperti laringoskopi, CT atau MRI). Saiz laring dibesarkan sedikit supaya mudah dilihat, dan getaran ditunjukkan dalam gerak perlahan. Perbandingan “tidak teratur” ialah ilustrasi, bukan diagnosis. Bunyi pilihan disintesis oleh komputer.</p>
+        <p class="en">All visuals are simplified, anatomically inspired illustrative 3D models — <b>not</b> actual medical imaging (such as laryngoscopy, CT or MRI). The larynx is enlarged slightly for visibility and vibration is shown in slow motion. The “irregular” comparison is an illustration, not a diagnosis. The optional sound is computer-synthesized.</p>
+
+        <div class="warn">
+          <b>⚕︎ Nasihat kesihatan <span class="en">· Health note</span></b>
+          <p>Jika suara serak berterusan lebih daripada 3–4 minggu, dapatkan pemeriksaan perubatan (pakar ENT). Dapatkan rawatan segera jika disertai kesukaran bernafas, sakit ketika menelan, batuk berdarah, benjolan di leher atau kehilangan suara secara tiba-tiba.</p>
+          <p class="en">If hoarseness persists for more than 3–4 weeks, seek medical evaluation (ENT specialist). Seek urgent care if it comes with difficulty breathing, painful swallowing, coughing blood, a neck lump or sudden loss of voice.</p>
+        </div>
+
+        <h4>Kawalan <span class="en">· Controls</span></h4>
+        <p>Seret untuk memutar · cubit untuk zum · ketik dua kali untuk set semula pandangan. Papan kekunci: Space (main/jeda), → (babak seterusnya), ← (sebelumnya).<br /><span class="en">Drag to rotate · pinch to zoom · double-tap to reset the view. Keyboard: Space (play/pause), → (next scene), ← (previous).</span></p>
+        <p class="small">Dibina dengan <a href="https://threejs.org" target="_blank" rel="noopener">Three.js</a> (MIT). Untuk pendidikan sahaja.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="errorBox" class="card hidden" role="alert"></div>
+
+  <script type="module" src="js/main.js"></script>
+  <script>
+    // Show a helpful message if the 3D module never starts (very old
+    // browser, or a file opened directly without a web server).
+    setTimeout(function () {
+      if (!window.__voiceAppReady) {
+        var s = document.getElementById('loadStatus');
+        if (s) s.innerHTML = 'Aplikasi tidak dapat dimuatkan. Sila guna Safari/Chrome terkini melalui pautan web (bukan fail tempatan).<br><span class="en">The app could not load. Please use an up-to-date Safari/Chrome via the web link (not a local file).</span>';
+      }
+    }, 12000);
+  </script>
+</body>
+</html>
