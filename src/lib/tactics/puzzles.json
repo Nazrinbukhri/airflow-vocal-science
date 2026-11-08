@@ -50,8 +50,8 @@
   "explanation": [
    "Putih menggerakkan Menteri (Queen) dari c2 ke c7. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Benteng di b8 dan Raja di e7 serentak.",
-   "Lawan: Ke6 – Hitam menggerakkan Raja (King) dari e7 ke e6.",
-   "Kita: Qxb8 – Putih menggerakkan Menteri (Queen) dari c7 ke b8 dan menangkap Benteng hitam (Rook, nilai 5).",
+   "Lawan: Ke6 \u2013 Hitam menggerakkan Raja (King) dari e7 ke e6.",
+   "Kita: Qxb8 \u2013 Putih menggerakkan Menteri (Queen) dari c7 ke b8 dan menangkap Benteng hitam (Rook, nilai 5).",
    "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: +8.00 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Ke6.",
@@ -112,7 +112,7 @@
    {
     "san": "Qb8+",
     "uci": "h2b8",
-    "eval": "−9.00",
+    "eval": "\u22129.00",
     "refutation": "Kxb8",
     "reason": "Lebih lemah kira-kira 16.3 Pion daripada penyelesaian; lawan menjawab Kxb8."
    }
@@ -120,8 +120,8 @@
   "explanation": [
    "Putih menggerakkan Menteri (Queen) dari h2 ke c7. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Kuda di c8 dan Raja di a7 dan Pion di a5 serentak.",
-   "Lawan: Ka6 – Hitam menggerakkan Raja (King) dari a7 ke a6.",
-   "Kita: Qxc8+ – Putih menggerakkan Menteri (Queen) dari c7 ke c8 dan menangkap Kuda hitam (Knight, nilai 3). Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
+   "Lawan: Ka6 \u2013 Hitam menggerakkan Raja (King) dari a7 ke a6.",
+   "Kita: Qxc8+ \u2013 Putih menggerakkan Menteri (Queen) dari c7 ke c8 dan menangkap Kuda hitam (Knight, nilai 3). Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Hasil: menang kira-kira 3 mata bahan. Penilaian enjin selepas langkah pertama: +7.28 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Ka6.",
@@ -167,14 +167,14 @@
    {
     "san": "a4+",
     "uci": "a5a4",
-    "eval": "−0.84",
+    "eval": "\u22120.84",
     "refutation": "Ka2",
     "reason": "Lebih lemah kira-kira 5.4 Pion daripada penyelesaian; lawan menjawab Ka2."
    },
    {
     "san": "Qxf4",
     "uci": "h4f4",
-    "eval": "−0.94",
+    "eval": "\u22120.94",
     "refutation": "Bf6+",
     "reason": "Lebih lemah kira-kira 5.3 Pion daripada penyelesaian; lawan menjawab Bf6+."
    }
@@ -182,9 +182,9 @@
   "explanation": [
    "Hitam menggerakkan Menteri (Queen) dari h4 ke h3. Ini CHECK: Raja putih diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Raja di b3 dan Benteng di g2 serentak.",
-   "Lawan: Bc3 – Putih menggerakkan Gajah (Bishop) dari a1 ke c3.",
-   "Kita: Qxg2 – Hitam menggerakkan Menteri (Queen) dari h3 ke g2 dan menangkap Benteng putih (Rook, nilai 5).",
-   "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: −6.25 (dari pihak Putih)."
+   "Lawan: Bc3 \u2013 Putih menggerakkan Gajah (Bishop) dari a1 ke c3.",
+   "Kita: Qxg2 \u2013 Hitam menggerakkan Menteri (Queen) dari h3 ke g2 dan menangkap Benteng putih (Rook, nilai 5).",
+   "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: \u22126.25 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Bc3.",
   "followUp": "Susulan: Qxg2.",
@@ -251,8 +251,8 @@
   "explanation": [
    "Putih menggerakkan Menteri (Queen) dari h3 ke f3. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Raja di f8 dan Benteng di d5 serentak.",
-   "Lawan: Ke8 – Hitam menggerakkan Raja (King) dari f8 ke e8.",
-   "Kita: Qxd5 – Putih menggerakkan Menteri (Queen) dari f3 ke d5 dan menangkap Benteng hitam (Rook, nilai 5).",
+   "Lawan: Ke8 \u2013 Hitam menggerakkan Raja (King) dari f8 ke e8.",
+   "Kita: Qxd5 \u2013 Putih menggerakkan Menteri (Queen) dari f3 ke d5 dan menangkap Benteng hitam (Rook, nilai 5).",
    "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: +7.27 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Ke8.",
@@ -312,7 +312,7 @@
    {
     "san": "Qa6+",
     "uci": "b5a6",
-    "eval": "−9.02",
+    "eval": "\u22129.02",
     "refutation": "bxa6",
     "reason": "Lebih lemah kira-kira 14.6 Pion daripada penyelesaian; lawan menjawab bxa6."
    }
@@ -320,8 +320,8 @@
   "explanation": [
    "Putih menggerakkan Menteri (Queen) dari b5 ke c5. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Raja di d6 dan Kuda di d4 serentak.",
-   "Lawan: Kd7 – Hitam menggerakkan Raja (King) dari d6 ke d7.",
-   "Kita: Qxd4+ – Putih menggerakkan Menteri (Queen) dari c5 ke d4 dan menangkap Kuda hitam (Knight, nilai 3). Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
+   "Lawan: Kd7 \u2013 Hitam menggerakkan Raja (King) dari d6 ke d7.",
+   "Kita: Qxd4+ \u2013 Putih menggerakkan Menteri (Queen) dari c5 ke d4 dan menangkap Kuda hitam (Knight, nilai 3). Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Hasil: menang kira-kira 3 mata bahan. Penilaian enjin selepas langkah pertama: +5.56 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kd7.",
@@ -381,7 +381,7 @@
    {
     "san": "Qe6+",
     "uci": "c4e6",
-    "eval": "−7.58",
+    "eval": "\u22127.58",
     "refutation": "Bxe6",
     "reason": "Lebih lemah kira-kira 14.3 Pion daripada penyelesaian; lawan menjawab Bxe6."
    }
@@ -389,8 +389,8 @@
   "explanation": [
    "Putih menggerakkan Menteri (Queen) dari c4 ke e4. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Benteng di b7 dan Raja di e7 dan Pion di h7 serentak.",
-   "Lawan: Kf8 – Hitam menggerakkan Raja (King) dari e7 ke f8.",
-   "Kita: Qxb7 – Putih menggerakkan Menteri (Queen) dari e4 ke b7 dan menangkap Benteng hitam (Rook, nilai 5).",
+   "Lawan: Kf8 \u2013 Hitam menggerakkan Raja (King) dari e7 ke f8.",
+   "Kita: Qxb7 \u2013 Putih menggerakkan Menteri (Queen) dari e4 ke b7 dan menangkap Benteng hitam (Rook, nilai 5).",
    "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: +6.74 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kf8.",
@@ -436,14 +436,14 @@
    {
     "san": "Kh6",
     "uci": "h7h6",
-    "eval": "−1.21",
+    "eval": "\u22121.21",
     "refutation": "h4",
     "reason": "Lebih lemah kira-kira 7.4 Pion daripada penyelesaian; lawan menjawab h4."
    },
    {
     "san": "e5",
     "uci": "e7e5",
-    "eval": "−1.22",
+    "eval": "\u22121.22",
     "refutation": "Kf3",
     "reason": "Lebih lemah kira-kira 7.4 Pion daripada penyelesaian; lawan menjawab Kf3."
    },
@@ -459,9 +459,9 @@
    "Hitam menggerakkan Menteri (Queen) dari c7 ke c1. Ini CHECK: Raja putih diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Raja di e3 dan Pion di b2 serentak.",
    "Skewer: Raja di e3 mesti bergerak, dan Benteng di g5 di belakangnya akan ditangkap.",
-   "Lawan: Kd3 – Putih menggerakkan Raja (King) dari e3 ke d3.",
-   "Kita: Qxg5 – Hitam menggerakkan Menteri (Queen) dari c1 ke g5 dan menangkap Benteng putih (Rook, nilai 5).",
-   "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: −8.62 (dari pihak Putih)."
+   "Lawan: Kd3 \u2013 Putih menggerakkan Raja (King) dari e3 ke d3.",
+   "Kita: Qxg5 \u2013 Hitam menggerakkan Menteri (Queen) dari c1 ke g5 dan menangkap Benteng putih (Rook, nilai 5).",
+   "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: \u22128.62 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kd3.",
   "followUp": "Susulan: Qxg5.",
@@ -506,14 +506,14 @@
    {
     "san": "Qg5+",
     "uci": "h5g5",
-    "eval": "−0.30",
+    "eval": "\u22120.30",
     "refutation": "Kf2",
     "reason": "Lebih lemah kira-kira 3.9 Pion daripada penyelesaian; lawan menjawab Kf2."
    },
    {
     "san": "Qh6",
     "uci": "h5h6",
-    "eval": "−0.34",
+    "eval": "\u22120.34",
     "refutation": "Rd3",
     "reason": "Lebih lemah kira-kira 3.8 Pion daripada penyelesaian; lawan menjawab Rd3."
    },
@@ -528,9 +528,9 @@
   "explanation": [
    "Hitam menggerakkan Menteri (Queen) dari h5 ke g6. Ini CHECK: Raja putih diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Gajah di d6 dan Raja di g2 serentak.",
-   "Lawan: Kf1 – Putih menggerakkan Raja (King) dari g2 ke f1.",
-   "Kita: Qxd6 – Hitam menggerakkan Menteri (Queen) dari g6 ke d6 dan menangkap Gajah putih (Bishop, nilai 3).",
-   "Hasil: menang kira-kira 3 mata bahan. Penilaian enjin selepas langkah pertama: −4.16 (dari pihak Putih)."
+   "Lawan: Kf1 \u2013 Putih menggerakkan Raja (King) dari g2 ke f1.",
+   "Kita: Qxd6 \u2013 Hitam menggerakkan Menteri (Queen) dari g6 ke d6 dan menangkap Gajah putih (Bishop, nilai 3).",
+   "Hasil: menang kira-kira 3 mata bahan. Penilaian enjin selepas langkah pertama: \u22124.16 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kf1.",
   "followUp": "Susulan: Qxd6.",
@@ -591,7 +591,7 @@
    "Putih menggerakkan Pion (Pawn) dari e3 ke f4 dan menangkap Gajah hitam (Bishop, nilai 3).",
    "Hasil: menang kira-kira 3 mata bahan. Penilaian enjin selepas langkah pertama: +6.80 (dari pihak Putih)."
   ],
-  "defence": "Lawan tidak dapat mendapatkan semula bahan dengan baik – enjin menilai kedudukan selepas tangkapan +6.80 untuk anda.",
+  "defence": "Lawan tidak dapat mendapatkan semula bahan dengan baik \u2013 enjin menilai kedudukan selepas tangkapan +6.80 untuk anda.",
   "followUp": "Teruskan dengan membangunkan buah dan menukar buah apabila anda lebih bahan.",
   "hints": {
    "threat": "Semak setiap buah lawan: adakah ia dilindungi?",
@@ -627,21 +627,21 @@
    {
     "san": "Qf8+",
     "uci": "f4f8",
-    "eval": "−0.32",
+    "eval": "\u22120.32",
     "refutation": "Kd7",
     "reason": "Lebih lemah kira-kira 10.2 Pion daripada penyelesaian; lawan menjawab Kd7."
    },
    {
     "san": "Qf3",
     "uci": "f4f3",
-    "eval": "−0.27",
+    "eval": "\u22120.27",
     "refutation": "h6",
     "reason": "Lebih lemah kira-kira 10.2 Pion daripada penyelesaian; lawan menjawab h6."
    },
    {
     "san": "Qf5+",
     "uci": "f4f5",
-    "eval": "−12.53",
+    "eval": "\u221212.53",
     "refutation": "Qxf5+",
     "reason": "Lebih lemah kira-kira 22.4 Pion daripada penyelesaian; lawan menjawab Qxf5+."
    }
@@ -650,7 +650,7 @@
    "Putih menggerakkan Menteri (Queen) dari f4 ke g5 dan menangkap Menteri hitam (Queen, nilai 9).",
    "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: +9.92 (dari pihak Putih)."
   ],
-  "defence": "Lawan tidak dapat mendapatkan semula bahan dengan baik – enjin menilai kedudukan selepas tangkapan +9.92 untuk anda.",
+  "defence": "Lawan tidak dapat mendapatkan semula bahan dengan baik \u2013 enjin menilai kedudukan selepas tangkapan +9.92 untuk anda.",
   "followUp": "Teruskan dengan membangunkan buah dan menukar buah apabila anda lebih bahan.",
   "hints": {
    "threat": "Semak setiap buah lawan: adakah ia dilindungi?",
@@ -703,7 +703,7 @@
    "Satu langkah menyerang Raja di c8 dan Kuda di b4 serentak.",
    "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: +7.77 (dari pihak Putih)."
   ],
-  "defence": "Lawan tidak dapat mendapatkan semula bahan dengan baik – enjin menilai kedudukan selepas tangkapan +7.77 untuk anda.",
+  "defence": "Lawan tidak dapat mendapatkan semula bahan dengan baik \u2013 enjin menilai kedudukan selepas tangkapan +7.77 untuk anda.",
   "followUp": "Teruskan dengan membangunkan buah dan menukar buah apabila anda lebih bahan.",
   "hints": {
    "threat": "Semak setiap buah lawan: adakah ia dilindungi?",
@@ -753,7 +753,7 @@
    {
     "san": "Rd8+",
     "uci": "d3d8",
-    "eval": "−0.11",
+    "eval": "\u22120.11",
     "refutation": "Ke7",
     "reason": "Lebih lemah kira-kira 7.2 Pion daripada penyelesaian; lawan menjawab Ke7."
    }
@@ -762,7 +762,7 @@
    "Putih menggerakkan Benteng (Rook) dari d3 ke e3 dan menangkap Gajah hitam (Bishop, nilai 3).",
    "Hasil: menang kira-kira 3 mata bahan. Penilaian enjin selepas langkah pertama: +7.13 (dari pihak Putih)."
   ],
-  "defence": "Lawan tidak dapat mendapatkan semula bahan dengan baik – enjin menilai kedudukan selepas tangkapan +7.13 untuk anda.",
+  "defence": "Lawan tidak dapat mendapatkan semula bahan dengan baik \u2013 enjin menilai kedudukan selepas tangkapan +7.13 untuk anda.",
   "followUp": "Teruskan dengan membangunkan buah dan menukar buah apabila anda lebih bahan.",
   "hints": {
    "threat": "Semak setiap buah lawan: adakah ia dilindungi?",
@@ -812,9 +812,9 @@
   ],
   "explanation": [
    "Hitam menggerakkan Benteng (Rook) dari b3 ke g3 dan menangkap Gajah putih (Bishop, nilai 3).",
-   "Hasil: menang kira-kira 3 mata bahan. Penilaian enjin selepas langkah pertama: −6.54 (dari pihak Putih)."
+   "Hasil: menang kira-kira 3 mata bahan. Penilaian enjin selepas langkah pertama: \u22126.54 (dari pihak Putih)."
   ],
-  "defence": "Lawan tidak dapat mendapatkan semula bahan dengan baik – enjin menilai kedudukan selepas tangkapan +6.54 untuk anda.",
+  "defence": "Lawan tidak dapat mendapatkan semula bahan dengan baik \u2013 enjin menilai kedudukan selepas tangkapan +6.54 untuk anda.",
   "followUp": "Teruskan dengan membangunkan buah dan menukar buah apabila anda lebih bahan.",
   "hints": {
    "threat": "Semak setiap buah lawan: adakah ia dilindungi?",
@@ -850,21 +850,21 @@
    {
     "san": "Qe2",
     "uci": "e5e2",
-    "eval": "−6.72",
+    "eval": "\u22126.72",
     "refutation": "Rd6",
     "reason": "Lebih lemah kira-kira 14.6 Pion daripada penyelesaian; lawan menjawab Rd6."
    },
    {
     "san": "Qg7+",
     "uci": "e5g7",
-    "eval": "−7.32",
+    "eval": "\u22127.32",
     "refutation": "Rc7",
     "reason": "Lebih lemah kira-kira 15.2 Pion daripada penyelesaian; lawan menjawab Rc7."
    },
    {
     "san": "Qc7+",
     "uci": "e5c7",
-    "eval": "−13.09",
+    "eval": "\u221213.09",
     "refutation": "Rxc7",
     "reason": "Lebih lemah kira-kira 20.9 Pion daripada penyelesaian; lawan menjawab Rxc7."
    }
@@ -874,7 +874,7 @@
    "Pin: Benteng di c6 tidak boleh lari kerana Raja di b7 berada di belakangnya.",
    "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: +7.85 (dari pihak Putih)."
   ],
-  "defence": "Lawan tidak dapat mendapatkan semula bahan dengan baik – enjin menilai kedudukan selepas tangkapan +7.85 untuk anda.",
+  "defence": "Lawan tidak dapat mendapatkan semula bahan dengan baik \u2013 enjin menilai kedudukan selepas tangkapan +7.85 untuk anda.",
   "followUp": "Teruskan dengan membangunkan buah dan menukar buah apabila anda lebih bahan.",
   "hints": {
    "threat": "Semak setiap buah lawan: adakah ia dilindungi?",
@@ -910,14 +910,14 @@
    {
     "san": "b3",
     "uci": "b2b3",
-    "eval": "−8.73",
+    "eval": "\u22128.73",
     "refutation": "Qe7+",
     "reason": "Lebih lemah kira-kira 14.4 Pion daripada penyelesaian; lawan menjawab Qe7+."
    },
    {
     "san": "Qg7+",
     "uci": "f6g7",
-    "eval": "−8.73",
+    "eval": "\u22128.73",
     "refutation": "Qe7+",
     "reason": "Lebih lemah kira-kira 14.4 Pion daripada penyelesaian; lawan menjawab Qe7+."
    },
@@ -933,7 +933,7 @@
    "Putih menggerakkan Pion (Pawn) dari b2 ke a3 dan menangkap Menteri hitam (Queen, nilai 9).",
    "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: +5.71 (dari pihak Putih)."
   ],
-  "defence": "Lawan tidak dapat mendapatkan semula bahan dengan baik – enjin menilai kedudukan selepas tangkapan +5.71 untuk anda.",
+  "defence": "Lawan tidak dapat mendapatkan semula bahan dengan baik \u2013 enjin menilai kedudukan selepas tangkapan +5.71 untuk anda.",
   "followUp": "Teruskan dengan membangunkan buah dan menukar buah apabila anda lebih bahan.",
   "hints": {
    "threat": "Semak setiap buah lawan: adakah ia dilindungi?",
@@ -969,23 +969,23 @@
    {
     "san": "h3",
     "uci": "h4h3",
-    "eval": "−0.51",
+    "eval": "\u22120.51",
     "refutation": "Nf4",
     "reason": "Lebih lemah kira-kira 4.9 Pion daripada penyelesaian; lawan menjawab Nf4."
    },
    {
     "san": "Re5",
     "uci": "e7e5",
-    "eval": "−0.11",
+    "eval": "\u22120.11",
     "refutation": "Nxh4",
     "reason": "Lebih lemah kira-kira 5.3 Pion daripada penyelesaian; lawan menjawab Nxh4."
    }
   ],
   "explanation": [
    "Hitam menggerakkan Benteng (Rook) dari e7 ke e4 dan menangkap Kuda putih (Knight, nilai 3).",
-   "Hasil: menang kira-kira 3 mata bahan. Penilaian enjin selepas langkah pertama: −5.39 (dari pihak Putih)."
+   "Hasil: menang kira-kira 3 mata bahan. Penilaian enjin selepas langkah pertama: \u22125.39 (dari pihak Putih)."
   ],
-  "defence": "Lawan tidak dapat mendapatkan semula bahan dengan baik – enjin menilai kedudukan selepas tangkapan +5.39 untuk anda.",
+  "defence": "Lawan tidak dapat mendapatkan semula bahan dengan baik \u2013 enjin menilai kedudukan selepas tangkapan +5.39 untuk anda.",
   "followUp": "Teruskan dengan membangunkan buah dan menukar buah apabila anda lebih bahan.",
   "hints": {
    "threat": "Semak setiap buah lawan: adakah ia dilindungi?",
@@ -1035,9 +1035,9 @@
   ],
   "explanation": [
    "Hitam menggerakkan Pion (Pawn) dari b5 ke a4 dan menangkap Gajah putih (Bishop, nilai 3).",
-   "Hasil: menang kira-kira 3 mata bahan. Penilaian enjin selepas langkah pertama: −7.01 (dari pihak Putih)."
+   "Hasil: menang kira-kira 3 mata bahan. Penilaian enjin selepas langkah pertama: \u22127.01 (dari pihak Putih)."
   ],
-  "defence": "Lawan tidak dapat mendapatkan semula bahan dengan baik – enjin menilai kedudukan selepas tangkapan +7.01 untuk anda.",
+  "defence": "Lawan tidak dapat mendapatkan semula bahan dengan baik \u2013 enjin menilai kedudukan selepas tangkapan +7.01 untuk anda.",
   "followUp": "Teruskan dengan membangunkan buah dan menukar buah apabila anda lebih bahan.",
   "hints": {
    "threat": "Semak setiap buah lawan: adakah ia dilindungi?",
@@ -1087,9 +1087,9 @@
   ],
   "explanation": [
    "Hitam menggerakkan Benteng (Rook) dari c6 ke g6 dan menangkap Menteri putih (Queen, nilai 9). Ini CHECK: Raja putih diserang dan mesti diselamatkan pada langkah seterusnya.",
-   "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: −5.92 (dari pihak Putih)."
+   "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: \u22125.92 (dari pihak Putih)."
   ],
-  "defence": "Lawan tidak dapat mendapatkan semula bahan dengan baik – enjin menilai kedudukan selepas tangkapan +5.92 untuk anda.",
+  "defence": "Lawan tidak dapat mendapatkan semula bahan dengan baik \u2013 enjin menilai kedudukan selepas tangkapan +5.92 untuk anda.",
   "followUp": "Teruskan dengan membangunkan buah dan menukar buah apabila anda lebih bahan.",
   "hints": {
    "threat": "Semak setiap buah lawan: adakah ia dilindungi?",
@@ -1151,7 +1151,7 @@
    "Putih menggerakkan Menteri (Queen) dari a1 ke h8. CHECKMATE! Raja hitam diserang dan tiada jalan keluar.",
    "Checkmate (corak back-rank)!"
   ],
-  "defence": "Lawan tiada pertahanan – permainan tamat.",
+  "defence": "Lawan tiada pertahanan \u2013 permainan tamat.",
   "followUp": "Tiada susulan diperlukan.",
   "hints": {
    "threat": "Lihat petak di sekeliling Raja lawan: petak mana yang masih bebas?",
@@ -1212,7 +1212,7 @@
    "Putih menggerakkan Menteri (Queen) dari d5 ke d8 dan menangkap Kuda hitam (Knight, nilai 3). CHECKMATE! Raja hitam diserang dan tiada jalan keluar.",
    "Checkmate (corak back-rank)!"
   ],
-  "defence": "Lawan tiada pertahanan – permainan tamat.",
+  "defence": "Lawan tiada pertahanan \u2013 permainan tamat.",
   "followUp": "Tiada susulan diperlukan.",
   "hints": {
    "threat": "Lihat petak di sekeliling Raja lawan: petak mana yang masih bebas?",
@@ -1274,7 +1274,7 @@
    "Putih menggerakkan Menteri (Queen) dari c6 ke c8. CHECKMATE! Raja hitam diserang dan tiada jalan keluar.",
    "Checkmate (corak back-rank)!"
   ],
-  "defence": "Lawan tiada pertahanan – permainan tamat.",
+  "defence": "Lawan tiada pertahanan \u2013 permainan tamat.",
   "followUp": "Tiada susulan diperlukan.",
   "hints": {
    "threat": "Lihat petak di sekeliling Raja lawan: petak mana yang masih bebas?",
@@ -1335,7 +1335,7 @@
    "Hitam menggerakkan Menteri (Queen) dari g8 ke g2. CHECKMATE! Raja putih diserang dan tiada jalan keluar.",
    "Checkmate!"
   ],
-  "defence": "Lawan tiada pertahanan – permainan tamat.",
+  "defence": "Lawan tiada pertahanan \u2013 permainan tamat.",
   "followUp": "Tiada susulan diperlukan.",
   "hints": {
    "threat": "Lihat petak di sekeliling Raja lawan: petak mana yang masih bebas?",
@@ -1389,7 +1389,7 @@
    "Putih menggerakkan Benteng (Rook) dari e6 ke e8. CHECKMATE! Raja hitam diserang dan tiada jalan keluar.",
    "Checkmate (corak back-rank)!"
   ],
-  "defence": "Lawan tiada pertahanan – permainan tamat.",
+  "defence": "Lawan tiada pertahanan \u2013 permainan tamat.",
   "followUp": "Tiada susulan diperlukan.",
   "hints": {
    "threat": "Lihat petak di sekeliling Raja lawan: petak mana yang masih bebas?",
@@ -1450,7 +1450,7 @@
    "Hitam menggerakkan Menteri (Queen) dari e5 ke e1. CHECKMATE! Raja putih diserang dan tiada jalan keluar.",
    "Checkmate (corak back-rank)!"
   ],
-  "defence": "Lawan tiada pertahanan – permainan tamat.",
+  "defence": "Lawan tiada pertahanan \u2013 permainan tamat.",
   "followUp": "Tiada susulan diperlukan.",
   "hints": {
    "threat": "Lihat petak di sekeliling Raja lawan: petak mana yang masih bebas?",
@@ -1511,7 +1511,7 @@
    "Hitam menggerakkan Benteng (Rook) dari h4 ke h1. CHECKMATE! Raja putih diserang dan tiada jalan keluar.",
    "Checkmate (corak back-rank)!"
   ],
-  "defence": "Lawan tiada pertahanan – permainan tamat.",
+  "defence": "Lawan tiada pertahanan \u2013 permainan tamat.",
   "followUp": "Tiada susulan diperlukan.",
   "hints": {
    "threat": "Lihat petak di sekeliling Raja lawan: petak mana yang masih bebas?",
@@ -1565,7 +1565,7 @@
    "Hitam menggerakkan Benteng (Rook) dari h3 ke h1. CHECKMATE! Raja putih diserang dan tiada jalan keluar.",
    "Checkmate (corak back-rank)!"
   ],
-  "defence": "Lawan tiada pertahanan – permainan tamat.",
+  "defence": "Lawan tiada pertahanan \u2013 permainan tamat.",
   "followUp": "Tiada susulan diperlukan.",
   "hints": {
    "threat": "Lihat petak di sekeliling Raja lawan: petak mana yang masih bebas?",
@@ -1617,16 +1617,16 @@
    {
     "san": "Qf3+",
     "uci": "f2f3",
-    "eval": "−10.31",
+    "eval": "\u221210.31",
     "refutation": "Kc2",
-    "reason": "Tiada checkmate yang dipaksa selepas langkah ini (enjin: −10.31 dari pihak Putih). Lawan menjawab Kc2."
+    "reason": "Tiada checkmate yang dipaksa selepas langkah ini (enjin: \u221210.31 dari pihak Putih). Lawan menjawab Kc2."
    }
   ],
   "explanation": [
    "Hitam menggerakkan Menteri (Queen) dari f2 ke d2. CHECKMATE! Raja putih diserang dan tiada jalan keluar.",
    "Checkmate!"
   ],
-  "defence": "Lawan tiada pertahanan – permainan tamat.",
+  "defence": "Lawan tiada pertahanan \u2013 permainan tamat.",
   "followUp": "Tiada susulan diperlukan.",
   "hints": {
    "threat": "Lihat petak di sekeliling Raja lawan: petak mana yang masih bebas?",
@@ -1687,7 +1687,7 @@
    "Hitam menggerakkan Menteri (Queen) dari a6 ke f1. CHECKMATE! Raja putih diserang dan tiada jalan keluar.",
    "Checkmate (corak back-rank)!"
   ],
-  "defence": "Lawan tiada pertahanan – permainan tamat.",
+  "defence": "Lawan tiada pertahanan \u2013 permainan tamat.",
   "followUp": "Tiada susulan diperlukan.",
   "hints": {
    "threat": "Lihat petak di sekeliling Raja lawan: petak mana yang masih bebas?",
@@ -1745,9 +1745,9 @@
   "explanation": [
    "Putih menggerakkan Kuda (Knight) dari d4 ke c6. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Raja di b8 dan Menteri di d8 serentak.",
-   "Buah yang bergerak membuka garisan buah di belakangnya – dua ancaman serentak.",
-   "Lawan: bxc6 – Hitam menggerakkan Pion (Pawn) dari b7 ke c6 dan menangkap Kuda putih (Knight, nilai 3).",
-   "Kita: Rxd8+ – Putih menggerakkan Benteng (Rook) dari d2 ke d8 dan menangkap Menteri hitam (Queen, nilai 9). Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
+   "Buah yang bergerak membuka garisan buah di belakangnya \u2013 dua ancaman serentak.",
+   "Lawan: bxc6 \u2013 Hitam menggerakkan Pion (Pawn) dari b7 ke c6 dan menangkap Kuda putih (Knight, nilai 3).",
+   "Kita: Rxd8+ \u2013 Putih menggerakkan Benteng (Rook) dari d2 ke d8 dan menangkap Menteri hitam (Queen, nilai 9). Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Hasil: menang kira-kira 6 mata bahan. Penilaian enjin selepas langkah pertama: +5.89 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: bxc6.",
@@ -1793,21 +1793,21 @@
    {
     "san": "Qxb4",
     "uci": "b3b4",
-    "eval": "−0.14",
+    "eval": "\u22120.14",
     "refutation": "Qxd5",
     "reason": "Lebih lemah kira-kira 8.8 Pion daripada penyelesaian; lawan menjawab Qxd5."
    },
    {
     "san": "Qa4+",
     "uci": "b3a4",
-    "eval": "−0.11",
+    "eval": "\u22120.11",
     "refutation": "Kf7",
     "reason": "Lebih lemah kira-kira 8.7 Pion daripada penyelesaian; lawan menjawab Kf7."
    },
    {
     "san": "Nxb4",
     "uci": "d5b4",
-    "eval": "−8.26",
+    "eval": "\u22128.26",
     "refutation": "Qxb3",
     "reason": "Lebih lemah kira-kira 16.9 Pion daripada penyelesaian; lawan menjawab Qxb3."
    }
@@ -1815,9 +1815,9 @@
   "explanation": [
    "Putih menggerakkan Kuda (Knight) dari d5 ke c7. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Raja di e8 dan Menteri di e6 serentak.",
-   "Buah yang bergerak membuka garisan buah di belakangnya – dua ancaman serentak.",
-   "Lawan: Kd7 – Hitam menggerakkan Raja (King) dari e8 ke d7.",
-   "Kita: Nxe6 – Putih menggerakkan Kuda (Knight) dari c7 ke e6 dan menangkap Menteri hitam (Queen, nilai 9).",
+   "Buah yang bergerak membuka garisan buah di belakangnya \u2013 dua ancaman serentak.",
+   "Lawan: Kd7 \u2013 Hitam menggerakkan Raja (King) dari e8 ke d7.",
+   "Kita: Nxe6 \u2013 Putih menggerakkan Kuda (Knight) dari c7 ke e6 dan menangkap Menteri hitam (Queen, nilai 9).",
    "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: +8.63 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kd7.",
@@ -1863,14 +1863,14 @@
    {
     "san": "Kf7",
     "uci": "e8f7",
-    "eval": "−0.15",
+    "eval": "\u22120.15",
     "refutation": "Qh8",
     "reason": "Lebih lemah kira-kira 6.0 Pion daripada penyelesaian; lawan menjawab Qh8."
    },
    {
     "san": "Rd7+",
     "uci": "c7d7",
-    "eval": "−0.25",
+    "eval": "\u22120.25",
     "refutation": "Kc1",
     "reason": "Lebih lemah kira-kira 6.0 Pion daripada penyelesaian; lawan menjawab Kc1."
    },
@@ -1885,10 +1885,10 @@
   "explanation": [
    "Hitam menggerakkan Gajah (Bishop) dari c5 ke b4.",
    "Pin: Menteri di c3 tidak boleh lari kerana Raja di d2 berada di belakangnya.",
-   "Buah yang bergerak membuka garisan buah di belakangnya – dua ancaman serentak.",
-   "Lawan: Qxb4 – Putih menggerakkan Menteri (Queen) dari c3 ke b4 dan menangkap Gajah hitam (Bishop, nilai 3).",
-   "Kita: Rxb4 – Hitam menggerakkan Benteng (Rook) dari b6 ke b4 dan menangkap Menteri putih (Queen, nilai 9).",
-   "Hasil: menang kira-kira 6 mata bahan. Penilaian enjin selepas langkah pertama: −6.20 (dari pihak Putih)."
+   "Buah yang bergerak membuka garisan buah di belakangnya \u2013 dua ancaman serentak.",
+   "Lawan: Qxb4 \u2013 Putih menggerakkan Menteri (Queen) dari c3 ke b4 dan menangkap Gajah hitam (Bishop, nilai 3).",
+   "Kita: Rxb4 \u2013 Hitam menggerakkan Benteng (Rook) dari b6 ke b4 dan menangkap Menteri putih (Queen, nilai 9).",
+   "Hasil: menang kira-kira 6 mata bahan. Penilaian enjin selepas langkah pertama: \u22126.20 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Qxb4.",
   "followUp": "Susulan: Rxb4.",
@@ -1933,14 +1933,14 @@
    {
     "san": "Rxh6",
     "uci": "h3h6",
-    "eval": "−0.06",
+    "eval": "\u22120.06",
     "refutation": "Qxh6",
     "reason": "Lebih lemah kira-kira 3.4 Pion daripada penyelesaian; lawan menjawab Qxh6."
    },
    {
     "san": "Rf7+",
     "uci": "f3f7",
-    "eval": "−0.01",
+    "eval": "\u22120.01",
     "refutation": "Kb6",
     "reason": "Lebih lemah kira-kira 3.4 Pion daripada penyelesaian; lawan menjawab Kb6."
    },
@@ -1954,9 +1954,9 @@
   ],
   "explanation": [
    "Putih menggerakkan Kuda (Knight) dari d4 ke e6. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
-   "Buah yang bergerak membuka garisan buah di belakangnya – dua ancaman serentak.",
-   "Lawan: Kd6 – Hitam menggerakkan Raja (King) dari c7 ke d6.",
-   "Kita: Bxh8 – Putih menggerakkan Gajah (Bishop) dari c3 ke h8 dan menangkap Menteri hitam (Queen, nilai 9).",
+   "Buah yang bergerak membuka garisan buah di belakangnya \u2013 dua ancaman serentak.",
+   "Lawan: Kd6 \u2013 Hitam menggerakkan Raja (King) dari c7 ke d6.",
+   "Kita: Bxh8 \u2013 Putih menggerakkan Gajah (Bishop) dari c3 ke h8 dan menangkap Menteri hitam (Queen, nilai 9).",
    "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: +3.34 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kd6.",
@@ -2002,14 +2002,14 @@
    {
     "san": "Ne3+",
     "uci": "g4e3",
-    "eval": "−2.02",
+    "eval": "\u22122.02",
     "refutation": "Kd8",
     "reason": "Lebih lemah kira-kira 8.5 Pion daripada penyelesaian; lawan menjawab Kd8."
    },
    {
     "san": "Nf6+",
     "uci": "g4f6",
-    "eval": "−4.12",
+    "eval": "\u22124.12",
     "refutation": "Ke7",
     "reason": "Lebih lemah kira-kira 10.6 Pion daripada penyelesaian; lawan menjawab Ke7."
    }
@@ -2017,9 +2017,9 @@
   "explanation": [
    "Putih menggerakkan Kuda (Knight) dari g4 ke e5. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Raja di d7 dan Menteri di c6 serentak.",
-   "Buah yang bergerak membuka garisan buah di belakangnya – dua ancaman serentak.",
-   "Lawan: Ke8 – Hitam menggerakkan Raja (King) dari d7 ke e8.",
-   "Kita: Nxc6 – Putih menggerakkan Kuda (Knight) dari e5 ke c6 dan menangkap Menteri hitam (Queen, nilai 9).",
+   "Buah yang bergerak membuka garisan buah di belakangnya \u2013 dua ancaman serentak.",
+   "Lawan: Ke8 \u2013 Hitam menggerakkan Raja (King) dari d7 ke e8.",
+   "Kita: Nxc6 \u2013 Putih menggerakkan Kuda (Knight) dari e5 ke c6 dan menangkap Menteri hitam (Queen, nilai 9).",
    "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: +6.45 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Ke8.",
@@ -2072,7 +2072,7 @@
    {
     "san": "Nxe4+",
     "uci": "c5e4",
-    "eval": "−0.05",
+    "eval": "\u22120.05",
     "refutation": "Kd3",
     "reason": "Lebih lemah kira-kira 2.4 Pion daripada penyelesaian; lawan menjawab Kd3."
    },
@@ -2086,10 +2086,10 @@
   ],
   "explanation": [
    "Hitam menggerakkan Kuda (Knight) dari c5 ke d7. Ini CHECK: Raja putih diserang dan mesti diselamatkan pada langkah seterusnya.",
-   "Buah yang bergerak membuka garisan buah di belakangnya – dua ancaman serentak.",
-   "Lawan: Kd4 – Putih menggerakkan Raja (King) dari c3 ke d4.",
-   "Kita: Nxe5 – Hitam menggerakkan Kuda (Knight) dari d7 ke e5 dan menangkap Benteng putih (Rook, nilai 5).",
-   "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: −2.46 (dari pihak Putih)."
+   "Buah yang bergerak membuka garisan buah di belakangnya \u2013 dua ancaman serentak.",
+   "Lawan: Kd4 \u2013 Putih menggerakkan Raja (King) dari c3 ke d4.",
+   "Kita: Nxe5 \u2013 Hitam menggerakkan Kuda (Knight) dari d7 ke e5 dan menangkap Benteng putih (Rook, nilai 5).",
+   "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: \u22122.46 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kd4.",
   "followUp": "Susulan: Nxe5.",
@@ -2141,16 +2141,16 @@
    {
     "san": "Kd1",
     "uci": "d2d1",
-    "eval": "−0.46",
+    "eval": "\u22120.46",
     "refutation": "Qa4",
     "reason": "Lebih lemah kira-kira 8.2 Pion daripada penyelesaian; lawan menjawab Qa4."
    }
   ],
   "explanation": [
    "Putih menggerakkan Kuda (Knight) dari b3 ke c5. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
-   "Buah yang bergerak membuka garisan buah di belakangnya – dua ancaman serentak.",
-   "Lawan: Kb4 – Hitam menggerakkan Raja (King) dari a3 ke b4.",
-   "Kita: Nxe4 – Putih menggerakkan Kuda (Knight) dari c5 ke e4 dan menangkap Menteri hitam (Queen, nilai 9).",
+   "Buah yang bergerak membuka garisan buah di belakangnya \u2013 dua ancaman serentak.",
+   "Lawan: Kb4 \u2013 Hitam menggerakkan Raja (King) dari a3 ke b4.",
+   "Kita: Nxe4 \u2013 Putih menggerakkan Kuda (Knight) dari c5 ke e4 dan menangkap Menteri hitam (Queen, nilai 9).",
    "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: +7.78 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kb4.",
@@ -2189,24 +2189,24 @@
    {
     "san": "Rb1+",
     "uci": "d1b1",
-    "eval": "−0.36",
+    "eval": "\u22120.36",
     "refutation": "Ka7",
     "reason": "Lebih lemah kira-kira 6.5 Pion daripada penyelesaian; lawan menjawab Ka7."
    },
    {
     "san": "Rh6+",
     "uci": "h1h6",
-    "eval": "−0.29",
+    "eval": "\u22120.29",
     "refutation": "Ka7",
     "reason": "Lebih lemah kira-kira 6.4 Pion daripada penyelesaian; lawan menjawab Ka7."
    }
   ],
   "explanation": [
    "Putih menggerakkan Kuda (Knight) dari f4 ke d5 dan menangkap Menteri hitam (Queen, nilai 9). Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
-   "Buah yang bergerak membuka garisan buah di belakangnya – dua ancaman serentak.",
+   "Buah yang bergerak membuka garisan buah di belakangnya \u2013 dua ancaman serentak.",
    "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: +6.09 (dari pihak Putih)."
   ],
-  "defence": "Lawan tidak dapat mendapatkan semula bahan dengan baik – enjin menilai kedudukan selepas tangkapan +6.09 untuk anda.",
+  "defence": "Lawan tidak dapat mendapatkan semula bahan dengan baik \u2013 enjin menilai kedudukan selepas tangkapan +6.09 untuk anda.",
   "followUp": "Teruskan dengan membangunkan buah dan menukar buah apabila anda lebih bahan.",
   "hints": {
    "threat": "Ada buah anda yang menghalang Benteng, Gajah atau Menteri anda sendiri.",
@@ -2249,30 +2249,30 @@
    {
     "san": "Nf3+",
     "uci": "h4f3",
-    "eval": "−0.05",
+    "eval": "\u22120.05",
     "refutation": "Kg4",
     "reason": "Lebih lemah kira-kira 5.0 Pion daripada penyelesaian; lawan menjawab Kg4."
    },
    {
     "san": "Nf5+",
     "uci": "h4f5",
-    "eval": "−0.01",
+    "eval": "\u22120.01",
     "refutation": "Kg6",
     "reason": "Lebih lemah kira-kira 5.0 Pion daripada penyelesaian; lawan menjawab Kg6."
    },
    {
     "san": "Ng6+",
     "uci": "h4g6",
-    "eval": "−4.37",
+    "eval": "\u22124.37",
     "refutation": "Kxg6",
     "reason": "Lebih lemah kira-kira 9.3 Pion daripada penyelesaian; lawan menjawab Kxg6."
    }
   ],
   "explanation": [
    "Putih menggerakkan Kuda (Knight) dari h4 ke g2. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
-   "Buah yang bergerak membuka garisan buah di belakangnya – dua ancaman serentak.",
-   "Lawan: Kg5 – Hitam menggerakkan Raja (King) dari h5 ke g5.",
-   "Kita: Nxf4 – Putih menggerakkan Kuda (Knight) dari g2 ke f4 dan menangkap Benteng hitam (Rook, nilai 5).",
+   "Buah yang bergerak membuka garisan buah di belakangnya \u2013 dua ancaman serentak.",
+   "Lawan: Kg5 \u2013 Hitam menggerakkan Raja (King) dari h5 ke g5.",
+   "Kita: Nxf4 \u2013 Putih menggerakkan Kuda (Knight) dari g2 ke f4 dan menangkap Benteng hitam (Rook, nilai 5).",
    "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: +4.95 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kg5.",
@@ -2318,21 +2318,21 @@
    {
     "san": "b3",
     "uci": "b4b3",
-    "eval": "−0.30",
+    "eval": "\u22120.30",
     "refutation": "Be3+",
     "reason": "Lebih lemah kira-kira 6.3 Pion daripada penyelesaian; lawan menjawab Be3+."
    },
    {
     "san": "Kb7",
     "uci": "a7b7",
-    "eval": "−0.09",
+    "eval": "\u22120.09",
     "refutation": "Kd1",
     "reason": "Lebih lemah kira-kira 6.5 Pion daripada penyelesaian; lawan menjawab Kd1."
    },
    {
     "san": "Nc7+",
     "uci": "e6c7",
-    "eval": "−0.01",
+    "eval": "\u22120.01",
     "refutation": "Re3",
     "reason": "Lebih lemah kira-kira 6.6 Pion daripada penyelesaian; lawan menjawab Re3."
    }
@@ -2340,10 +2340,10 @@
   "explanation": [
    "Hitam menggerakkan Kuda (Knight) dari e6 ke f4. Ini CHECK: Raja putih diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Benteng di h3 dan Raja di e2 serentak.",
-   "Buah yang bergerak membuka garisan buah di belakangnya – dua ancaman serentak.",
-   "Lawan: Kf3 – Putih menggerakkan Raja (King) dari e2 ke f3.",
-   "Kita: Nxh3 – Hitam menggerakkan Kuda (Knight) dari f4 ke h3 dan menangkap Benteng putih (Rook, nilai 5).",
-   "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: −6.57 (dari pihak Putih)."
+   "Buah yang bergerak membuka garisan buah di belakangnya \u2013 dua ancaman serentak.",
+   "Lawan: Kf3 \u2013 Putih menggerakkan Raja (King) dari e2 ke f3.",
+   "Kita: Nxh3 \u2013 Hitam menggerakkan Kuda (Knight) dari f4 ke h3 dan menangkap Benteng putih (Rook, nilai 5).",
+   "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: \u22126.57 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kf3.",
   "followUp": "Susulan: Nxh3.",
@@ -2388,21 +2388,21 @@
    {
     "san": "Nc5",
     "uci": "b3c5",
-    "eval": "−0.78",
+    "eval": "\u22120.78",
     "refutation": "Qd6",
     "reason": "Lebih lemah kira-kira 8.1 Pion daripada penyelesaian; lawan menjawab Qd6."
    },
    {
     "san": "Na5",
     "uci": "b3a5",
-    "eval": "−1.75",
+    "eval": "\u22121.75",
     "refutation": "Qb4+",
     "reason": "Lebih lemah kira-kira 9.0 Pion daripada penyelesaian; lawan menjawab Qb4+."
    },
    {
     "san": "Nd7+",
     "uci": "e5d7",
-    "eval": "−7.37",
+    "eval": "\u22127.37",
     "refutation": "Qxd7",
     "reason": "Lebih lemah kira-kira 14.6 Pion daripada penyelesaian; lawan menjawab Qxd7."
    }
@@ -2410,8 +2410,8 @@
   "explanation": [
    "Putih menggerakkan Kuda (Knight) dari e5 ke c6. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Raja di b8 dan Menteri di e7 serentak.",
-   "Lawan: Kc7 – Hitam menggerakkan Raja (King) dari b8 ke c7.",
-   "Kita: Nxe7 – Putih menggerakkan Kuda (Knight) dari c6 ke e7 dan menangkap Menteri hitam (Queen, nilai 9).",
+   "Lawan: Kc7 \u2013 Hitam menggerakkan Raja (King) dari b8 ke c7.",
+   "Kita: Nxe7 \u2013 Putih menggerakkan Kuda (Knight) dari c6 ke e7 dan menangkap Menteri hitam (Queen, nilai 9).",
    "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: +7.27 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kc7.",
@@ -2457,14 +2457,14 @@
    {
     "san": "Kh2",
     "uci": "g1h2",
-    "eval": "−0.24",
+    "eval": "\u22120.24",
     "refutation": "Rd7",
     "reason": "Lebih lemah kira-kira 6.6 Pion daripada penyelesaian; lawan menjawab Rd7."
    },
    {
     "san": "Kg2",
     "uci": "g1g2",
-    "eval": "−0.19",
+    "eval": "\u22120.19",
     "refutation": "Rd7",
     "reason": "Lebih lemah kira-kira 6.5 Pion daripada penyelesaian; lawan menjawab Rd7."
    }
@@ -2472,8 +2472,8 @@
   "explanation": [
    "Putih menggerakkan Kuda (Knight) dari d4 ke c6. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Raja di b8 dan Benteng di a7 serentak.",
-   "Lawan: Kc7 – Hitam menggerakkan Raja (King) dari b8 ke c7.",
-   "Kita: Nxa7 – Putih menggerakkan Kuda (Knight) dari c6 ke a7 dan menangkap Benteng hitam (Rook, nilai 5).",
+   "Lawan: Kc7 \u2013 Hitam menggerakkan Raja (King) dari b8 ke c7.",
+   "Kita: Nxa7 \u2013 Putih menggerakkan Kuda (Knight) dari c6 ke a7 dan menangkap Benteng hitam (Rook, nilai 5).",
    "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: +6.35 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kc7.",
@@ -2519,21 +2519,21 @@
    {
     "san": "Kb2",
     "uci": "c1b2",
-    "eval": "−3.17",
+    "eval": "\u22123.17",
     "refutation": "Rxb4+",
     "reason": "Lebih lemah kira-kira 11.2 Pion daripada penyelesaian; lawan menjawab Rxb4+."
    },
    {
     "san": "Kd2",
     "uci": "c1d2",
-    "eval": "−3.17",
+    "eval": "\u22123.17",
     "refutation": "Rxb4",
     "reason": "Lebih lemah kira-kira 11.2 Pion daripada penyelesaian; lawan menjawab Rxb4."
    },
    {
     "san": "Nd6+",
     "uci": "c4d6",
-    "eval": "−4.09",
+    "eval": "\u22124.09",
     "refutation": "Kd7",
     "reason": "Lebih lemah kira-kira 12.2 Pion daripada penyelesaian; lawan menjawab Kd7."
    }
@@ -2541,8 +2541,8 @@
   "explanation": [
    "Putih menggerakkan Kuda (Knight) dari c4 ke b6. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Raja di c8 dan Benteng di a4 serentak.",
-   "Lawan: Kc7 – Hitam menggerakkan Raja (King) dari c8 ke c7.",
-   "Kita: Nxa4 – Putih menggerakkan Kuda (Knight) dari b6 ke a4 dan menangkap Benteng hitam (Rook, nilai 5).",
+   "Lawan: Kc7 \u2013 Hitam menggerakkan Raja (King) dari c8 ke c7.",
+   "Kita: Nxa4 \u2013 Putih menggerakkan Kuda (Knight) dari b6 ke a4 dan menangkap Benteng hitam (Rook, nilai 5).",
    "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: +8.07 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kc7.",
@@ -2603,9 +2603,9 @@
   "explanation": [
    "Hitam menggerakkan Kuda (Knight) dari e4 ke c5. Ini CHECK: Raja putih diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Menteri di d7 dan Raja di e6 serentak.",
-   "Lawan: Kd5 – Putih menggerakkan Raja (King) dari e6 ke d5.",
-   "Kita: Nxd7 – Hitam menggerakkan Kuda (Knight) dari c5 ke d7 dan menangkap Menteri putih (Queen, nilai 9).",
-   "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: −8.33 (dari pihak Putih)."
+   "Lawan: Kd5 \u2013 Putih menggerakkan Raja (King) dari e6 ke d5.",
+   "Kita: Nxd7 \u2013 Hitam menggerakkan Kuda (Knight) dari c5 ke d7 dan menangkap Menteri putih (Queen, nilai 9).",
+   "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: \u22128.33 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kd5.",
   "followUp": "Susulan: Nxd7.",
@@ -2650,14 +2650,14 @@
    {
     "san": "Bb6",
     "uci": "d8b6",
-    "eval": "−0.36",
+    "eval": "\u22120.36",
     "refutation": "Qe1",
     "reason": "Lebih lemah kira-kira 6.8 Pion daripada penyelesaian; lawan menjawab Qe1."
    },
    {
     "san": "N7d5",
     "uci": "e7d5",
-    "eval": "−0.02",
+    "eval": "\u22120.02",
     "refutation": "Qe2",
     "reason": "Lebih lemah kira-kira 7.2 Pion daripada penyelesaian; lawan menjawab Qe2."
    },
@@ -2672,9 +2672,9 @@
   "explanation": [
    "Hitam menggerakkan Kuda (Knight) dari e3 ke g4. Ini CHECK: Raja putih diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Menteri di f2 dan Raja di h2 serentak.",
-   "Lawan: Kg3 – Putih menggerakkan Raja (King) dari h2 ke g3.",
-   "Kita: Nxf2 – Hitam menggerakkan Kuda (Knight) dari g4 ke f2 dan menangkap Menteri putih (Queen, nilai 9).",
-   "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: −7.21 (dari pihak Putih)."
+   "Lawan: Kg3 \u2013 Putih menggerakkan Raja (King) dari h2 ke g3.",
+   "Kita: Nxf2 \u2013 Hitam menggerakkan Kuda (Knight) dari g4 ke f2 dan menangkap Menteri putih (Queen, nilai 9).",
+   "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: \u22127.21 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kg3.",
   "followUp": "Susulan: Nxf2.",
@@ -2734,9 +2734,9 @@
   "explanation": [
    "Hitam menggerakkan Kuda (Knight) dari g4 ke e5. Ini CHECK: Raja putih diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Raja di g6 dan Menteri di f3 serentak.",
-   "Lawan: Kf5 – Putih menggerakkan Raja (King) dari g6 ke f5.",
-   "Kita: Nxf3 – Hitam menggerakkan Kuda (Knight) dari e5 ke f3 dan menangkap Menteri putih (Queen, nilai 9).",
-   "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: −6.83 (dari pihak Putih)."
+   "Lawan: Kf5 \u2013 Putih menggerakkan Raja (King) dari g6 ke f5.",
+   "Kita: Nxf3 \u2013 Hitam menggerakkan Kuda (Knight) dari e5 ke f3 dan menangkap Menteri putih (Queen, nilai 9).",
+   "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: \u22126.83 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kf5.",
   "followUp": "Susulan: Nxf3.",
@@ -2795,7 +2795,7 @@
    {
     "san": "Nb7+",
     "uci": "d6b7",
-    "eval": "−0.88",
+    "eval": "\u22120.88",
     "refutation": "Kc7",
     "reason": "Lebih lemah kira-kira 7.5 Pion daripada penyelesaian; lawan menjawab Kc7."
    }
@@ -2803,8 +2803,8 @@
   "explanation": [
    "Putih menggerakkan Kuda (Knight) dari d6 ke f7. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Raja di d8 dan Menteri di e5 serentak.",
-   "Lawan: Ke7 – Hitam menggerakkan Raja (King) dari d8 ke e7.",
-   "Kita: Nxe5 – Putih menggerakkan Kuda (Knight) dari f7 ke e5 dan menangkap Menteri hitam (Queen, nilai 9).",
+   "Lawan: Ke7 \u2013 Hitam menggerakkan Raja (King) dari d8 ke e7.",
+   "Kita: Nxe5 \u2013 Putih menggerakkan Kuda (Knight) dari f7 ke e5 dan menangkap Menteri hitam (Queen, nilai 9).",
    "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: +6.64 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Ke7.",
@@ -2850,21 +2850,21 @@
    {
     "san": "Rb8",
     "uci": "b2b8",
-    "eval": "−5.67",
+    "eval": "\u22125.67",
     "refutation": "Kc4",
     "reason": "Lebih lemah kira-kira 13.8 Pion daripada penyelesaian; lawan menjawab Kc4."
    },
    {
     "san": "Rd2",
     "uci": "b2d2",
-    "eval": "−5.55",
+    "eval": "\u22125.55",
     "refutation": "Qxg3+",
     "reason": "Lebih lemah kira-kira 13.7 Pion daripada penyelesaian; lawan menjawab Qxg3+."
    },
    {
     "san": "Ne6+",
     "uci": "d8e6",
-    "eval": "−7.39",
+    "eval": "\u22127.39",
     "refutation": "Qxe6+",
     "reason": "Lebih lemah kira-kira 15.5 Pion daripada penyelesaian; lawan menjawab Qxe6+."
    }
@@ -2872,8 +2872,8 @@
   "explanation": [
    "Putih menggerakkan Kuda (Knight) dari d8 ke b7. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Menteri di d6 dan Raja di c5 serentak.",
-   "Lawan: Kc4 – Hitam menggerakkan Raja (King) dari c5 ke c4.",
-   "Kita: Nxd6+ – Putih menggerakkan Kuda (Knight) dari b7 ke d6 dan menangkap Menteri hitam (Queen, nilai 9). Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
+   "Lawan: Kc4 \u2013 Hitam menggerakkan Raja (King) dari c5 ke c4.",
+   "Kita: Nxd6+ \u2013 Putih menggerakkan Kuda (Knight) dari b7 ke d6 dan menangkap Menteri hitam (Queen, nilai 9). Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: +8.12 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kc4.",
@@ -2941,9 +2941,9 @@
   "explanation": [
    "Hitam menggerakkan Kuda (Knight) dari d6 ke c4. Ini CHECK: Raja putih diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Pion di a5 dan Menteri di b2 dan Raja di d2 serentak.",
-   "Lawan: Kc3 – Putih menggerakkan Raja (King) dari d2 ke c3.",
-   "Kita: Nxb2 – Hitam menggerakkan Kuda (Knight) dari c4 ke b2 dan menangkap Menteri putih (Queen, nilai 9).",
-   "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: −8.13 (dari pihak Putih)."
+   "Lawan: Kc3 \u2013 Putih menggerakkan Raja (King) dari d2 ke c3.",
+   "Kita: Nxb2 \u2013 Hitam menggerakkan Kuda (Knight) dari c4 ke b2 dan menangkap Menteri putih (Queen, nilai 9).",
+   "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: \u22128.13 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kc3.",
   "followUp": "Susulan: Nxb2.",
@@ -2988,21 +2988,21 @@
    {
     "san": "Na6",
     "uci": "c7a6",
-    "eval": "−3.95",
+    "eval": "\u22123.95",
     "refutation": "h3",
     "reason": "Lebih lemah kira-kira 8.9 Pion daripada penyelesaian; lawan menjawab h3."
    },
    {
     "san": "Nd5",
     "uci": "c7d5",
-    "eval": "−4.26",
+    "eval": "\u22124.26",
     "refutation": "h3",
     "reason": "Lebih lemah kira-kira 9.2 Pion daripada penyelesaian; lawan menjawab h3."
    },
    {
     "san": "Bxh5",
     "uci": "f3h5",
-    "eval": "−7.39",
+    "eval": "\u22127.39",
     "refutation": "Rxc7",
     "reason": "Lebih lemah kira-kira 12.4 Pion daripada penyelesaian; lawan menjawab Rxc7."
    }
@@ -3010,8 +3010,8 @@
   "explanation": [
    "Putih menggerakkan Kuda (Knight) dari c7 ke e6. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Raja di f8 dan Benteng di g7 dan Pion di c5 serentak.",
-   "Lawan: Ke7 – Hitam menggerakkan Raja (King) dari f8 ke e7.",
-   "Kita: Nxg7 – Putih menggerakkan Kuda (Knight) dari e6 ke g7 dan menangkap Benteng hitam (Rook, nilai 5).",
+   "Lawan: Ke7 \u2013 Hitam menggerakkan Raja (King) dari f8 ke e7.",
+   "Kita: Nxg7 \u2013 Putih menggerakkan Kuda (Knight) dari e6 ke g7 dan menangkap Benteng hitam (Rook, nilai 5).",
    "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: +4.97 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Ke7.",
@@ -3057,21 +3057,21 @@
    {
     "san": "b3",
     "uci": "b2b3",
-    "eval": "−0.07",
+    "eval": "\u22120.07",
     "refutation": "Re4",
     "reason": "Lebih lemah kira-kira 8.3 Pion daripada penyelesaian; lawan menjawab Re4."
    },
    {
     "san": "Nd3",
     "uci": "f4d3",
-    "eval": "−0.13",
+    "eval": "\u22120.13",
     "refutation": "Re4",
     "reason": "Lebih lemah kira-kira 8.3 Pion daripada penyelesaian; lawan menjawab Re4."
    },
    {
     "san": "Ne6+",
     "uci": "f4e6",
-    "eval": "−5.91",
+    "eval": "\u22125.91",
     "refutation": "Rxe6",
     "reason": "Lebih lemah kira-kira 14.1 Pion daripada penyelesaian; lawan menjawab Rxe6."
    }
@@ -3079,8 +3079,8 @@
   "explanation": [
    "Putih menggerakkan Kuda (Knight) dari f4 ke g6. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Raja di f8 dan Benteng di e7 serentak.",
-   "Lawan: Ke8 – Hitam menggerakkan Raja (King) dari f8 ke e8.",
-   "Kita: Nxe7 – Putih menggerakkan Kuda (Knight) dari g6 ke e7 dan menangkap Benteng hitam (Rook, nilai 5).",
+   "Lawan: Ke8 \u2013 Hitam menggerakkan Raja (King) dari f8 ke e8.",
+   "Kita: Nxe7 \u2013 Putih menggerakkan Kuda (Knight) dari g6 ke e7 dan menangkap Benteng hitam (Rook, nilai 5).",
    "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: +8.22 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Ke8.",
@@ -3133,14 +3133,14 @@
    {
     "san": "b5",
     "uci": "b4b5",
-    "eval": "−1.85",
+    "eval": "\u22121.85",
     "refutation": "Ke8",
     "reason": "Lebih lemah kira-kira 8.0 Pion daripada penyelesaian; lawan menjawab Ke8."
    },
    {
     "san": "Ne6+",
     "uci": "f4e6",
-    "eval": "−7.95",
+    "eval": "\u22127.95",
     "refutation": "Rxe6",
     "reason": "Lebih lemah kira-kira 14.1 Pion daripada penyelesaian; lawan menjawab Rxe6."
    }
@@ -3148,8 +3148,8 @@
   "explanation": [
    "Putih menggerakkan Kuda (Knight) dari f4 ke g6. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Raja di f8 dan Benteng di e7 serentak.",
-   "Lawan: Ke8 – Hitam menggerakkan Raja (King) dari f8 ke e8.",
-   "Kita: Nxe7 – Putih menggerakkan Kuda (Knight) dari g6 ke e7 dan menangkap Benteng hitam (Rook, nilai 5).",
+   "Lawan: Ke8 \u2013 Hitam menggerakkan Raja (King) dari f8 ke e8.",
+   "Kita: Nxe7 \u2013 Putih menggerakkan Kuda (Knight) dari g6 ke e7 dan menangkap Benteng hitam (Rook, nilai 5).",
    "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: +6.16 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Ke8.",
@@ -3217,9 +3217,9 @@
   "explanation": [
    "Hitam menggerakkan Kuda (Knight) dari e4 ke g5. Ini CHECK: Raja putih diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Benteng di h7 dan Raja di h3 serentak.",
-   "Lawan: Kg4 – Putih menggerakkan Raja (King) dari h3 ke g4.",
-   "Kita: Nxh7 – Hitam menggerakkan Kuda (Knight) dari g5 ke h7 dan menangkap Benteng putih (Rook, nilai 5).",
-   "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: −5.87 (dari pihak Putih)."
+   "Lawan: Kg4 \u2013 Putih menggerakkan Raja (King) dari h3 ke g4.",
+   "Kita: Nxh7 \u2013 Hitam menggerakkan Kuda (Knight) dari g5 ke h7 dan menangkap Benteng putih (Rook, nilai 5).",
+   "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: \u22125.87 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kg4.",
   "followUp": "Susulan: Nxh7.",
@@ -3264,14 +3264,14 @@
    {
     "san": "Rd4+",
     "uci": "d3d4",
-    "eval": "−0.91",
+    "eval": "\u22120.91",
     "refutation": "Kb5",
     "reason": "Lebih lemah kira-kira 10.0 Pion daripada penyelesaian; lawan menjawab Kb5."
    },
    {
     "san": "Na5+",
     "uci": "c6a5",
-    "eval": "−1.28",
+    "eval": "\u22121.28",
     "refutation": "Kb5",
     "reason": "Lebih lemah kira-kira 10.4 Pion daripada penyelesaian; lawan menjawab Kb5."
    }
@@ -3279,8 +3279,8 @@
   "explanation": [
    "Putih menggerakkan Kuda (Knight) dari c6 ke e5. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Menteri di f7 dan Raja di c4 serentak.",
-   "Lawan: Kb5 – Hitam menggerakkan Raja (King) dari c4 ke b5.",
-   "Kita: Nxf7 – Putih menggerakkan Kuda (Knight) dari e5 ke f7 dan menangkap Menteri hitam (Queen, nilai 9).",
+   "Lawan: Kb5 \u2013 Hitam menggerakkan Raja (King) dari c4 ke b5.",
+   "Kita: Nxf7 \u2013 Putih menggerakkan Kuda (Knight) dari e5 ke f7 dan menangkap Menteri hitam (Queen, nilai 9).",
    "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: +9.08 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kb5.",
@@ -3326,14 +3326,14 @@
    {
     "san": "Nc3+",
     "uci": "a4c3",
-    "eval": "−3.92",
+    "eval": "\u22123.92",
     "refutation": "Kd4",
     "reason": "Lebih lemah kira-kira 10.7 Pion daripada penyelesaian; lawan menjawab Kd4."
    },
    {
     "san": "h4",
     "uci": "h2h4",
-    "eval": "−4.37",
+    "eval": "\u22124.37",
     "refutation": "Kd4",
     "reason": "Lebih lemah kira-kira 11.2 Pion daripada penyelesaian; lawan menjawab Kd4."
    }
@@ -3341,8 +3341,8 @@
   "explanation": [
    "Putih menggerakkan Kuda (Knight) dari a4 ke b6. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Benteng di d7 dan Raja di d5 serentak.",
-   "Lawan: Ke4 – Hitam menggerakkan Raja (King) dari d5 ke e4.",
-   "Kita: Nxd7 – Putih menggerakkan Kuda (Knight) dari b6 ke d7 dan menangkap Benteng hitam (Rook, nilai 5).",
+   "Lawan: Ke4 \u2013 Hitam menggerakkan Raja (King) dari d5 ke e4.",
+   "Kita: Nxd7 \u2013 Putih menggerakkan Kuda (Knight) dari b6 ke d7 dan menangkap Benteng hitam (Rook, nilai 5).",
    "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: +6.81 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Ke4.",
@@ -3410,9 +3410,9 @@
   "explanation": [
    "Hitam menggerakkan Kuda (Knight) dari b4 ke d5. Ini CHECK: Raja putih diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Benteng di b6 dan Raja di c3 serentak.",
-   "Lawan: Kd4 – Putih menggerakkan Raja (King) dari c3 ke d4.",
-   "Kita: Nxb6 – Hitam menggerakkan Kuda (Knight) dari d5 ke b6 dan menangkap Benteng putih (Rook, nilai 5).",
-   "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: −6.07 (dari pihak Putih)."
+   "Lawan: Kd4 \u2013 Putih menggerakkan Raja (King) dari c3 ke d4.",
+   "Kita: Nxb6 \u2013 Hitam menggerakkan Kuda (Knight) dari d5 ke b6 dan menangkap Benteng putih (Rook, nilai 5).",
+   "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: \u22126.07 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kd4.",
   "followUp": "Susulan: Nxb6.",
@@ -3471,7 +3471,7 @@
    {
     "san": "Nf7+",
     "uci": "g5f7",
-    "eval": "−4.04",
+    "eval": "\u22124.04",
     "refutation": "Ke6",
     "reason": "Lebih lemah kira-kira 11.2 Pion daripada penyelesaian; lawan menjawab Ke6."
    }
@@ -3479,8 +3479,8 @@
   "explanation": [
    "Putih menggerakkan Kuda (Knight) dari g5 ke e4. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Raja di d6 dan Menteri di c5 serentak.",
-   "Lawan: Kc6 – Hitam menggerakkan Raja (King) dari d6 ke c6.",
-   "Kita: Nxc5+ – Putih menggerakkan Kuda (Knight) dari e4 ke c5 dan menangkap Menteri hitam (Queen, nilai 9). Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
+   "Lawan: Kc6 \u2013 Hitam menggerakkan Raja (King) dari d6 ke c6.",
+   "Kita: Nxc5+ \u2013 Putih menggerakkan Kuda (Knight) dari e4 ke c5 dan menangkap Menteri hitam (Queen, nilai 9). Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: +7.19 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kc6.",
@@ -3540,7 +3540,7 @@
    {
     "san": "Nd7+",
     "uci": "f6d7",
-    "eval": "−3.69",
+    "eval": "\u22123.69",
     "refutation": "Ke7",
     "reason": "Lebih lemah kira-kira 10.2 Pion daripada penyelesaian; lawan menjawab Ke7."
    }
@@ -3548,8 +3548,8 @@
   "explanation": [
    "Putih menggerakkan Kuda (Knight) dari f6 ke g4. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Menteri di h6 dan Benteng di h2 serentak.",
-   "Lawan: Ke7 – Hitam menggerakkan Raja (King) dari f7 ke e7.",
-   "Kita: Nxh6 – Putih menggerakkan Kuda (Knight) dari g4 ke h6 dan menangkap Menteri hitam (Queen, nilai 9).",
+   "Lawan: Ke7 \u2013 Hitam menggerakkan Raja (King) dari f7 ke e7.",
+   "Kita: Nxh6 \u2013 Putih menggerakkan Kuda (Knight) dari g4 ke h6 dan menangkap Menteri hitam (Queen, nilai 9).",
    "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: +6.52 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Ke7.",
@@ -3595,21 +3595,21 @@
    {
     "san": "Kb2",
     "uci": "c1b2",
-    "eval": "−0.35",
+    "eval": "\u22120.35",
     "refutation": "Re3",
     "reason": "Lebih lemah kira-kira 7.2 Pion daripada penyelesaian; lawan menjawab Re3."
    },
    {
     "san": "e6+",
     "uci": "e5e6",
-    "eval": "−1.37",
+    "eval": "\u22121.37",
     "refutation": "Ke7",
     "reason": "Lebih lemah kira-kira 8.2 Pion daripada penyelesaian; lawan menjawab Ke7."
    },
    {
     "san": "Nd6+",
     "uci": "e4d6",
-    "eval": "−4.28",
+    "eval": "\u22124.28",
     "refutation": "Ke6",
     "reason": "Lebih lemah kira-kira 11.1 Pion daripada penyelesaian; lawan menjawab Ke6."
    }
@@ -3617,8 +3617,8 @@
   "explanation": [
    "Putih menggerakkan Kuda (Knight) dari e4 ke g5. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Raja di f7 dan Benteng di f3 serentak.",
-   "Lawan: Kg6 – Hitam menggerakkan Raja (King) dari f7 ke g6.",
-   "Kita: Nxf3 – Putih menggerakkan Kuda (Knight) dari g5 ke f3 dan menangkap Benteng hitam (Rook, nilai 5).",
+   "Lawan: Kg6 \u2013 Hitam menggerakkan Raja (King) dari f7 ke g6.",
+   "Kita: Nxf3 \u2013 Putih menggerakkan Kuda (Knight) dari g5 ke f3 dan menangkap Benteng hitam (Rook, nilai 5).",
    "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: +6.80 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kg6.",
@@ -3664,14 +3664,14 @@
    {
     "san": "Ng5+",
     "uci": "h3g5",
-    "eval": "−2.98",
+    "eval": "\u22122.98",
     "refutation": "Kd7",
     "reason": "Lebih lemah kira-kira 9.3 Pion daripada penyelesaian; lawan menjawab Kd7."
    },
    {
     "san": "Kc1",
     "uci": "b2c1",
-    "eval": "−3.76",
+    "eval": "\u22123.76",
     "refutation": "Kd7",
     "reason": "Lebih lemah kira-kira 10.1 Pion daripada penyelesaian; lawan menjawab Kd7."
    }
@@ -3679,8 +3679,8 @@
   "explanation": [
    "Putih menggerakkan Kuda (Knight) dari h3 ke f4. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Raja di e6 dan Menteri di d5 serentak.",
-   "Lawan: Ke5 – Hitam menggerakkan Raja (King) dari e6 ke e5.",
-   "Kita: Nxd5 – Putih menggerakkan Kuda (Knight) dari f4 ke d5 dan menangkap Menteri hitam (Queen, nilai 9).",
+   "Lawan: Ke5 \u2013 Hitam menggerakkan Raja (King) dari e6 ke e5.",
+   "Kita: Nxd5 \u2013 Putih menggerakkan Kuda (Knight) dari f4 ke d5 dan menangkap Menteri hitam (Queen, nilai 9).",
    "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: +6.34 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Ke5.",
@@ -3726,21 +3726,21 @@
    {
     "san": "Nc4",
     "uci": "b2c4",
-    "eval": "−3.49",
+    "eval": "\u22123.49",
     "refutation": "Qxh2",
     "reason": "Lebih lemah kira-kira 10.5 Pion daripada penyelesaian; lawan menjawab Qxh2."
    },
    {
     "san": "Nd3",
     "uci": "b2d3",
-    "eval": "−4.23",
+    "eval": "\u22124.23",
     "refutation": "Qxh2",
     "reason": "Lebih lemah kira-kira 11.2 Pion daripada penyelesaian; lawan menjawab Qxh2."
    },
    {
     "san": "Bxc6",
     "uci": "g2c6",
-    "eval": "−4.31",
+    "eval": "\u22124.31",
     "refutation": "Qxb2",
     "reason": "Lebih lemah kira-kira 11.3 Pion daripada penyelesaian; lawan menjawab Qxb2."
    }
@@ -3748,8 +3748,8 @@
   "explanation": [
    "Putih menggerakkan Kuda (Knight) dari h2 ke g4. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Raja di f6 dan Menteri di e5 serentak.",
-   "Lawan: Ke6 – Hitam menggerakkan Raja (King) dari f6 ke e6.",
-   "Kita: Nxe5 – Putih menggerakkan Kuda (Knight) dari g4 ke e5 dan menangkap Menteri hitam (Queen, nilai 9).",
+   "Lawan: Ke6 \u2013 Hitam menggerakkan Raja (King) dari f6 ke e6.",
+   "Kita: Nxe5 \u2013 Putih menggerakkan Kuda (Knight) dari g4 ke e5 dan menangkap Menteri hitam (Queen, nilai 9).",
    "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: +6.98 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Ke6.",
@@ -3795,14 +3795,14 @@
    {
     "san": "Rb2",
     "uci": "d2b2",
-    "eval": "−2.32",
+    "eval": "\u22122.32",
     "refutation": "Qg5+",
     "reason": "Lebih lemah kira-kira 9.8 Pion daripada penyelesaian; lawan menjawab Qg5+."
    },
    {
     "san": "Kf1",
     "uci": "g2f1",
-    "eval": "−2.13",
+    "eval": "\u22122.13",
     "refutation": "Qf3+",
     "reason": "Lebih lemah kira-kira 9.6 Pion daripada penyelesaian; lawan menjawab Qf3+."
    }
@@ -3810,8 +3810,8 @@
   "explanation": [
    "Putih menggerakkan Kuda (Knight) dari e2 ke f4. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Raja di g6 dan Menteri di h5 serentak.",
-   "Lawan: Kh7 – Hitam menggerakkan Raja (King) dari g6 ke h7.",
-   "Kita: Nxh5 – Putih menggerakkan Kuda (Knight) dari f4 ke h5 dan menangkap Menteri hitam (Queen, nilai 9).",
+   "Lawan: Kh7 \u2013 Hitam menggerakkan Raja (King) dari g6 ke h7.",
+   "Kita: Nxh5 \u2013 Putih menggerakkan Kuda (Knight) dari f4 ke h5 dan menangkap Menteri hitam (Queen, nilai 9).",
    "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: +7.43 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kh7.",
@@ -3857,21 +3857,21 @@
    {
     "san": "Kb2",
     "uci": "a1b2",
-    "eval": "−6.60",
+    "eval": "\u22126.60",
     "refutation": "Kxe2",
     "reason": "Lebih lemah kira-kira 16.2 Pion daripada penyelesaian; lawan menjawab Kxe2."
    },
    {
     "san": "f4",
     "uci": "f2f4",
-    "eval": "−7.20",
+    "eval": "\u22127.20",
     "refutation": "Kxe2",
     "reason": "Lebih lemah kira-kira 16.8 Pion daripada penyelesaian; lawan menjawab Kxe2."
    },
    {
     "san": "Bc4+",
     "uci": "a2c4",
-    "eval": "−7.78",
+    "eval": "\u22127.78",
     "refutation": "Kxc4",
     "reason": "Lebih lemah kira-kira 17.4 Pion daripada penyelesaian; lawan menjawab Kxc4."
    }
@@ -3879,8 +3879,8 @@
   "explanation": [
    "Putih menggerakkan Kuda (Knight) dari e2 ke f4. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Menteri di g6 dan Raja di d3 serentak.",
-   "Lawan: Kd2 – Hitam menggerakkan Raja (King) dari d3 ke d2.",
-   "Kita: Nxg6 – Putih menggerakkan Kuda (Knight) dari f4 ke g6 dan menangkap Menteri hitam (Queen, nilai 9).",
+   "Lawan: Kd2 \u2013 Hitam menggerakkan Raja (King) dari d3 ke d2.",
+   "Kita: Nxg6 \u2013 Putih menggerakkan Kuda (Knight) dari f4 ke g6 dan menangkap Menteri hitam (Queen, nilai 9).",
    "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: +9.59 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kd2.",
@@ -3926,14 +3926,14 @@
    {
     "san": "Nd4",
     "uci": "e6d4",
-    "eval": "−1.96",
+    "eval": "\u22121.96",
     "refutation": "Qxe3+",
     "reason": "Lebih lemah kira-kira 11.3 Pion daripada penyelesaian; lawan menjawab Qxe3+."
    },
    {
     "san": "Rd6",
     "uci": "d1d6",
-    "eval": "−5.31",
+    "eval": "\u22125.31",
     "refutation": "dxe6",
     "reason": "Lebih lemah kira-kira 14.6 Pion daripada penyelesaian; lawan menjawab dxe6."
    }
@@ -3941,8 +3941,8 @@
   "explanation": [
    "Putih menggerakkan Kuda (Knight) dari e6 ke c7. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Raja di a8 dan Menteri di e8 serentak.",
-   "Lawan: Kb7 – Hitam menggerakkan Raja (King) dari a8 ke b7.",
-   "Kita: Nxe8 – Putih menggerakkan Kuda (Knight) dari c7 ke e8 dan menangkap Menteri hitam (Queen, nilai 9).",
+   "Lawan: Kb7 \u2013 Hitam menggerakkan Raja (King) dari a8 ke b7.",
+   "Kita: Nxe8 \u2013 Putih menggerakkan Kuda (Knight) dari c7 ke e8 dan menangkap Menteri hitam (Queen, nilai 9).",
    "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: +9.30 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kb7.",
@@ -4003,9 +4003,9 @@
   "explanation": [
    "Hitam menggerakkan Kuda (Knight) dari f5 ke e3. Ini CHECK: Raja putih diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Menteri di c4 dan Raja di d1 serentak.",
-   "Lawan: Ke2 – Putih menggerakkan Raja (King) dari d1 ke e2.",
-   "Kita: Nxc4 – Hitam menggerakkan Kuda (Knight) dari e3 ke c4 dan menangkap Menteri putih (Queen, nilai 9).",
-   "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: −6.49 (dari pihak Putih)."
+   "Lawan: Ke2 \u2013 Putih menggerakkan Raja (King) dari d1 ke e2.",
+   "Kita: Nxc4 \u2013 Hitam menggerakkan Kuda (Knight) dari e3 ke c4 dan menangkap Menteri putih (Queen, nilai 9).",
+   "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: \u22126.49 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Ke2.",
   "followUp": "Susulan: Nxc4.",
@@ -4058,14 +4058,14 @@
    {
     "san": "Nb6+",
     "uci": "a8b6",
-    "eval": "−6.08",
+    "eval": "\u22126.08",
     "refutation": "Kd4",
     "reason": "Lebih lemah kira-kira 13.3 Pion daripada penyelesaian; lawan menjawab Kd4."
    },
    {
     "san": "Be2",
     "uci": "f3e2",
-    "eval": "−6.67",
+    "eval": "\u22126.67",
     "refutation": "Qe5+",
     "reason": "Lebih lemah kira-kira 13.9 Pion daripada penyelesaian; lawan menjawab Qe5+."
    }
@@ -4073,10 +4073,10 @@
   "explanation": [
    "Putih menggerakkan Kuda (Knight) dari a8 ke c7. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Menteri di e6 dan Raja di d5 serentak.",
-   "Lawan: Kc4 – Hitam menggerakkan Raja (King) dari d5 ke c4.",
-   "Kita: Be2+ – Putih menggerakkan Gajah (Bishop) dari f3 ke e2. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
-   "Lawan: Kb4 – Hitam menggerakkan Raja (King) dari c4 ke b4.",
-   "Kita: Nxe6 – Putih menggerakkan Kuda (Knight) dari c7 ke e6 dan menangkap Menteri hitam (Queen, nilai 9).",
+   "Lawan: Kc4 \u2013 Hitam menggerakkan Raja (King) dari d5 ke c4.",
+   "Kita: Be2+ \u2013 Putih menggerakkan Gajah (Bishop) dari f3 ke e2. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
+   "Lawan: Kb4 \u2013 Hitam menggerakkan Raja (King) dari c4 ke b4.",
+   "Kita: Nxe6 \u2013 Putih menggerakkan Kuda (Knight) dari c7 ke e6 dan menangkap Menteri hitam (Queen, nilai 9).",
    "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: +7.23 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kc4.",
@@ -4122,21 +4122,21 @@
    {
     "san": "Kf2",
     "uci": "f1f2",
-    "eval": "−3.98",
+    "eval": "\u22123.98",
     "refutation": "Qc6",
     "reason": "Lebih lemah kira-kira 12.0 Pion daripada penyelesaian; lawan menjawab Qc6."
    },
    {
     "san": "Re3+",
     "uci": "a3e3",
-    "eval": "−4.18",
+    "eval": "\u22124.18",
     "refutation": "Kf5",
     "reason": "Lebih lemah kira-kira 12.2 Pion daripada penyelesaian; lawan menjawab Kf5."
    },
    {
     "san": "Ng7+",
     "uci": "e8g7",
-    "eval": "−4.46",
+    "eval": "\u22124.46",
     "refutation": "Ke5",
     "reason": "Lebih lemah kira-kira 12.5 Pion daripada penyelesaian; lawan menjawab Ke5."
    }
@@ -4144,8 +4144,8 @@
   "explanation": [
    "Putih menggerakkan Kuda (Knight) dari e8 ke c7. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Menteri di a8 dan Raja di e6 serentak.",
-   "Lawan: Kf5 – Hitam menggerakkan Raja (King) dari e6 ke f5.",
-   "Kita: Nxa8 – Putih menggerakkan Kuda (Knight) dari c7 ke a8 dan menangkap Menteri hitam (Queen, nilai 9).",
+   "Lawan: Kf5 \u2013 Hitam menggerakkan Raja (King) dari e6 ke f5.",
+   "Kita: Nxa8 \u2013 Putih menggerakkan Kuda (Knight) dari c7 ke a8 dan menangkap Menteri hitam (Queen, nilai 9).",
    "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: +8.05 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kf5.",
@@ -4191,21 +4191,21 @@
    {
     "san": "Kb2",
     "uci": "a2b2",
-    "eval": "−0.05",
+    "eval": "\u22120.05",
     "refutation": "Ra5",
     "reason": "Lebih lemah kira-kira 3.8 Pion daripada penyelesaian; lawan menjawab Ra5."
    },
    {
     "san": "Nxf6",
     "uci": "d5f6",
-    "eval": "−0.05",
+    "eval": "\u22120.05",
     "refutation": "Kb4+",
     "reason": "Lebih lemah kira-kira 3.8 Pion daripada penyelesaian; lawan menjawab Kb4+."
    },
    {
     "san": "Nc3+",
     "uci": "d5c3",
-    "eval": "−0.28",
+    "eval": "\u22120.28",
     "refutation": "Kb4+",
     "reason": "Lebih lemah kira-kira 4.1 Pion daripada penyelesaian; lawan menjawab Kb4+."
    }
@@ -4213,8 +4213,8 @@
   "explanation": [
    "Putih menggerakkan Kuda (Knight) dari d5 ke b6. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Benteng di a8 dan Raja di a4 serentak.",
-   "Lawan: Kb5+ – Hitam menggerakkan Raja (King) dari a4 ke b5. Ini CHECK: Raja putih diserang dan mesti diselamatkan pada langkah seterusnya.",
-   "Kita: Nxa8 – Putih menggerakkan Kuda (Knight) dari b6 ke a8 dan menangkap Benteng hitam (Rook, nilai 5).",
+   "Lawan: Kb5+ \u2013 Hitam menggerakkan Raja (King) dari a4 ke b5. Ini CHECK: Raja putih diserang dan mesti diselamatkan pada langkah seterusnya.",
+   "Kita: Nxa8 \u2013 Putih menggerakkan Kuda (Knight) dari b6 ke a8 dan menangkap Benteng hitam (Rook, nilai 5).",
    "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: +3.78 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kb5+.",
@@ -4279,7 +4279,7 @@
    "Putih menggerakkan Menteri (Queen) dari a4 ke a8. CHECKMATE! Raja hitam diserang dan tiada jalan keluar.",
    "Checkmate (corak back-rank)!"
   ],
-  "defence": "Lawan tiada pertahanan – permainan tamat.",
+  "defence": "Lawan tiada pertahanan \u2013 permainan tamat.",
   "followUp": "Tiada susulan diperlukan.",
   "hints": {
    "threat": "Lihat petak di sekeliling Raja lawan: petak mana yang masih bebas?",
@@ -4341,7 +4341,7 @@
    "Putih menggerakkan Menteri (Queen) dari a3 ke e7. CHECKMATE! Raja hitam diserang dan tiada jalan keluar.",
    "Checkmate!"
   ],
-  "defence": "Lawan tiada pertahanan – permainan tamat.",
+  "defence": "Lawan tiada pertahanan \u2013 permainan tamat.",
   "followUp": "Tiada susulan diperlukan.",
   "hints": {
    "threat": "Lihat petak di sekeliling Raja lawan: petak mana yang masih bebas?",
@@ -4402,7 +4402,7 @@
    "Hitam menggerakkan Menteri (Queen) dari f4 ke c1. CHECKMATE! Raja putih diserang dan tiada jalan keluar.",
    "Checkmate (corak back-rank)!"
   ],
-  "defence": "Lawan tiada pertahanan – permainan tamat.",
+  "defence": "Lawan tiada pertahanan \u2013 permainan tamat.",
   "followUp": "Tiada susulan diperlukan.",
   "hints": {
    "threat": "Lihat petak di sekeliling Raja lawan: petak mana yang masih bebas?",
@@ -4468,8 +4468,8 @@
   ],
   "explanation": [
    "Putih menggerakkan Menteri (Queen) dari a3 ke f8. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
-   "Lawan: Kh7 – Hitam menggerakkan Raja (King) dari g8 ke h7.",
-   "Kita: Rh6# – Putih menggerakkan Benteng (Rook) dari f6 ke h6. CHECKMATE! Raja hitam diserang dan tiada jalan keluar.",
+   "Lawan: Kh7 \u2013 Hitam menggerakkan Raja (King) dari g8 ke h7.",
+   "Kita: Rh6# \u2013 Putih menggerakkan Benteng (Rook) dari f6 ke h6. CHECKMATE! Raja hitam diserang dan tiada jalan keluar.",
    "Checkmate!"
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kh7.",
@@ -4533,7 +4533,7 @@
    "Hitam menggerakkan Menteri (Queen) dari d6 ke g3. CHECKMATE! Raja putih diserang dan tiada jalan keluar.",
    "Checkmate!"
   ],
-  "defence": "Lawan tiada pertahanan – permainan tamat.",
+  "defence": "Lawan tiada pertahanan \u2013 permainan tamat.",
   "followUp": "Tiada susulan diperlukan.",
   "hints": {
    "threat": "Lihat petak di sekeliling Raja lawan: petak mana yang masih bebas?",
@@ -4592,15 +4592,15 @@
    {
     "san": "Rxb3",
     "uci": "h3b3",
-    "eval": "−10.89",
+    "eval": "\u221210.89",
     "refutation": "Ka2",
-    "reason": "Tiada checkmate yang dipaksa selepas langkah ini (enjin: −10.89 dari pihak Putih). Lawan menjawab Ka2."
+    "reason": "Tiada checkmate yang dipaksa selepas langkah ini (enjin: \u221210.89 dari pihak Putih). Lawan menjawab Ka2."
    }
   ],
   "explanation": [
    "Hitam menggerakkan Benteng (Rook) dari h3 ke h1. Ini CHECK: Raja putih diserang dan mesti diselamatkan pada langkah seterusnya.",
-   "Lawan: Ka2 – Putih menggerakkan Raja (King) dari a1 ke a2.",
-   "Kita: Ra6# – Hitam menggerakkan Benteng (Rook) dari d6 ke a6. CHECKMATE! Raja putih diserang dan tiada jalan keluar.",
+   "Lawan: Ka2 \u2013 Putih menggerakkan Raja (King) dari a1 ke a2.",
+   "Kita: Ra6# \u2013 Hitam menggerakkan Benteng (Rook) dari d6 ke a6. CHECKMATE! Raja putih diserang dan tiada jalan keluar.",
    "Checkmate!"
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Ka2.",
@@ -4639,14 +4639,14 @@
    {
     "san": "Qf3+",
     "uci": "g3f3",
-    "eval": "−0.55",
+    "eval": "\u22120.55",
     "refutation": "Kc2",
     "reason": "Lebih lemah kira-kira 3.4 Pion daripada penyelesaian; lawan menjawab Kc2."
    },
    {
     "san": "Qg4+",
     "uci": "g3g4",
-    "eval": "−0.23",
+    "eval": "\u22120.23",
     "refutation": "Kc2",
     "reason": "Lebih lemah kira-kira 3.7 Pion daripada penyelesaian; lawan menjawab Kc2."
    },
@@ -4661,9 +4661,9 @@
   "explanation": [
    "Hitam menggerakkan Menteri (Queen) dari g3 ke d3 dan menangkap Kuda putih (Knight, nilai 3).",
    "Pin: Gajah di d2 tidak boleh lari kerana Raja di d1 berada di belakangnya.",
-   "Hasil: menang kira-kira 3 mata bahan. Penilaian enjin selepas langkah pertama: −3.91 (dari pihak Putih)."
+   "Hasil: menang kira-kira 3 mata bahan. Penilaian enjin selepas langkah pertama: \u22123.91 (dari pihak Putih)."
   ],
-  "defence": "Lawan tidak dapat mendapatkan semula bahan dengan baik – enjin menilai kedudukan selepas tangkapan +3.91 untuk anda.",
+  "defence": "Lawan tidak dapat mendapatkan semula bahan dengan baik \u2013 enjin menilai kedudukan selepas tangkapan +3.91 untuk anda.",
   "followUp": "Teruskan dengan membangunkan buah dan menukar buah apabila anda lebih bahan.",
   "hints": {
    "threat": "Cari buah lawan yang berdiri di hadapan Raja atau Menterinya pada satu garisan.",
@@ -4706,21 +4706,21 @@
    {
     "san": "Kg3",
     "uci": "g2g3",
-    "eval": "−1.34",
+    "eval": "\u22121.34",
     "refutation": "Rd7",
     "reason": "Lebih lemah kira-kira 7.3 Pion daripada penyelesaian; lawan menjawab Rd7."
    },
    {
     "san": "Bd6",
     "uci": "b4d6",
-    "eval": "−2.39",
+    "eval": "\u22122.39",
     "refutation": "Ra7",
     "reason": "Lebih lemah kira-kira 8.4 Pion daripada penyelesaian; lawan menjawab Ra7."
    },
    {
     "san": "Be7+",
     "uci": "b4e7",
-    "eval": "−5.80",
+    "eval": "\u22125.80",
     "refutation": "Kxe7",
     "reason": "Lebih lemah kira-kira 11.8 Pion daripada penyelesaian; lawan menjawab Kxe7."
    }
@@ -4728,8 +4728,8 @@
   "explanation": [
    "Putih menggerakkan Gajah (Bishop) dari b4 ke a5.",
    "Pin: Benteng di c7 tidak boleh lari kerana Raja di d8 berada di belakangnya.",
-   "Lawan: Kd7 – Hitam menggerakkan Raja (King) dari d8 ke d7.",
-   "Kita: Bxc7 – Putih menggerakkan Gajah (Bishop) dari a5 ke c7 dan menangkap Benteng hitam (Rook, nilai 5).",
+   "Lawan: Kd7 \u2013 Hitam menggerakkan Raja (King) dari d8 ke d7.",
+   "Kita: Bxc7 \u2013 Putih menggerakkan Gajah (Bishop) dari a5 ke c7 dan menangkap Benteng hitam (Rook, nilai 5).",
    "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: +5.98 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kd7.",
@@ -4797,9 +4797,9 @@
   "explanation": [
    "Hitam menggerakkan Gajah (Bishop) dari c4 ke b3.",
    "Pin: Benteng di c2 tidak boleh lari kerana Raja di d1 berada di belakangnya.",
-   "Lawan: Kc1 – Putih menggerakkan Raja (King) dari d1 ke c1.",
-   "Kita: Bxc2 – Hitam menggerakkan Gajah (Bishop) dari b3 ke c2 dan menangkap Benteng putih (Rook, nilai 5).",
-   "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: −5.75 (dari pihak Putih)."
+   "Lawan: Kc1 \u2013 Putih menggerakkan Raja (King) dari d1 ke c1.",
+   "Kita: Bxc2 \u2013 Hitam menggerakkan Gajah (Bishop) dari b3 ke c2 dan menangkap Benteng putih (Rook, nilai 5).",
+   "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: \u22125.75 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kc1.",
   "followUp": "Susulan: Bxc2.",
@@ -4845,21 +4845,21 @@
    {
     "san": "Nxe6+",
     "uci": "c5e6",
-    "eval": "−0.06",
+    "eval": "\u22120.06",
     "refutation": "Qxe6",
     "reason": "Lebih lemah kira-kira 6.3 Pion daripada penyelesaian; lawan menjawab Qxe6."
    },
    {
     "san": "Ne4",
     "uci": "c5e4",
-    "eval": "−1.08",
+    "eval": "\u22121.08",
     "refutation": "Qb5",
     "reason": "Lebih lemah kira-kira 7.3 Pion daripada penyelesaian; lawan menjawab Qb5."
    },
    {
     "san": "Nxa6",
     "uci": "c5a6",
-    "eval": "−3.60",
+    "eval": "\u22123.60",
     "refutation": "Qh1+",
     "reason": "Lebih lemah kira-kira 9.8 Pion daripada penyelesaian; lawan menjawab Qh1+."
    }
@@ -4867,8 +4867,8 @@
   "explanation": [
    "Putih menggerakkan Benteng (Rook) dari a3 ke d3.",
    "Pin: Menteri di d5 tidak boleh lari kerana Raja di d8 berada di belakangnya.",
-   "Lawan: Nf4 – Hitam menggerakkan Kuda (Knight) dari e6 ke f4.",
-   "Kita: Rxd5+ – Putih menggerakkan Benteng (Rook) dari d3 ke d5 dan menangkap Menteri hitam (Queen, nilai 9). Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
+   "Lawan: Nf4 \u2013 Hitam menggerakkan Kuda (Knight) dari e6 ke f4.",
+   "Kita: Rxd5+ \u2013 Putih menggerakkan Benteng (Rook) dari d3 ke d5 dan menangkap Menteri hitam (Queen, nilai 9). Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: +6.22 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Nf4.",
@@ -4922,7 +4922,7 @@
    {
     "san": "Kd7",
     "uci": "d8d7",
-    "eval": "−0.22",
+    "eval": "\u22120.22",
     "refutation": "Ke1",
     "reason": "Lebih lemah kira-kira 6.6 Pion daripada penyelesaian; lawan menjawab Ke1."
    },
@@ -4937,11 +4937,11 @@
   "explanation": [
    "Hitam menggerakkan Gajah (Bishop) dari e6 ke c4.",
    "Pin: Benteng di e2 tidak boleh lari kerana Raja di f1 berada di belakangnya.",
-   "Lawan: f4 – Putih menggerakkan Pion (Pawn) dari f3 ke f4.",
-   "Kita: Kd7 – Hitam menggerakkan Raja (King) dari d8 ke d7.",
-   "Lawan: Kf2 – Putih menggerakkan Raja (King) dari f1 ke f2.",
-   "Kita: Bxe2 – Hitam menggerakkan Gajah (Bishop) dari c4 ke e2 dan menangkap Benteng putih (Rook, nilai 5).",
-   "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: −6.78 (dari pihak Putih)."
+   "Lawan: f4 \u2013 Putih menggerakkan Pion (Pawn) dari f3 ke f4.",
+   "Kita: Kd7 \u2013 Hitam menggerakkan Raja (King) dari d8 ke d7.",
+   "Lawan: Kf2 \u2013 Putih menggerakkan Raja (King) dari f1 ke f2.",
+   "Kita: Bxe2 \u2013 Hitam menggerakkan Gajah (Bishop) dari c4 ke e2 dan menangkap Benteng putih (Rook, nilai 5).",
+   "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: \u22126.78 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: f4.",
   "followUp": "Susulan: Kd7 Kf2 Bxe2.",
@@ -4986,14 +4986,14 @@
    {
     "san": "Ke7",
     "uci": "e8e7",
-    "eval": "−0.23",
+    "eval": "\u22120.23",
     "refutation": "Kf3",
     "reason": "Lebih lemah kira-kira 5.1 Pion daripada penyelesaian; lawan menjawab Kf3."
    },
    {
     "san": "Kf7",
     "uci": "e8f7",
-    "eval": "−0.16",
+    "eval": "\u22120.16",
     "refutation": "Kf3",
     "reason": "Lebih lemah kira-kira 5.2 Pion daripada penyelesaian; lawan menjawab Kf3."
    }
@@ -5001,9 +5001,9 @@
   "explanation": [
    "Hitam menggerakkan Gajah (Bishop) dari a1 ke d4.",
    "Pin: Kuda di e3 tidak boleh lari kerana Raja di f2 berada di belakangnya.",
-   "Lawan: Kf3 – Putih menggerakkan Raja (King) dari f2 ke f3.",
-   "Kita: Bxe3 – Hitam menggerakkan Gajah (Bishop) dari d4 ke e3 dan menangkap Kuda putih (Knight, nilai 3).",
-   "Hasil: menang kira-kira 3 mata bahan. Penilaian enjin selepas langkah pertama: −5.31 (dari pihak Putih)."
+   "Lawan: Kf3 \u2013 Putih menggerakkan Raja (King) dari f2 ke f3.",
+   "Kita: Bxe3 \u2013 Hitam menggerakkan Gajah (Bishop) dari d4 ke e3 dan menangkap Kuda putih (Knight, nilai 3).",
+   "Hasil: menang kira-kira 3 mata bahan. Penilaian enjin selepas langkah pertama: \u22125.31 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kf3.",
   "followUp": "Susulan: Bxe3.",
@@ -5048,7 +5048,7 @@
    {
     "san": "Bxd4",
     "uci": "c5d4",
-    "eval": "−0.02",
+    "eval": "\u22120.02",
     "refutation": "Rc4",
     "reason": "Lebih lemah kira-kira 2.7 Pion daripada penyelesaian; lawan menjawab Rc4."
    },
@@ -5063,9 +5063,9 @@
   "explanation": [
    "Hitam menggerakkan Gajah (Bishop) dari c5 ke b4.",
    "Pin: Benteng di c3 tidak boleh lari kerana Raja di d2 berada di belakangnya.",
-   "Lawan: Kc2 – Putih menggerakkan Raja (King) dari d2 ke c2.",
-   "Kita: Bxc3 – Hitam menggerakkan Gajah (Bishop) dari b4 ke c3 dan menangkap Benteng putih (Rook, nilai 5).",
-   "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: −2.69 (dari pihak Putih)."
+   "Lawan: Kc2 \u2013 Putih menggerakkan Raja (King) dari d2 ke c2.",
+   "Kita: Bxc3 \u2013 Hitam menggerakkan Gajah (Bishop) dari b4 ke c3 dan menangkap Benteng putih (Rook, nilai 5).",
+   "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: \u22122.69 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kc2.",
   "followUp": "Susulan: Bxc3.",
@@ -5110,14 +5110,14 @@
    {
     "san": "Bxg7",
     "uci": "h6g7",
-    "eval": "−0.03",
+    "eval": "\u22120.03",
     "refutation": "Ra6",
     "reason": "Lebih lemah kira-kira 6.3 Pion daripada penyelesaian; lawan menjawab Ra6."
    },
    {
     "san": "Bg5",
     "uci": "h6g5",
-    "eval": "−1.46",
+    "eval": "\u22121.46",
     "refutation": "Kc6",
     "reason": "Lebih lemah kira-kira 7.8 Pion daripada penyelesaian; lawan menjawab Kc6."
    }
@@ -5125,8 +5125,8 @@
   "explanation": [
    "Putih menggerakkan Gajah (Bishop) dari h6 ke f4.",
    "Pin: Benteng di d6 tidak boleh lari kerana Raja di c7 berada di belakangnya.",
-   "Lawan: Kc6 – Hitam menggerakkan Raja (King) dari c7 ke c6.",
-   "Kita: Bxd6 – Putih menggerakkan Gajah (Bishop) dari f4 ke d6 dan menangkap Benteng hitam (Rook, nilai 5).",
+   "Lawan: Kc6 \u2013 Hitam menggerakkan Raja (King) dari c7 ke c6.",
+   "Kita: Bxd6 \u2013 Putih menggerakkan Gajah (Bishop) dari f4 ke d6 dan menangkap Benteng hitam (Rook, nilai 5).",
    "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: +6.31 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kc6.",
@@ -5172,14 +5172,14 @@
    {
     "san": "Kf1",
     "uci": "e1f1",
-    "eval": "−2.13",
+    "eval": "\u22122.13",
     "refutation": "Qxg1+",
     "reason": "Lebih lemah kira-kira 13.2 Pion daripada penyelesaian; lawan menjawab Qxg1+."
    },
    {
     "san": "Be6+",
     "uci": "a2e6",
-    "eval": "−6.48",
+    "eval": "\u22126.48",
     "refutation": "Qxe6",
     "reason": "Lebih lemah kira-kira 17.5 Pion daripada penyelesaian; lawan menjawab Qxe6."
    }
@@ -5190,7 +5190,7 @@
    "Pin: Pion di f5 tidak boleh lari kerana Kuda di e4 berada di belakangnya.",
    "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: +11.03 (dari pihak Putih)."
   ],
-  "defence": "Lawan tidak dapat mendapatkan semula bahan dengan baik – enjin menilai kedudukan selepas tangkapan +11.03 untuk anda.",
+  "defence": "Lawan tidak dapat mendapatkan semula bahan dengan baik \u2013 enjin menilai kedudukan selepas tangkapan +11.03 untuk anda.",
   "followUp": "Teruskan dengan membangunkan buah dan menukar buah apabila anda lebih bahan.",
   "hints": {
    "threat": "Cari buah lawan yang berdiri di hadapan Raja atau Menterinya pada satu garisan.",
@@ -5242,21 +5242,21 @@
    {
     "san": "Kf2",
     "uci": "g1f2",
-    "eval": "−1.15",
+    "eval": "\u22121.15",
     "refutation": "Rh3",
     "reason": "Lebih lemah kira-kira 8.5 Pion daripada penyelesaian; lawan menjawab Rh3."
    },
    {
     "san": "Kf1",
     "uci": "g1f1",
-    "eval": "−1.54",
+    "eval": "\u22121.54",
     "refutation": "Kf5",
     "reason": "Lebih lemah kira-kira 8.9 Pion daripada penyelesaian; lawan menjawab Kf5."
    },
    {
     "san": "Be7+",
     "uci": "b4e7",
-    "eval": "−7.65",
+    "eval": "\u22127.65",
     "refutation": "Rxe7",
     "reason": "Lebih lemah kira-kira 15.0 Pion daripada penyelesaian; lawan menjawab Rxe7."
    }
@@ -5264,10 +5264,10 @@
   "explanation": [
    "Putih menggerakkan Gajah (Bishop) dari b4 ke d2.",
    "Pin: Benteng di e3 tidak boleh lari kerana Raja di g5 berada di belakangnya.",
-   "Lawan: Kf4 – Hitam menggerakkan Raja (King) dari g5 ke f4.",
-   "Kita: Kf2 – Putih menggerakkan Raja (King) dari g1 ke f2.",
-   "Lawan: Kg5 – Hitam menggerakkan Raja (King) dari f4 ke g5.",
-   "Kita: Bxe3+ – Putih menggerakkan Gajah (Bishop) dari d2 ke e3 dan menangkap Benteng hitam (Rook, nilai 5). Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
+   "Lawan: Kf4 \u2013 Hitam menggerakkan Raja (King) dari g5 ke f4.",
+   "Kita: Kf2 \u2013 Putih menggerakkan Raja (King) dari g1 ke f2.",
+   "Lawan: Kg5 \u2013 Hitam menggerakkan Raja (King) dari f4 ke g5.",
+   "Kita: Bxe3+ \u2013 Putih menggerakkan Gajah (Bishop) dari d2 ke e3 dan menangkap Benteng hitam (Rook, nilai 5). Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: +7.39 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kf4.",
@@ -5314,14 +5314,14 @@
    {
     "san": "Qb5+",
     "uci": "b8b5",
-    "eval": "−0.05",
+    "eval": "\u22120.05",
     "refutation": "Kg4",
     "reason": "Lebih lemah kira-kira 10.2 Pion daripada penyelesaian; lawan menjawab Kg4."
    },
    {
     "san": "Qb1+",
     "uci": "b8b1",
-    "eval": "−0.05",
+    "eval": "\u22120.05",
     "refutation": "Kg5",
     "reason": "Lebih lemah kira-kira 10.2 Pion daripada penyelesaian; lawan menjawab Kg5."
    }
@@ -5329,9 +5329,9 @@
   "explanation": [
    "Hitam menggerakkan Menteri (Queen) dari b8 ke c8. Ini CHECK: Raja putih diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Skewer: Raja di f5 mesti bergerak, dan Menteri di h3 di belakangnya akan ditangkap.",
-   "Lawan: Ke4 – Putih menggerakkan Raja (King) dari f5 ke e4.",
-   "Kita: Qxh3 – Hitam menggerakkan Menteri (Queen) dari c8 ke h3 dan menangkap Menteri putih (Queen, nilai 9).",
-   "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: −10.21 (dari pihak Putih)."
+   "Lawan: Ke4 \u2013 Putih menggerakkan Raja (King) dari f5 ke e4.",
+   "Kita: Qxh3 \u2013 Hitam menggerakkan Menteri (Queen) dari c8 ke h3 dan menangkap Menteri putih (Queen, nilai 9).",
+   "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: \u221210.21 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Ke4.",
   "followUp": "Susulan: Qxh3.",
@@ -5376,14 +5376,14 @@
    {
     "san": "Kd7",
     "uci": "d8d7",
-    "eval": "−1.08",
+    "eval": "\u22121.08",
     "refutation": "Ra1",
     "reason": "Lebih lemah kira-kira 5.0 Pion daripada penyelesaian; lawan menjawab Ra1."
    },
    {
     "san": "Ke7",
     "uci": "d8e7",
-    "eval": "−0.83",
+    "eval": "\u22120.83",
     "refutation": "Kd3",
     "reason": "Lebih lemah kira-kira 5.3 Pion daripada penyelesaian; lawan menjawab Kd3."
    },
@@ -5398,9 +5398,9 @@
   "explanation": [
    "Hitam menggerakkan Benteng (Rook) dari f5 ke e5 dan menangkap Pion putih (Pawn, nilai 1). Ini CHECK: Raja putih diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Skewer: Raja di e2 mesti bergerak, dan Benteng di e1 di belakangnya akan ditangkap.",
-   "Lawan: Kd2 – Putih menggerakkan Raja (King) dari e2 ke d2.",
-   "Kita: Rxe1 – Hitam menggerakkan Benteng (Rook) dari e5 ke e1 dan menangkap Benteng putih (Rook, nilai 5).",
-   "Hasil: menang kira-kira 6 mata bahan. Penilaian enjin selepas langkah pertama: −6.08 (dari pihak Putih)."
+   "Lawan: Kd2 \u2013 Putih menggerakkan Raja (King) dari e2 ke d2.",
+   "Kita: Rxe1 \u2013 Hitam menggerakkan Benteng (Rook) dari e5 ke e1 dan menangkap Benteng putih (Rook, nilai 5).",
+   "Hasil: menang kira-kira 6 mata bahan. Penilaian enjin selepas langkah pertama: \u22126.08 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kd2.",
   "followUp": "Susulan: Rxe1.",
@@ -5459,7 +5459,7 @@
    {
     "san": "Qc5+",
     "uci": "c3c5",
-    "eval": "−9.72",
+    "eval": "\u22129.72",
     "refutation": "Kxc5",
     "reason": "Lebih lemah kira-kira 20.3 Pion daripada penyelesaian; lawan menjawab Kxc5."
    }
@@ -5468,8 +5468,8 @@
    "Putih menggerakkan Menteri (Queen) dari c3 ke b4. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Raja di d6 dan Pion di b5 dan Pion di g4 serentak.",
    "Skewer: Raja di d6 mesti bergerak, dan Menteri di f8 di belakangnya akan ditangkap.",
-   "Lawan: Ke5 – Hitam menggerakkan Raja (King) dari d6 ke e5.",
-   "Kita: Qxf8 – Putih menggerakkan Menteri (Queen) dari b4 ke f8 dan menangkap Menteri hitam (Queen, nilai 9).",
+   "Lawan: Ke5 \u2013 Hitam menggerakkan Raja (King) dari d6 ke e5.",
+   "Kita: Qxf8 \u2013 Putih menggerakkan Menteri (Queen) dari b4 ke f8 dan menangkap Menteri hitam (Queen, nilai 9).",
    "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: +10.57 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Ke5.",
@@ -5529,7 +5529,7 @@
    {
     "san": "Bf4+",
     "uci": "d2f4",
-    "eval": "−4.92",
+    "eval": "\u22124.92",
     "refutation": "Rxf4",
     "reason": "Lebih lemah kira-kira 13.6 Pion daripada penyelesaian; lawan menjawab Rxf4."
    }
@@ -5537,8 +5537,8 @@
   "explanation": [
    "Putih menggerakkan Gajah (Bishop) dari d2 ke b4. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Skewer: Raja di d6 mesti bergerak, dan Benteng di f8 di belakangnya akan ditangkap.",
-   "Lawan: Kc7 – Hitam menggerakkan Raja (King) dari d6 ke c7.",
-   "Kita: Bxf8 – Putih menggerakkan Gajah (Bishop) dari b4 ke f8 dan menangkap Benteng hitam (Rook, nilai 5).",
+   "Lawan: Kc7 \u2013 Hitam menggerakkan Raja (King) dari d6 ke c7.",
+   "Kita: Bxf8 \u2013 Putih menggerakkan Gajah (Bishop) dari b4 ke f8 dan menangkap Benteng hitam (Rook, nilai 5).",
    "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: +8.71 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kc7.",
@@ -5584,21 +5584,21 @@
    {
     "san": "Qa5+",
     "uci": "a6a5",
-    "eval": "−0.36",
+    "eval": "\u22120.36",
     "refutation": "Kc6",
     "reason": "Lebih lemah kira-kira 5.7 Pion daripada penyelesaian; lawan menjawab Kc6."
    },
    {
     "san": "Qc4+",
     "uci": "a6c4",
-    "eval": "−0.30",
+    "eval": "\u22120.30",
     "refutation": "Kd6",
     "reason": "Lebih lemah kira-kira 5.8 Pion daripada penyelesaian; lawan menjawab Kd6."
    },
    {
     "san": "Qc8+",
     "uci": "a6c8",
-    "eval": "−0.29",
+    "eval": "\u22120.29",
     "refutation": "Kxd5",
     "reason": "Lebih lemah kira-kira 5.8 Pion daripada penyelesaian; lawan menjawab Kxd5."
    }
@@ -5606,9 +5606,9 @@
   "explanation": [
    "Hitam menggerakkan Menteri (Queen) dari a6 ke a7. Ini CHECK: Raja putih diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Skewer: Raja di c5 mesti bergerak, dan Benteng di f2 di belakangnya akan ditangkap.",
-   "Lawan: Kxd5 – Putih menggerakkan Raja (King) dari c5 ke d5 dan menangkap Pion hitam (Pawn, nilai 1).",
-   "Kita: Qxf2 – Hitam menggerakkan Menteri (Queen) dari a7 ke f2 dan menangkap Benteng putih (Rook, nilai 5).",
-   "Hasil: menang kira-kira 4 mata bahan. Penilaian enjin selepas langkah pertama: −6.05 (dari pihak Putih)."
+   "Lawan: Kxd5 \u2013 Putih menggerakkan Raja (King) dari c5 ke d5 dan menangkap Pion hitam (Pawn, nilai 1).",
+   "Kita: Qxf2 \u2013 Hitam menggerakkan Menteri (Queen) dari a7 ke f2 dan menangkap Benteng putih (Rook, nilai 5).",
+   "Hasil: menang kira-kira 4 mata bahan. Penilaian enjin selepas langkah pertama: \u22126.05 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kxd5.",
   "followUp": "Susulan: Qxf2.",
@@ -5653,7 +5653,7 @@
    {
     "san": "Rc1",
     "uci": "f1c1",
-    "eval": "−1.11",
+    "eval": "\u22121.11",
     "refutation": "Kf3",
     "reason": "Lebih lemah kira-kira 6.8 Pion daripada penyelesaian; lawan menjawab Kf3."
    },
@@ -5675,9 +5675,9 @@
   "explanation": [
    "Hitam menggerakkan Benteng (Rook) dari f1 ke g1. Ini CHECK: Raja putih diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Skewer: Raja di g3 mesti bergerak, dan Benteng di g6 di belakangnya akan ditangkap.",
-   "Lawan: Kf4 – Putih menggerakkan Raja (King) dari g3 ke f4.",
-   "Kita: Rxg6 – Hitam menggerakkan Benteng (Rook) dari g1 ke g6 dan menangkap Benteng putih (Rook, nilai 5).",
-   "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: −7.86 (dari pihak Putih)."
+   "Lawan: Kf4 \u2013 Putih menggerakkan Raja (King) dari g3 ke f4.",
+   "Kita: Rxg6 \u2013 Hitam menggerakkan Benteng (Rook) dari g1 ke g6 dan menangkap Benteng putih (Rook, nilai 5).",
+   "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: \u22127.86 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kf4.",
   "followUp": "Susulan: Rxg6.",
@@ -5737,8 +5737,8 @@
   "explanation": [
    "Putih menggerakkan Benteng (Rook) dari g4 ke g7. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Skewer: Raja di d7 mesti bergerak, dan Benteng di b7 di belakangnya akan ditangkap.",
-   "Lawan: Kc6 – Hitam menggerakkan Raja (King) dari d7 ke c6.",
-   "Kita: Rxb7 – Putih menggerakkan Benteng (Rook) dari g7 ke b7 dan menangkap Benteng hitam (Rook, nilai 5).",
+   "Lawan: Kc6 \u2013 Hitam menggerakkan Raja (King) dari d7 ke c6.",
+   "Kita: Rxb7 \u2013 Putih menggerakkan Benteng (Rook) dari g7 ke b7 dan menangkap Benteng hitam (Rook, nilai 5).",
    "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: +6.76 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kc6.",
@@ -5798,7 +5798,7 @@
    {
     "san": "Rc4+",
     "uci": "c1c4",
-    "eval": "−8.41",
+    "eval": "\u22128.41",
     "refutation": "Kxc4",
     "reason": "Lebih lemah kira-kira 16.2 Pion daripada penyelesaian; lawan menjawab Kxc4."
    }
@@ -5806,8 +5806,8 @@
   "explanation": [
    "Putih menggerakkan Benteng (Rook) dari c1 ke b1. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Skewer: Raja di b4 mesti bergerak, dan Benteng di b7 di belakangnya akan ditangkap.",
-   "Lawan: Kc4 – Hitam menggerakkan Raja (King) dari b4 ke c4.",
-   "Kita: Rxb7 – Putih menggerakkan Benteng (Rook) dari b1 ke b7 dan menangkap Benteng hitam (Rook, nilai 5).",
+   "Lawan: Kc4 \u2013 Hitam menggerakkan Raja (King) dari b4 ke c4.",
+   "Kita: Rxb7 \u2013 Putih menggerakkan Benteng (Rook) dari b1 ke b7 dan menangkap Benteng hitam (Rook, nilai 5).",
    "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: +7.76 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kc4.",
@@ -5853,21 +5853,21 @@
    {
     "san": "Rf2",
     "uci": "d2f2",
-    "eval": "−0.04",
+    "eval": "\u22120.04",
     "refutation": "Rb5",
     "reason": "Lebih lemah kira-kira 6.4 Pion daripada penyelesaian; lawan menjawab Rb5."
    },
    {
     "san": "Rc2",
     "uci": "d2c2",
-    "eval": "−0.15",
+    "eval": "\u22120.15",
     "refutation": "Ra7+",
     "reason": "Lebih lemah kira-kira 6.5 Pion daripada penyelesaian; lawan menjawab Ra7+."
    },
    {
     "san": "Rd4+",
     "uci": "d2d4",
-    "eval": "−2.27",
+    "eval": "\u22122.27",
     "refutation": "Kc3",
     "reason": "Lebih lemah kira-kira 8.7 Pion daripada penyelesaian; lawan menjawab Kc3."
    }
@@ -5875,8 +5875,8 @@
   "explanation": [
    "Putih menggerakkan Benteng (Rook) dari d2 ke b2. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Skewer: Raja di b4 mesti bergerak, dan Benteng di b7 di belakangnya akan ditangkap.",
-   "Lawan: Kc5 – Hitam menggerakkan Raja (King) dari b4 ke c5.",
-   "Kita: Rxb7 – Putih menggerakkan Benteng (Rook) dari b2 ke b7 dan menangkap Benteng hitam (Rook, nilai 5).",
+   "Lawan: Kc5 \u2013 Hitam menggerakkan Raja (King) dari b4 ke c5.",
+   "Kita: Rxb7 \u2013 Putih menggerakkan Benteng (Rook) dari b2 ke b7 dan menangkap Benteng hitam (Rook, nilai 5).",
    "Hasil: menang kira-kira 5 mata bahan. Penilaian enjin selepas langkah pertama: +6.40 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kc5.",
@@ -5936,7 +5936,7 @@
    {
     "san": "Rc5+",
     "uci": "f5c5",
-    "eval": "−4.93",
+    "eval": "\u22124.93",
     "refutation": "Qxc5",
     "reason": "Lebih lemah kira-kira 12.4 Pion daripada penyelesaian; lawan menjawab Qxc5."
    }
@@ -5944,8 +5944,8 @@
   "explanation": [
    "Putih menggerakkan Benteng (Rook) dari f5 ke f7. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Skewer: Raja di c7 mesti bergerak, dan Menteri di a7 di belakangnya akan ditangkap.",
-   "Lawan: Kd6 – Hitam menggerakkan Raja (King) dari c7 ke d6.",
-   "Kita: Rxa7 – Putih menggerakkan Benteng (Rook) dari f7 ke a7 dan menangkap Menteri hitam (Queen, nilai 9).",
+   "Lawan: Kd6 \u2013 Hitam menggerakkan Raja (King) dari c7 ke d6.",
+   "Kita: Rxa7 \u2013 Putih menggerakkan Benteng (Rook) dari f7 ke a7 dan menangkap Menteri hitam (Queen, nilai 9).",
    "Hasil: menang kira-kira 9 mata bahan. Penilaian enjin selepas langkah pertama: +7.49 (dari pihak Putih)."
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kd6.",
@@ -6002,7 +6002,7 @@
    "Putih menggerakkan Benteng (Rook) dari e3 ke e8 dan menangkap Benteng hitam (Rook, nilai 5). CHECKMATE! Raja hitam diserang dan tiada jalan keluar.",
    "Checkmate (corak back-rank)!"
   ],
-  "defence": "Lawan tiada pertahanan – permainan tamat.",
+  "defence": "Lawan tiada pertahanan \u2013 permainan tamat.",
   "followUp": "Tiada susulan diperlukan.",
   "hints": {
    "threat": "Raja lawan terperangkap di belakang Pionnya sendiri.",
@@ -6054,16 +6054,16 @@
    {
     "san": "Qxb7+",
     "uci": "h1b7",
-    "eval": "−8.11",
+    "eval": "\u22128.11",
     "refutation": "Kxb7",
-    "reason": "Tiada checkmate yang dipaksa selepas langkah ini (enjin: −8.11 dari pihak Putih). Lawan menjawab Kxb7."
+    "reason": "Tiada checkmate yang dipaksa selepas langkah ini (enjin: \u22128.11 dari pihak Putih). Lawan menjawab Kxb7."
    }
   ],
   "explanation": [
    "Putih menggerakkan Menteri (Queen) dari h1 ke h8 dan menangkap Benteng hitam (Rook, nilai 5). CHECKMATE! Raja hitam diserang dan tiada jalan keluar.",
    "Checkmate (corak back-rank)!"
   ],
-  "defence": "Lawan tiada pertahanan – permainan tamat.",
+  "defence": "Lawan tiada pertahanan \u2013 permainan tamat.",
   "followUp": "Tiada susulan diperlukan.",
   "hints": {
    "threat": "Raja lawan terperangkap di belakang Pionnya sendiri.",
@@ -6080,7 +6080,7 @@
  {
   "id": "p095",
   "level": 3,
-  "theme": "back-rank",
+  "theme": "deflection",
   "pattern": "back-rank",
   "fen": "1k6/ppp1b3/8/8/8/3Q4/P1P5/K2Q4 w - - 0 1",
   "goal": "mate",
@@ -6122,15 +6122,16 @@
   ],
   "explanation": [
    "Putih menggerakkan Menteri (Queen) dari d3 ke d8. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
+   "Deflection / buang pertahanan: langkah pertama memaksa buah lawan meninggalkan tugasnya mempertahankan baris belakang, kemudian kita memberi checkmate.",
    "Satu langkah menyerang Raja di b8 dan Gajah di e7 serentak.",
-   "Lawan: Bxd8 – Hitam menggerakkan Gajah (Bishop) dari e7 ke d8 dan menangkap Menteri putih (Queen, nilai 9).",
-   "Kita: Qxd8# – Putih menggerakkan Menteri (Queen) dari d1 ke d8 dan menangkap Gajah hitam (Bishop, nilai 3). CHECKMATE! Raja hitam diserang dan tiada jalan keluar.",
+   "Lawan: Bxd8 \u2013 Hitam menggerakkan Gajah (Bishop) dari e7 ke d8 dan menangkap Menteri putih (Queen, nilai 9).",
+   "Kita: Qxd8# \u2013 Putih menggerakkan Menteri (Queen) dari d1 ke d8 dan menangkap Gajah hitam (Bishop, nilai 3). CHECKMATE! Raja hitam diserang dan tiada jalan keluar.",
    "Checkmate (corak back-rank)!"
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Bxd8.",
   "followUp": "Susulan: Qxd8#.",
   "hints": {
-   "threat": "Raja lawan terperangkap di belakang Pionnya sendiri.",
+   "threat": "Satu buah lawan sedang melakukan dua tugas. Apakah tugasnya?",
    "attacked": "Sasaran: Raja di b8 dan Gajah di e7.",
    "squares": [
     "d3"
@@ -6181,7 +6182,7 @@
    "Putih menggerakkan Benteng (Rook) dari h2 ke h8. CHECKMATE! Raja hitam diserang dan tiada jalan keluar.",
    "Checkmate (corak back-rank)!"
   ],
-  "defence": "Lawan tiada pertahanan – permainan tamat.",
+  "defence": "Lawan tiada pertahanan \u2013 permainan tamat.",
   "followUp": "Tiada susulan diperlukan.",
   "hints": {
    "threat": "Raja lawan terperangkap di belakang Pionnya sendiri.",
@@ -6235,7 +6236,7 @@
    "Putih menggerakkan Menteri (Queen) dari d2 ke d8 dan menangkap Benteng hitam (Rook, nilai 5). CHECKMATE! Raja hitam diserang dan tiada jalan keluar.",
    "Checkmate (corak back-rank)!"
   ],
-  "defence": "Lawan tiada pertahanan – permainan tamat.",
+  "defence": "Lawan tiada pertahanan \u2013 permainan tamat.",
   "followUp": "Tiada susulan diperlukan.",
   "hints": {
    "threat": "Raja lawan terperangkap di belakang Pionnya sendiri.",
@@ -6273,16 +6274,16 @@
    {
     "san": "Qb6",
     "uci": "c7b6",
-    "eval": "−10.32",
+    "eval": "\u221210.32",
     "refutation": "g4",
-    "reason": "Tiada checkmate yang dipaksa selepas langkah ini (enjin: −10.32 dari pihak Putih). Lawan menjawab g4."
+    "reason": "Tiada checkmate yang dipaksa selepas langkah ini (enjin: \u221210.32 dari pihak Putih). Lawan menjawab g4."
    },
    {
     "san": "f5",
     "uci": "f7f5",
-    "eval": "−10.26",
+    "eval": "\u221210.26",
     "refutation": "Na2",
-    "reason": "Tiada checkmate yang dipaksa selepas langkah ini (enjin: −10.26 dari pihak Putih). Lawan menjawab Na2."
+    "reason": "Tiada checkmate yang dipaksa selepas langkah ini (enjin: \u221210.26 dari pihak Putih). Lawan menjawab Na2."
    },
    {
     "san": "Qxh2+",
@@ -6296,7 +6297,7 @@
    "Hitam menggerakkan Menteri (Queen) dari c7 ke c1. CHECKMATE! Raja putih diserang dan tiada jalan keluar.",
    "Checkmate (corak back-rank)!"
   ],
-  "defence": "Lawan tiada pertahanan – permainan tamat.",
+  "defence": "Lawan tiada pertahanan \u2013 permainan tamat.",
   "followUp": "Tiada susulan diperlukan.",
   "hints": {
    "threat": "Raja lawan terperangkap di belakang Pionnya sendiri.",
@@ -6313,7 +6314,7 @@
  {
   "id": "p099",
   "level": 3,
-  "theme": "back-rank",
+  "theme": "deflection",
   "pattern": "back-rank",
   "fen": "6k1/5ppp/8/8/2q5/8/5PP1/R6K w - - 0 1",
   "goal": "mate",
@@ -6341,28 +6342,29 @@
    {
     "san": "Re1",
     "uci": "a1e1",
-    "eval": "−6.79",
+    "eval": "\u22126.79",
     "refutation": "g5",
-    "reason": "Tiada checkmate yang dipaksa selepas langkah ini (enjin: −6.79 dari pihak Putih). Lawan menjawab g5."
+    "reason": "Tiada checkmate yang dipaksa selepas langkah ini (enjin: \u22126.79 dari pihak Putih). Lawan menjawab g5."
    },
    {
     "san": "Kh2",
     "uci": "h1h2",
-    "eval": "−6.88",
+    "eval": "\u22126.88",
     "refutation": "g5",
-    "reason": "Tiada checkmate yang dipaksa selepas langkah ini (enjin: −6.88 dari pihak Putih). Lawan menjawab g5."
+    "reason": "Tiada checkmate yang dipaksa selepas langkah ini (enjin: \u22126.88 dari pihak Putih). Lawan menjawab g5."
    }
   ],
   "explanation": [
    "Putih menggerakkan Benteng (Rook) dari a1 ke a8. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
-   "Lawan: Qc8 – Hitam menggerakkan Menteri (Queen) dari c4 ke c8.",
-   "Kita: Rxc8# – Putih menggerakkan Benteng (Rook) dari a8 ke c8 dan menangkap Menteri hitam (Queen, nilai 9). CHECKMATE! Raja hitam diserang dan tiada jalan keluar.",
+   "Deflection / buang pertahanan: langkah pertama memaksa buah lawan meninggalkan tugasnya mempertahankan baris belakang, kemudian kita memberi checkmate.",
+   "Lawan: Qc8 \u2013 Hitam menggerakkan Menteri (Queen) dari c4 ke c8.",
+   "Kita: Rxc8# \u2013 Putih menggerakkan Benteng (Rook) dari a8 ke c8 dan menangkap Menteri hitam (Queen, nilai 9). CHECKMATE! Raja hitam diserang dan tiada jalan keluar.",
    "Checkmate (corak back-rank)!"
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Qc8.",
   "followUp": "Susulan: Rxc8#.",
   "hints": {
-   "threat": "Raja lawan terperangkap di belakang Pionnya sendiri.",
+   "threat": "Satu buah lawan sedang melakukan dua tugas. Apakah tugasnya?",
    "attacked": "Sasaran: Raja di g8.",
    "squares": [
     "a1"
@@ -6411,16 +6413,16 @@
    {
     "san": "Qc8+",
     "uci": "h3c8",
-    "eval": "−0.07",
+    "eval": "\u22120.07",
     "refutation": "Rxc8",
-    "reason": "Tiada checkmate yang dipaksa selepas langkah ini (enjin: −0.07 dari pihak Putih). Lawan menjawab Rxc8."
+    "reason": "Tiada checkmate yang dipaksa selepas langkah ini (enjin: \u22120.07 dari pihak Putih). Lawan menjawab Rxc8."
    }
   ],
   "explanation": [
    "Putih menggerakkan Menteri (Queen) dari h3 ke h8 dan menangkap Benteng hitam (Rook, nilai 5). CHECKMATE! Raja hitam diserang dan tiada jalan keluar.",
    "Checkmate (corak back-rank)!"
   ],
-  "defence": "Lawan tiada pertahanan – permainan tamat.",
+  "defence": "Lawan tiada pertahanan \u2013 permainan tamat.",
   "followUp": "Tiada susulan diperlukan.",
   "hints": {
    "threat": "Raja lawan terperangkap di belakang Pionnya sendiri.",
@@ -6474,7 +6476,7 @@
    "Putih menggerakkan Menteri (Queen) dari e1 ke e8. CHECKMATE! Raja hitam diserang dan tiada jalan keluar.",
    "Checkmate (corak back-rank)!"
   ],
-  "defence": "Lawan tiada pertahanan – permainan tamat.",
+  "defence": "Lawan tiada pertahanan \u2013 permainan tamat.",
   "followUp": "Tiada susulan diperlukan.",
   "hints": {
    "threat": "Raja lawan terperangkap di belakang Pionnya sendiri.",
@@ -6533,8 +6535,8 @@
   ],
   "explanation": [
    "Putih menggerakkan Benteng (Rook) dari e3 ke e7.",
-   "Lawan: Bxf4 – Hitam menggerakkan Gajah (Bishop) dari b8 ke f4 dan menangkap Pion putih (Pawn, nilai 1).",
-   "Kita: Rxh7# – Putih menggerakkan Benteng (Rook) dari e7 ke h7 dan menangkap Pion hitam (Pawn, nilai 1). CHECKMATE! Raja hitam diserang dan tiada jalan keluar.",
+   "Lawan: Bxf4 \u2013 Hitam menggerakkan Gajah (Bishop) dari b8 ke f4 dan menangkap Pion putih (Pawn, nilai 1).",
+   "Kita: Rxh7# \u2013 Putih menggerakkan Benteng (Rook) dari e7 ke h7 dan menangkap Pion hitam (Pawn, nilai 1). CHECKMATE! Raja hitam diserang dan tiada jalan keluar.",
    "Checkmate (corak arabian)!"
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Bxf4.",
@@ -6589,16 +6591,16 @@
    {
     "san": "Qxh7+",
     "uci": "d3h7",
-    "eval": "−0.95",
+    "eval": "\u22120.95",
     "refutation": "Kxh7",
-    "reason": "Tiada checkmate yang dipaksa selepas langkah ini (enjin: −0.95 dari pihak Putih). Lawan menjawab Kxh7."
+    "reason": "Tiada checkmate yang dipaksa selepas langkah ini (enjin: \u22120.95 dari pihak Putih). Lawan menjawab Kxh7."
    }
   ],
   "explanation": [
    "Putih menggerakkan Kuda (Knight) dari e5 ke f7. CHECKMATE! Raja hitam diserang dan tiada jalan keluar.",
    "Checkmate (corak smothered)!"
   ],
-  "defence": "Lawan tiada pertahanan – permainan tamat.",
+  "defence": "Lawan tiada pertahanan \u2013 permainan tamat.",
   "followUp": "Tiada susulan diperlukan.",
   "hints": {
    "threat": "Lihat petak di sekeliling Raja lawan: petak mana yang masih bebas?",
@@ -6636,23 +6638,23 @@
    {
     "san": "Qd3",
     "uci": "a6d3",
-    "eval": "−6.95",
+    "eval": "\u22126.95",
     "refutation": "Re1",
-    "reason": "Tiada checkmate yang dipaksa selepas langkah ini (enjin: −6.95 dari pihak Putih). Lawan menjawab Re1."
+    "reason": "Tiada checkmate yang dipaksa selepas langkah ini (enjin: \u22126.95 dari pihak Putih). Lawan menjawab Re1."
    },
    {
     "san": "Nxc3",
     "uci": "d1c3",
-    "eval": "−6.92",
+    "eval": "\u22126.92",
     "refutation": "d5",
-    "reason": "Tiada checkmate yang dipaksa selepas langkah ini (enjin: −6.92 dari pihak Putih). Lawan menjawab d5."
+    "reason": "Tiada checkmate yang dipaksa selepas langkah ini (enjin: \u22126.92 dari pihak Putih). Lawan menjawab d5."
    }
   ],
   "explanation": [
    "Hitam menggerakkan Kuda (Knight) dari d1 ke f2. CHECKMATE! Raja putih diserang dan tiada jalan keluar.",
    "Checkmate (corak smothered)!"
   ],
-  "defence": "Lawan tiada pertahanan – permainan tamat.",
+  "defence": "Lawan tiada pertahanan \u2013 permainan tamat.",
   "followUp": "Tiada susulan diperlukan.",
   "hints": {
    "threat": "Lihat petak di sekeliling Raja lawan: petak mana yang masih bebas?",
@@ -6697,9 +6699,9 @@
    {
     "san": "Rxa2+",
     "uci": "f2a2",
-    "eval": "−0.18",
+    "eval": "\u22120.18",
     "refutation": "Qxa2",
-    "reason": "Tiada checkmate yang dipaksa selepas langkah ini (enjin: −0.18 dari pihak Putih). Lawan menjawab Qxa2."
+    "reason": "Tiada checkmate yang dipaksa selepas langkah ini (enjin: \u22120.18 dari pihak Putih). Lawan menjawab Qxa2."
    },
    {
     "san": "Rxf3",
@@ -6718,8 +6720,8 @@
   ],
   "explanation": [
    "Hitam menggerakkan Benteng (Rook) dari f2 ke g2 dan menangkap Menteri putih (Queen, nilai 9).",
-   "Lawan: a4 – Putih menggerakkan Pion (Pawn) dari a2 ke a4. Pion boleh maju dua petak pada langkah pertamanya.",
-   "Kita: Ra2# – Hitam menggerakkan Benteng (Rook) dari g2 ke a2. CHECKMATE! Raja putih diserang dan tiada jalan keluar.",
+   "Lawan: a4 \u2013 Putih menggerakkan Pion (Pawn) dari a2 ke a4. Pion boleh maju dua petak pada langkah pertamanya.",
+   "Kita: Ra2# \u2013 Hitam menggerakkan Benteng (Rook) dari g2 ke a2. CHECKMATE! Raja putih diserang dan tiada jalan keluar.",
    "Checkmate (corak arabian)!"
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: a4.",
@@ -6781,8 +6783,8 @@
   ],
   "explanation": [
    "Putih menggerakkan Benteng (Rook) dari e2 ke e7.",
-   "Lawan: a6 – Hitam menggerakkan Pion (Pawn) dari a7 ke a6.",
-   "Kita: Ra7# – Putih menggerakkan Benteng (Rook) dari e7 ke a7. CHECKMATE! Raja hitam diserang dan tiada jalan keluar.",
+   "Lawan: a6 \u2013 Hitam menggerakkan Pion (Pawn) dari a7 ke a6.",
+   "Kita: Ra7# \u2013 Putih menggerakkan Benteng (Rook) dari e7 ke a7. CHECKMATE! Raja hitam diserang dan tiada jalan keluar.",
    "Checkmate (corak arabian)!"
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: a6.",
@@ -6852,14 +6854,14 @@
   "explanation": [
    "Hitam menggerakkan Menteri (Queen) dari e6 ke a2 dan menangkap Pion putih (Pawn, nilai 1). Ini CHECK: Raja putih diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Ini pengorbanan: kita memberi bahan kerana semua jawapan lawan sudah dikira.",
-   "Lawan: Kxa2 – Putih menggerakkan Raja (King) dari a1 ke a2 dan menangkap Menteri hitam (Queen, nilai 9).",
-   "Kita: Ra5# – Hitam menggerakkan Benteng (Rook) dari f5 ke a5. CHECKMATE! Raja putih diserang dan tiada jalan keluar.",
+   "Lawan: Kxa2 \u2013 Putih menggerakkan Raja (King) dari a1 ke a2 dan menangkap Menteri hitam (Queen, nilai 9).",
+   "Kita: Ra5# \u2013 Hitam menggerakkan Benteng (Rook) dari f5 ke a5. CHECKMATE! Raja putih diserang dan tiada jalan keluar.",
    "Checkmate (corak anastasia)!"
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kxa2.",
   "followUp": "Susulan: Ra5#.",
   "hints": {
-   "threat": "Langkah terbaik mungkin memberi buah – kira semua jawapan lawan.",
+   "threat": "Langkah terbaik mungkin memberi buah \u2013 kira semua jawapan lawan.",
    "attacked": "Sasaran: Raja di a1.",
    "squares": [
     "e6"
@@ -6915,22 +6917,22 @@
    {
     "san": "Rxf4",
     "uci": "d4f4",
-    "eval": "−12.26",
+    "eval": "\u221212.26",
     "refutation": "a3",
-    "reason": "Tiada checkmate yang dipaksa selepas langkah ini (enjin: −12.26 dari pihak Putih). Lawan menjawab a3."
+    "reason": "Tiada checkmate yang dipaksa selepas langkah ini (enjin: \u221212.26 dari pihak Putih). Lawan menjawab a3."
    }
   ],
   "explanation": [
    "Hitam menggerakkan Menteri (Queen) dari e6 ke a2 dan menangkap Pion putih (Pawn, nilai 1). Ini CHECK: Raja putih diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Ini pengorbanan: kita memberi bahan kerana semua jawapan lawan sudah dikira.",
-   "Lawan: Kxa2 – Putih menggerakkan Raja (King) dari a1 ke a2 dan menangkap Menteri hitam (Queen, nilai 9).",
-   "Kita: Ra4# – Hitam menggerakkan Benteng (Rook) dari d4 ke a4. CHECKMATE! Raja putih diserang dan tiada jalan keluar.",
+   "Lawan: Kxa2 \u2013 Putih menggerakkan Raja (King) dari a1 ke a2 dan menangkap Menteri hitam (Queen, nilai 9).",
+   "Kita: Ra4# \u2013 Hitam menggerakkan Benteng (Rook) dari d4 ke a4. CHECKMATE! Raja putih diserang dan tiada jalan keluar.",
    "Checkmate (corak anastasia)!"
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kxa2.",
   "followUp": "Susulan: Ra4#.",
   "hints": {
-   "threat": "Langkah terbaik mungkin memberi buah – kira semua jawapan lawan.",
+   "threat": "Langkah terbaik mungkin memberi buah \u2013 kira semua jawapan lawan.",
    "attacked": "Sasaran: Raja di a1.",
    "squares": [
     "e6"
@@ -6979,23 +6981,23 @@
    {
     "san": "a6",
     "uci": "a7a6",
-    "eval": "−6.36",
+    "eval": "\u22126.36",
     "refutation": "bxa3",
-    "reason": "Tiada checkmate yang dipaksa selepas langkah ini (enjin: −6.36 dari pihak Putih). Lawan menjawab bxa3."
+    "reason": "Tiada checkmate yang dipaksa selepas langkah ini (enjin: \u22126.36 dari pihak Putih). Lawan menjawab bxa3."
    }
   ],
   "explanation": [
    "Hitam menggerakkan Menteri (Queen) dari g6 ke b1. Ini CHECK: Raja putih diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Raja di a1 dan Benteng di f1 serentak.",
    "Ini pengorbanan: kita memberi bahan kerana semua jawapan lawan sudah dikira.",
-   "Lawan: Rxb1 – Putih menggerakkan Benteng (Rook) dari f1 ke b1 dan menangkap Menteri hitam (Queen, nilai 9).",
-   "Kita: Nc2# – Hitam menggerakkan Kuda (Knight) dari a3 ke c2. CHECKMATE! Raja putih diserang dan tiada jalan keluar.",
+   "Lawan: Rxb1 \u2013 Putih menggerakkan Benteng (Rook) dari f1 ke b1 dan menangkap Menteri hitam (Queen, nilai 9).",
+   "Kita: Nc2# \u2013 Hitam menggerakkan Kuda (Knight) dari a3 ke c2. CHECKMATE! Raja putih diserang dan tiada jalan keluar.",
    "Checkmate (corak smothered)!"
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Rxb1.",
   "followUp": "Susulan: Nc2#.",
   "hints": {
-   "threat": "Langkah terbaik mungkin memberi buah – kira semua jawapan lawan.",
+   "threat": "Langkah terbaik mungkin memberi buah \u2013 kira semua jawapan lawan.",
    "attacked": "Sasaran: Raja di a1 dan Benteng di f1.",
    "squares": [
     "g6"
@@ -7060,14 +7062,14 @@
    "Putih menggerakkan Menteri (Queen) dari d5 ke g8. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Benteng di c8 dan Raja di h8 serentak.",
    "Ini pengorbanan: kita memberi bahan kerana semua jawapan lawan sudah dikira.",
-   "Lawan: Rxg8 – Hitam menggerakkan Benteng (Rook) dari c8 ke g8 dan menangkap Menteri putih (Queen, nilai 9).",
-   "Kita: Nf7# – Putih menggerakkan Kuda (Knight) dari h6 ke f7. CHECKMATE! Raja hitam diserang dan tiada jalan keluar.",
+   "Lawan: Rxg8 \u2013 Hitam menggerakkan Benteng (Rook) dari c8 ke g8 dan menangkap Menteri putih (Queen, nilai 9).",
+   "Kita: Nf7# \u2013 Putih menggerakkan Kuda (Knight) dari h6 ke f7. CHECKMATE! Raja hitam diserang dan tiada jalan keluar.",
    "Checkmate (corak smothered)!"
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Rxg8.",
   "followUp": "Susulan: Nf7#.",
   "hints": {
-   "threat": "Langkah terbaik mungkin memberi buah – kira semua jawapan lawan.",
+   "threat": "Langkah terbaik mungkin memberi buah \u2013 kira semua jawapan lawan.",
    "attacked": "Sasaran: Benteng di c8 dan Raja di h8.",
    "squares": [
     "d5"
@@ -7125,14 +7127,14 @@
    "Putih menggerakkan Menteri (Queen) dari c4 ke g8. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Benteng di d8 dan Raja di h8 serentak.",
    "Ini pengorbanan: kita memberi bahan kerana semua jawapan lawan sudah dikira.",
-   "Lawan: Rxg8 – Hitam menggerakkan Benteng (Rook) dari d8 ke g8 dan menangkap Menteri putih (Queen, nilai 9).",
-   "Kita: Nf7# – Putih menggerakkan Kuda (Knight) dari h6 ke f7. CHECKMATE! Raja hitam diserang dan tiada jalan keluar.",
+   "Lawan: Rxg8 \u2013 Hitam menggerakkan Benteng (Rook) dari d8 ke g8 dan menangkap Menteri putih (Queen, nilai 9).",
+   "Kita: Nf7# \u2013 Putih menggerakkan Kuda (Knight) dari h6 ke f7. CHECKMATE! Raja hitam diserang dan tiada jalan keluar.",
    "Checkmate (corak smothered)!"
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Rxg8.",
   "followUp": "Susulan: Nf7#.",
   "hints": {
-   "threat": "Langkah terbaik mungkin memberi buah – kira semua jawapan lawan.",
+   "threat": "Langkah terbaik mungkin memberi buah \u2013 kira semua jawapan lawan.",
    "attacked": "Sasaran: Benteng di d8 dan Raja di h8.",
    "squares": [
     "c4"
@@ -7190,14 +7192,14 @@
    "Putih menggerakkan Menteri (Queen) dari a2 ke g8. Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Satu langkah menyerang Benteng di f8 dan Raja di h8 serentak.",
    "Ini pengorbanan: kita memberi bahan kerana semua jawapan lawan sudah dikira.",
-   "Lawan: Rxg8 – Hitam menggerakkan Benteng (Rook) dari f8 ke g8 dan menangkap Menteri putih (Queen, nilai 9).",
-   "Kita: Nf7# – Putih menggerakkan Kuda (Knight) dari h6 ke f7. CHECKMATE! Raja hitam diserang dan tiada jalan keluar.",
+   "Lawan: Rxg8 \u2013 Hitam menggerakkan Benteng (Rook) dari f8 ke g8 dan menangkap Menteri putih (Queen, nilai 9).",
+   "Kita: Nf7# \u2013 Putih menggerakkan Kuda (Knight) dari h6 ke f7. CHECKMATE! Raja hitam diserang dan tiada jalan keluar.",
    "Checkmate (corak smothered)!"
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Rxg8.",
   "followUp": "Susulan: Nf7#.",
   "hints": {
-   "threat": "Langkah terbaik mungkin memberi buah – kira semua jawapan lawan.",
+   "threat": "Langkah terbaik mungkin memberi buah \u2013 kira semua jawapan lawan.",
    "attacked": "Sasaran: Benteng di f8 dan Raja di h8.",
    "squares": [
     "a2"
@@ -7254,14 +7256,14 @@
   "explanation": [
    "Putih menggerakkan Menteri (Queen) dari a4 ke a7 dan menangkap Pion hitam (Pawn, nilai 1). Ini CHECK: Raja hitam diserang dan mesti diselamatkan pada langkah seterusnya.",
    "Ini pengorbanan: kita memberi bahan kerana semua jawapan lawan sudah dikira.",
-   "Lawan: Kxa7 – Hitam menggerakkan Raja (King) dari a8 ke a7 dan menangkap Menteri putih (Queen, nilai 9).",
-   "Kita: Ra3# – Putih menggerakkan Benteng (Rook) dari g3 ke a3. CHECKMATE! Raja hitam diserang dan tiada jalan keluar.",
+   "Lawan: Kxa7 \u2013 Hitam menggerakkan Raja (King) dari a8 ke a7 dan menangkap Menteri putih (Queen, nilai 9).",
+   "Kita: Ra3# \u2013 Putih menggerakkan Benteng (Rook) dari g3 ke a3. CHECKMATE! Raja hitam diserang dan tiada jalan keluar.",
    "Checkmate (corak anastasia)!"
   ],
   "defence": "Pertahanan terbaik lawan menurut enjin: Kxa7.",
   "followUp": "Susulan: Ra3#.",
   "hints": {
-   "threat": "Langkah terbaik mungkin memberi buah – kira semua jawapan lawan.",
+   "threat": "Langkah terbaik mungkin memberi buah \u2013 kira semua jawapan lawan.",
    "attacked": "Sasaran: Raja di a8.",
    "squares": [
     "a4"
