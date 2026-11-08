@@ -18,14 +18,14 @@ export type NavItem = {
 export const NAV: NavItem[] = [
   { href: '/', short: 'Utama', label: 'Papan Utama', labelEn: 'Dashboard', icon: 'home', ready: true, description: 'Ringkasan kemajuan dan sambung belajar.' },
   { href: '/learn', short: 'Belajar', label: 'Mula Belajar', labelEn: 'Start Learning', icon: 'route', ready: true, description: 'Program 48 jam, sesi demi sesi.' },
-  { href: '/fundamentals', short: 'Asas', label: 'Asas Catur', labelEn: 'Chess Fundamentals', icon: 'book', ready: false, description: 'Papan, buah catur dan peraturan dari sifar.', availableNow: 'Penjelajah buah catur' },
+  { href: '/fundamentals', short: 'Asas', label: 'Asas Catur', labelEn: 'Chess Fundamentals', icon: 'book', ready: true, description: 'Papan, buah catur dan peraturan dari sifar.', availableNow: 'Penjelajah buah catur' },
   { href: '/openings', short: 'Pembukaan', label: 'Akademi Pembukaan', labelEn: 'Opening Academy', icon: 'flag', ready: true, description: 'Italian Game, Sicilian dan King’s Indian – tunjuk dan latih langkah demi langkah.' },
-  { href: '/tactics', short: 'Taktik', label: 'Taktik Agresif', labelEn: 'Aggressive Tactics', icon: 'bolt', ready: false, description: 'Fork, pin, skewer, pengorbanan dan corak mat.' },
-  { href: '/formations', short: 'Formasi', label: 'Perpustakaan Formasi', labelEn: 'Formation Library', icon: 'grid', ready: false, description: 'Struktur Pion dan cara menyerangnya.' },
+  { href: '/tactics', short: 'Taktik', label: 'Taktik Agresif', labelEn: 'Aggressive Tactics', icon: 'bolt', ready: true, description: 'Fork, pin, skewer, pengorbanan dan corak mat.' },
+  { href: '/formations', short: 'Formasi', label: 'Perpustakaan Formasi', labelEn: 'Formation Library', icon: 'grid', ready: true, description: 'Struktur Pion dan cara menyerangnya.' },
   { href: '/prediction', short: 'Ramalan', label: 'Ramalan AI', labelEn: 'AI Prediction', icon: 'spark', ready: true, description: 'Jurulatih serangan: ancaman, 3 langkah calon, jawapan lawan dan petunjuk berperingkat.' },
   { href: '/play', short: 'Main', label: 'Lawan AI', labelEn: 'Play Against AI', icon: 'play', ready: true, description: 'Main lawan Stockfish pada 8 tahap, atau mod dua pemain.' },
-  { href: '/masterclass', short: 'GM', label: 'Kelas Grandmaster', labelEn: 'Grandmaster Masterclass', icon: 'crown', ready: false, description: 'Permainan serangan Tal, Kasparov, Polgár dan lain-lain.' },
-  { href: '/analysis', short: 'Analisis', label: 'Analisis Permainan', labelEn: 'Game Analysis', icon: 'chart', ready: false, description: 'Semak permainan dengan enjin: kesilapan, blunder, ketepatan.', availableNow: 'Import PGN/FEN' },
+  { href: '/masterclass', short: 'GM', label: 'Kelas Grandmaster', labelEn: 'Grandmaster Masterclass', icon: 'crown', ready: true, description: 'Permainan serangan Tal, Kasparov, Polgár dan lain-lain.' },
+  { href: '/analysis', short: 'Analisis', label: 'Analisis Permainan', labelEn: 'Game Analysis', icon: 'chart', ready: true, description: 'Semak permainan dengan enjin: kesilapan, blunder, ketepatan.', availableNow: 'Import PGN/FEN' },
   { href: '/progress', short: 'Kemajuan', label: 'Kemajuan Saya', labelEn: 'My Progress', icon: 'trophy', ready: true, description: 'Sesi selesai, masa belajar dan laporan.' },
 ];
 

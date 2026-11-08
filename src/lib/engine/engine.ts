@@ -42,6 +42,8 @@ export type AnalyseOptions = SearchLimit & {
   onUpdate?: (partial: AnalysisResult) => void;
   /** UCI "Skill Level" 0–20 (20 = full strength). */
   skill?: number;
+  /** Only search these moves (UCI), e.g. to evaluate a tempting wrong move. */
+  searchMoves?: string[];
 };
 
 const DEFAULT_LIMIT: SearchLimit = { depth: 16 };
@@ -163,7 +165,7 @@ export class Engine {
   private async search(fen: string, opts: AnalyseOptions): Promise<AnalysisResult> {
     const chess = new Chess(fen);
     const turn = chess.turn();
-    const legalCount = chess.moves().length;
+    const legalCount = opts.searchMoves?.length ?? chess.moves().length;
     const result: AnalysisResult = { fen, turn, depth: 0, lines: [], bestMove: null, stopped: false };
 
     if (opts.signal?.aborted) return { ...result, stopped: true };
@@ -179,7 +181,8 @@ export class Engine {
     await this.isReady();
 
     const limit = opts.depth || opts.movetime ? opts : DEFAULT_LIMIT;
-    const go = limit.depth ? `go depth ${limit.depth}` : `go movetime ${limit.movetime}`;
+    const restrict = opts.searchMoves?.length ? ` searchmoves ${opts.searchMoves.join(' ')}` : '';
+    const go = (limit.depth ? `go depth ${limit.depth}` : `go movetime ${limit.movetime}`) + restrict;
 
     // Collect lines per depth; publish a depth only when all its MultiPV lines arrived.
     let pending = new Map<number, InfoLine>();

@@ -1,11 +1,26 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+import { AssessmentRunner } from '@/components/assessment/AssessmentRunner';
+import { PerformanceReportView } from '@/components/assessment/PerformanceReportView';
 import { Badge, Button, Card, CardTitle, ProgressBar } from '@/components/ui/primitives';
+import type { AssessmentResult } from '@/lib/assessment/assessments';
+import { usePersistentState } from '@/lib/hooks/usePersistentState';
 import { PROGRAMME, TOTAL_HOURS } from '@/lib/curriculum/programme';
 import { useProgress } from '@/lib/hooks/useProgress';
 
 export function ProgressView() {
-  const { summary, resetAll } = useProgress();
+  const { summary, resetAll, complete } = useProgress();
+  const [day1, setDay1] = usePersistentState<AssessmentResult | undefined>('assessment:day1', undefined);
+  const [final, setFinal] = usePersistentState<AssessmentResult | undefined>('assessment:final', undefined);
+  const [version, setVersion] = useState(0);
+  const loaded = !!summary;
+  // Links like /progress/#final: scroll once the content exists.
+  useEffect(() => {
+    if (!loaded || !window.location.hash) return;
+    const t = setTimeout(() => document.getElementById(window.location.hash.slice(1))?.scrollIntoView({ block: 'start' }), 50);
+    return () => clearTimeout(t);
+  }, [loaded]);
   if (!summary) return <p className="text-charcoal-300">Memuatkan kemajuan…</p>;
 
   const hours = (summary.minutesStudied / 60).toFixed(1);
@@ -67,22 +82,24 @@ export function ProgressView() {
         </ul>
       </Card>
 
+      <AssessmentRunner id="day1" result={day1} onSave={(r, sid) => { setDay1(r); void complete(sid); setVersion((v) => v + 1); }} />
+      <AssessmentRunner id="final" result={final} onSave={(r, sid) => { setFinal(r); void complete(sid); setVersion((v) => v + 1); }} />
+      <PerformanceReportView summary={summary} version={version + (day1?.at ?? 0) + (final?.at ?? 0)} onViewed={() => void complete('h48')} />
+
       <Card>
-        <CardTitle sub="Penilaian, ketepatan taktik dan laporan prestasi akhir akan ditambah dalam Fasa 9.">
-          Laporan prestasi
-        </CardTitle>
+        <CardTitle sub="Data disimpan pada peranti ini sahaja.">Storan</CardTitle>
         <p className="text-sm text-charcoal-300">
-          Buat masa ini, halaman ini menjejak sesi yang anda tandakan selesai. Data disimpan{' '}
+          Kemajuan disimpan{' '}
           {summary.persistent ? 'dalam IndexedDB pada peranti ini' : 'dalam memori sahaja (storan pelayar tidak tersedia)'}.
         </p>
         <div className="mt-4">
           <Button
             variant="danger"
             onClick={() => {
-              if (window.confirm('Padam semua kemajuan? Tindakan ini tidak boleh dibatalkan.')) void resetAll();
+              if (window.confirm('Padam semua kemajuan sesi? Tindakan ini tidak boleh dibatalkan.')) void resetAll();
             }}
           >
-            Set semula semua kemajuan
+            Set semula kemajuan sesi
           </Button>
         </div>
       </Card>

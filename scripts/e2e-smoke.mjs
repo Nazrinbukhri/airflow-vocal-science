@@ -6,6 +6,7 @@ import { createRequire } from 'node:module';
 import { mkdirSync } from 'node:fs';
 
 const { chromium, devices } = createRequire(import.meta.url)('playwright');
+const PUZZLES = JSON.parse((await import('node:fs')).readFileSync('src/lib/tactics/puzzles.json', 'utf8'));
 const PORT = 4310;
 const BASE = `http://localhost:${PORT}`;
 const SHOTS = process.env.SCREENSHOTS;
@@ -173,6 +174,72 @@ try {
     if (SHOTS) await page.screenshot({ path: `${SHOTS}/desktop-openings.png`, fullPage: true });
   });
 
+  await step('lessons: first lesson flows Explain → Show → Practice → Test → Review and saves a score', async () => {
+    await page.goto(BASE + '/fundamentals/#f01-what');
+    await page.getByTestId('lesson-explain').waitFor();
+    for (let k = 0; k < 3; k++) await page.getByTestId('lesson-next-step').click();
+    const tests = page.getByTestId('lesson-test');
+    await tests.nth(0).getByRole('button', { name: 'Memberi checkmate kepada Raja lawan' }).click();
+    await tests.nth(1).getByRole('button', { name: 'Tidak – anda mesti bergerak setiap giliran' }).click();
+    assert((await page.getByTestId('lesson-score').textContent()).includes('2/2'), 'lesson score');
+    await page.goto(BASE + '/fundamentals/');
+    await page.getByText('✓ Ujian 2/2').waitFor({ timeout: 5000 });
+  });
+
+  await step('tactics: a verified puzzle can be solved by playing its solution', async () => {
+    const p = PUZZLES.find((x) => x.level === 1 && x.solution.length === 1) ?? PUZZLES[0];
+    await page.goto(BASE + '/tactics/');
+    await page.getByRole('button', { name: new RegExp(p.id) }).click();
+    const board = page.locator(`[aria-label="Teka-teki ${p.id}"]`);
+    for (let i = 0; i < p.solution.length; i += 2) {
+      const u = p.solution[i];
+      await page.waitForFunction(([sq, id]) => document.querySelector(`[aria-label="Teka-teki ${id}"] [data-square="${sq}"]`)?.getAttribute('tabindex') === '0', [u.slice(0, 2), p.id], { timeout: 5000 });
+      await board.locator(`[data-square="${u.slice(0, 2)}"]`).click();
+      await board.locator(`[data-square="${u.slice(2, 4)}"]`).click();
+      if (u.length === 5) await page.locator(`[data-promotion="${u[4]}"]`).click();
+    }
+    await page.getByTestId('puzzle-explanation').waitFor({ timeout: 8000 });
+    if (SHOTS) await page.screenshot({ path: `${SHOTS}/desktop-puzzle.png` });
+  });
+
+  await step('formations, masterclass and attack lessons open and respond', async () => {
+    await page.goto(BASE + '/formations/');
+    await page.getByRole('button', { name: /Pion Terpencil/ }).click();
+    await page.locator('[aria-label="Papan latihan"] [data-square="d4"]').click();
+    assert((await page.getByTestId('exercise-feedback').getAttribute('data-correct')) === 'true', 'formation answer');
+    await page.goto(BASE + '/masterclass/');
+    await page.getByTestId('gm-byrne-fischer-1956').click();
+    for (let k = 0; k < 8; k++) await page.getByTestId('gm-next').click();
+    assert((await page.getByTestId('gm-note').textContent()).includes('fianchetto'), 'gm note');
+    await page.goto(BASE + '/tactics/');
+    await page.getByRole('tab', { name: 'Pelajaran serangan & pertahanan' }).click();
+    await page.getByTestId('lesson-a01-king-safety').click();
+    await page.getByTestId('lesson-explain').waitFor();
+  });
+
+  await step('analysis: full game review finds the blunder in Scholar\'s mate', async () => {
+    await page.goto(BASE + '/analysis/');
+    await page.getByRole('tab', { name: 'FEN / PGN' }).click().catch(() => undefined);
+    await page.fill('#game\\:analysis-pgn', '1. e4 e5 2. Bc4 Nc6 3. Qh5 Nf6 4. Qxf7#');
+    await page.getByRole('button', { name: 'Muat PGN' }).click();
+    await page.getByTestId('review-run').click();
+    await page.getByTestId('review-report').waitFor({ timeout: 60000 });
+    const moments = await page.getByTestId('review-moments').textContent();
+    assert(moments.includes('Nf6') && moments.includes('Blunder'), `moments: ${moments}`);
+  });
+
+  await step('assessment + performance report', async () => {
+    await page.goto(BASE + '/progress/');
+    await page.getByTestId('assessment-start-day1').click();
+    for (let k = 0; k < 12; k++) {
+      await page.getByTestId('assessment-item').getByRole('button', { name: 'Tunjuk jawapan' }).click();
+      await page.getByTestId(k < 11 ? 'assessment-next' : 'assessment-finish').click();
+    }
+    await page.getByTestId('assessment-result-day1').waitFor();
+    await page.getByTestId('report-overall').waitFor();
+    if (SHOTS) await page.screenshot({ path: `${SHOTS}/desktop-progress.png`, fullPage: true });
+  });
+
   await step('progress: completing hour 1 persists and resume points to hour 2', async () => {
     await page.goto(BASE + '/learn/');
     await page.getByTestId('complete-h01').click();
@@ -180,6 +247,14 @@ try {
     await page.getByText('Sambung Jam 2').waitFor({ timeout: 5000 });
     await page.reload();
     await page.getByText('Sambung Jam 2').waitFor({ timeout: 5000 });
+  });
+
+  await step('learn: session timer starts and finishing records the session', async () => {
+    await page.goto(BASE + '/learn/');
+    await page.getByTestId('timer-start-h02').click();
+    await page.getByRole('timer').getByRole('button', { name: 'Tamat sesi' }).click();
+    await page.goto(BASE + '/');
+    await page.getByText('Sambung Jam 3').waitFor({ timeout: 5000 });
   });
 
   await step('PWA: manifest + service worker, pages load offline', async () => {

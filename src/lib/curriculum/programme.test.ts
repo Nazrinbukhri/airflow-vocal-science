@@ -27,6 +27,21 @@ describe('48-hour programme', () => {
     for (const s of ALL_SESSIONS) expect(routes.has(s.route), s.id).toBe(true);
   });
 
+  it('every session has concrete activities that point to real lessons/pages', async () => {
+    const { SESSION_LINKS } = await import('./programme');
+    const { LESSONS } = await import('@/lib/lessons/data');
+    const routes = new Set(NAV.map((n) => n.href));
+    for (const s of ALL_SESSIONS) {
+      const links = SESSION_LINKS[s.id];
+      expect(links?.length, s.id).toBeGreaterThan(0);
+      for (const l of links!) {
+        const [path, hash] = l.href.split('#');
+        expect(routes.has(path!.replace(/\/$/, '') || '/'), l.href).toBe(true);
+        if (hash && path === '/fundamentals/') expect(LESSONS.some((x) => x.id === hash), hash).toBe(true);
+      }
+    }
+  });
+
   it('nextSession returns the first incomplete session in order', () => {
     expect(nextSession(new Set())?.hour).toBe(1);
     expect(nextSession(new Set(['h01', 'h02']))?.hour).toBe(3);

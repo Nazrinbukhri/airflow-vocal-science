@@ -5,6 +5,10 @@ The programme is defined in `src/lib/curriculum/programme.ts` (tested in `progra
 - **1 "hour" = 1 session**: 45 minutes of study + 15 minutes of rest.
 - **Not 48 hours in a row.** Suggested maximum: 3 sessions per day. Day 1 / Day 2 are the two halves of the programme.
 - **Resumable**: progress is saved on the device; the dashboard always shows the next unfinished session.
+- **Every session links to concrete activities** (lessons, drills, opening trainer, puzzle levels, formations, coach, games) – see `SESSION_LINKS` in `programme.ts`.
+- **Study timer**: start a 45-minute timer per session; at 45:00 it reminds you to take the 15-minute break. Finishing records the minutes studied. The timer survives a reload.
+- **Assessments**: Hour 22 = *Ujian Hari 1* (12 questions: rules, notation, checkmate, basic tactics, openings, strategy). Hour 47 = *Cabaran Akhir* (15 questions: tactics levels 2–4, openings, defence, endgame, strategy). Completing them marks those sessions done.
+- **Hour 48 = performance report** on *Kemajuan Saya*: overall score, level description, strengths, weaknesses, recommendations, all skills, downloadable as text.
 
 ## Day 1 – Foundation and attacking principles
 
@@ -37,3 +41,15 @@ The programme is defined in `src/lib/curriculum/programme.ts` (tested in `progra
 Every lesson follows **EXPLAIN → SHOW → PRACTICE → TEST → REVIEW**
 (*Terang → Tunjuk → Latih → Uji → Ulang kaji*). Hints are progressive:
 threat → attacked pieces → candidate squares → solution with explanation.
+
+## Content map
+
+| Module | Content |
+| --- | --- |
+| Asas Catur | 15 lessons: what is chess, board, files & ranks, 64 squares, six pieces, movement, capturing, check, checkmate, stalemate, castling, en passant, promotion, draws, notation (SAN & UCI) |
+| Permainan akhir | 5 lessons: queen mate, rook mate, opposition, passed pawns & square rule, active king |
+| Serangan & pertahanan | 6 lessons: king safety, coordination, attacking the castled king, defensive techniques, counterattack & zwischenzug, aggressive-not-reckless calculation |
+| Akademi Pembukaan | Italian Game (main, Pianissimo, Two Knights, Evans, Fried Liver trap, Blackburne trap), Sicilian (Dragon, Najdorf, Alapin, Smith-Morra, Siberian trap), King's Indian (Classical, Sämisch, Four Pawns, Fianchetto, exchange mistake) |
+| Taktik | ≥100 verified puzzles, levels 1–4 |
+| Formasi | 15 structures with an exercise each |
+| Grandmaster | 5 annotated games with guess-the-move |

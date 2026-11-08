@@ -25,6 +25,8 @@ type Settings = {
   showCoach: boolean;
 };
 
+export type PlayResult = { key: string; at: number; result: 'win' | 'loss' | 'draw'; level: number; color: Color; moves: number };
+
 const DEFAULTS: Settings = { mode: 'ai', human: 'w', level: 1, showEngine: false, showCoach: true };
 const MIN_THINK_MS = 450;
 
@@ -169,6 +171,21 @@ export function PlayView() {
       </label>
     </Card>
   );
+
+  // Record finished games against the AI (once per game) for the progress report.
+  const finishedKey = !playing && vsAi && g.game.length() > 0 ? `${g.game.initialFen()}|${g.game.fullHistory().map((m) => m.lan).join(' ')}` : null;
+  useEffect(() => {
+    if (!finishedKey || !g.restored) return;
+    const status = g.status;
+    const result: PlayResult['result'] = status.kind === 'checkmate' ? (status.winner === settings.human ? 'win' : 'loss') : 'draw';
+    void getStore().then(async (store) => {
+      const prev = (await store.getSetting<PlayResult[]>('play:results')) ?? [];
+      if (prev.some((r) => r.key === finishedKey)) return;
+      await store.setSetting('play:results', [{ key: finishedKey, at: Date.now(), result, level: settings.level, color: settings.human, moves: Math.ceil(g.game.length() / 2) }, ...prev].slice(0, 100));
+    });
+    // Only when a new game finishes.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [finishedKey, g.restored]);
 
   const resultCard =
     !playing && g.game.length() > 0 ? (

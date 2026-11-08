@@ -214,3 +214,60 @@ export function blockOfSession(sessionId: string): Block | undefined {
 export function nextSession(completed: ReadonlySet<string>): Session | undefined {
   return ALL_SESSIONS.find((s) => !completed.has(s.id));
 }
+
+export type SessionLink = { label: string; href: string };
+
+const L = (id: string, label: string): SessionLink => ({ label, href: `/fundamentals/#${id}` });
+const A = (label: string): SessionLink => ({ label, href: '/tactics/' });
+
+/** Concrete activities for each session (lessons, drills, trainers). */
+export const SESSION_LINKS: Record<string, SessionLink[]> = {
+  h01: [L('f01-what', 'Pelajaran: Apa itu catur?'), L('f02-board', 'Pelajaran: Papan catur')],
+  h02: [L('f03-files-ranks', 'Pelajaran: Files dan ranks'), L('f04-squares', 'Pelajaran: 64 petak'), { label: 'Latihan cari petak', href: '/fundamentals/' }],
+  h03: [L('f05-pieces', 'Pelajaran: Enam buah catur'), { label: 'Penjelajah buah catur', href: '/fundamentals/' }],
+  h04: [L('f06-movement', 'Pelajaran: Pergerakan buah'), L('f07-capture', 'Pelajaran: Menangkap')],
+  h05: [L('f11-castling', 'Pelajaran: Castling'), L('f12-en-passant', 'Pelajaran: En passant'), L('f13-promotion', 'Pelajaran: Promosi Pion')],
+  h06: [L('f15-notation', 'Pelajaran: Notasi SAN dan UCI')],
+  h07: [L('f08-check', 'Pelajaran: Check')],
+  h08: [L('f09-checkmate', 'Pelajaran: Checkmate'), L('f10-stalemate', 'Pelajaran: Stalemate'), L('f14-draws', 'Pelajaran: Syarat seri')],
+  h09: [L('e01-queen-mate', 'Pelajaran: Mat dengan Menteri'), A('Teka-teki Tahap 1: checkmate')],
+  h10: [{ label: 'Akademi Pembukaan: tiga prinsip', href: '/openings/' }],
+  h11: [{ label: 'Akademi Pembukaan: Italian Game (Tunjuk)', href: '/openings/' }],
+  h12: [{ label: 'Pelajaran: Keselamatan Raja', href: '/tactics/' }, { label: 'Akademi Pembukaan', href: '/openings/' }],
+  h13: [{ label: 'Italian Game – mod Tunjuk', href: '/openings/' }],
+  h14: [{ label: 'Italian Game – mod Latih', href: '/openings/' }, { label: 'Perangkap Fried Liver', href: '/openings/' }],
+  h15: [{ label: 'Variasi Italian: Two Knights, Evans', href: '/openings/' }],
+  h16: [A('Teka-teki Tahap 1: buah tergantung')],
+  h17: [A('Teka-teki Tahap 1: check dan mat')],
+  h18: [A('Teka-teki: serangan dua buah')],
+  h19: [{ label: 'Formasi: rantai, terpencil, berganda', href: '/formations/' }],
+  h20: [{ label: 'Formasi: fail terbuka, petak lemah, outpost', href: '/formations/' }],
+  h21: [{ label: 'Formasi: Pion lulus, fianchetto', href: '/formations/' }],
+  h22: [{ label: 'Ujian Hari 1', href: '/progress/#day1' }],
+  h23: [{ label: 'Lawan Stockfish (tahap 1–2)', href: '/play/' }],
+  h24: [{ label: 'Analisis permainan anda', href: '/analysis/' }],
+  h25: [{ label: 'Sicilian Defence – Tunjuk', href: '/openings/' }],
+  h26: [{ label: 'Sicilian Defence – Latih', href: '/openings/' }, { label: 'Perangkap Siberian', href: '/openings/' }],
+  h27: [{ label: "King's Indian – Tunjuk", href: '/openings/' }],
+  h28: [{ label: "King's Indian – Latih", href: '/openings/' }, { label: 'Formasi: serangan sayap Raja', href: '/formations/' }],
+  h29: [A('Teka-teki Tahap 2: fork Kuda')],
+  h30: [A('Teka-teki Tahap 2: pin dan skewer')],
+  h31: [A('Teka-teki Tahap 2: discovered attack')],
+  h32: [A('Teka-teki Tahap 3: deflection')],
+  h33: [{ label: 'Pelajaran: Menyerang Raja yang sudah castle', href: '/tactics/' }, A('Teka-teki Tahap 4: pengorbanan')],
+  h34: [A('Teka-teki Tahap 4: smothered, Arabian, Anastasia')],
+  h35: [{ label: 'Pelajaran: Koordinasi buah', href: '/tactics/' }, A('Teka-teki Tahap 3: back-rank')],
+  h36: [{ label: 'Jurulatih: apa ancaman lawan?', href: '/prediction/' }],
+  h37: [{ label: 'Pelajaran: Teknik pertahanan', href: '/tactics/' }],
+  h38: [{ label: 'Pelajaran: Serangan balas dan zwischenzug', href: '/tactics/' }, { label: 'Pelajaran: Agresif, bukan melulu', href: '/tactics/' }],
+  h39: [L('e05-active-king', 'Pelajaran: Raja aktif'), L('e04-passed-pawns', 'Pelajaran: Pion lulus')],
+  h40: [L('e03-opposition', 'Pelajaran: Opposition')],
+  h41: [L('e02-rook-mate', 'Pelajaran: Mat dengan Benteng')],
+  h42: [{ label: 'Ramalan AI: membaca penilaian', href: '/prediction/' }],
+  h43: [{ label: 'Jurulatih: tiga langkah calon', href: '/prediction/' }],
+  h44: [{ label: 'Lawan Stockfish dengan jurulatih', href: '/play/' }],
+  h45: [{ label: 'Kelas Grandmaster: Tal, Kasparov, Fischer', href: '/masterclass/' }],
+  h46: [{ label: 'Kelas Grandmaster: Carlsen', href: '/masterclass/' }],
+  h47: [{ label: 'Cabaran akhir', href: '/progress/#final' }, { label: 'Lawan Stockfish', href: '/play/' }],
+  h48: [{ label: 'Laporan prestasi', href: '/progress/#report' }],
+};

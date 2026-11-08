@@ -1,5 +1,6 @@
 'use client';
 
+import { GameReviewPanel } from '@/components/analysis/GameReviewPanel';
 import { EnginePanel } from '@/components/engine/EnginePanel';
 import { GameWorkbench } from '@/components/game/GameWorkbench';
 import { useAnalysis } from '@/lib/hooks/useEngine';
@@ -52,7 +53,10 @@ export function AnalysisView({ aside }: { aside?: React.ReactNode }) {
       id="game:analysis"
       importFirst
       sideTop={<EnginePanel {...analysis} controls={controls} />}
-      aside={aside}
+      aside={<>
+        <GameReviewPanel game={g} />
+        {aside}
+      </>}
     />
   );
 }

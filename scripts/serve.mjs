@@ -3,6 +3,7 @@
 import { createServer } from 'node:http';
 import { existsSync, readFileSync, statSync } from 'node:fs';
 import { extname, join, normalize } from 'node:path';
+import { COMMON, CSP } from './security-headers.mjs';
 
 const root = 'out';
 const portArg = process.argv.indexOf('--port');
@@ -26,7 +27,8 @@ createServer((req, res) => {
     res.end(existsSync(join(root, '404.html')) ? readFileSync(join(root, '404.html')) : 'Not found');
     return;
   }
-  const headers = { 'Content-Type': TYPES[extname(file)] ?? 'application/octet-stream' };
+  const headers = { ...COMMON, 'Content-Type': TYPES[extname(file)] ?? 'application/octet-stream' };
+  if (extname(file) === '.html') headers['Content-Security-Policy'] = CSP;
   if (path.startsWith('/_next/static/')) headers['Cache-Control'] = 'public, max-age=31536000, immutable';
   if (path === '/sw.js') headers['Cache-Control'] = 'no-cache';
   res.writeHead(200, headers);

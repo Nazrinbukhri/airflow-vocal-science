@@ -3,6 +3,7 @@
 import { createHash } from 'node:crypto';
 import { readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import { join, relative, sep } from 'node:path';
+import { COMMON, CSP } from './security-headers.mjs';
 
 const OUT = 'out';
 
@@ -41,3 +42,14 @@ writeFileSync(swPath, sw);
 
 const bytes = files.reduce((n, rel) => n + statSync(join(OUT, rel)).size, 0);
 console.log(`sw.js: version ${version}, ${urls.length} files precached (${(bytes / 1024).toFixed(0)} KiB)`);
+
+// Host configs for Netlify / Cloudflare Pages (_headers) and Vercel (vercel.json).
+const headerLines = Object.entries(COMMON).map(([k, v]) => `  ${k}: ${v}`);
+writeFileSync(
+  join(OUT, '_headers'),
+  ['/*', ...headerLines, `  Content-Security-Policy: ${CSP}`, '', '/_next/static/*', '  Cache-Control: public, max-age=31536000, immutable', '', '/sw.js', '  Cache-Control: no-cache', ''].join('\n'),
+);
+writeFileSync(
+  join(OUT, 'vercel.json'),
+  JSON.stringify({ headers: [{ source: '/(.*)', headers: [...Object.entries(COMMON), ['Content-Security-Policy', CSP]].map(([key, value]) => ({ key, value })) }] }, null, 2),
+);

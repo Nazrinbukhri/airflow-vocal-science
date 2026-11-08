@@ -6,9 +6,11 @@ import { Badge, Button, Card, ProgressBar, buttonClass } from '@/components/ui/p
 import {
   BREAK_MINUTES,
   PROGRAMME,
+  SESSION_LINKS,
   STUDY_MINUTES,
   SUGGESTED_HOURS_PER_DAY,
 } from '@/lib/curriculum/programme';
+import { SessionTimer } from './SessionTimer';
 import { useProgress } from '@/lib/hooks/useProgress';
 
 export function ProgrammeView() {
@@ -97,6 +99,22 @@ export function ProgrammeView() {
                     </div>
                     <p className="mt-1 font-medium text-white">{s.title}</p>
                     <p className="text-sm text-charcoal-300">Matlamat: {s.goal}</p>
+                    {SESSION_LINKS[s.id] && (
+                      <ul className="mt-2 flex flex-wrap gap-2">
+                        {SESSION_LINKS[s.id]!.map((l) => (
+                          <li key={l.label}>
+                            <Link href={l.href} onClick={() => void start(s.id)} className="inline-flex min-h-9 items-center rounded-full border border-emerald-600/40 bg-emerald-600/10 px-3 text-xs text-emerald-200 hover:bg-emerald-600/20">
+                              {l.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                    {!isDone && (
+                      <div className="mt-2">
+                        <SessionTimer sessionId={s.id} onFinish={(min) => void complete(s.id, min)} />
+                      </div>
+                    )}
                     <div className="mt-2 flex flex-wrap gap-2">
                       <Link
                         href={s.route}
