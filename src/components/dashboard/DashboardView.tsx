@@ -6,7 +6,7 @@ import { Badge, Card, CardTitle, ProgressBar, buttonClass } from '@/components/u
 import { PIECES, pieceImage } from '@/lib/chess/pieces';
 import { PROGRAMME, TOTAL_HOURS, blockOfSession } from '@/lib/curriculum/programme';
 import { useProgress } from '@/lib/hooks/useProgress';
-import { CURRENT_PHASE, NAV } from '@/lib/nav';
+import { NAV } from '@/lib/nav';
 
 export function DashboardView() {
   const { summary } = useProgress();
@@ -150,7 +150,7 @@ export function DashboardView() {
         <h2 className="mb-3 font-display text-xl text-gold-200">Modul</h2>
         <ul className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
           {NAV.filter((n) => n.href !== '/').map((n) => {
-            const ready = n.phase <= CURRENT_PHASE;
+            const ready = n.ready;
             return (
               <li key={n.href}>
                 <Link
@@ -164,9 +164,9 @@ export function DashboardView() {
                       {ready ? (
                         <Badge tone="emerald">Sedia</Badge>
                       ) : n.availableNow ? (
-                        <Badge tone="gold">Sebahagian · Fasa {n.phase}</Badge>
+                        <Badge tone="gold">Sebahagian</Badge>
                       ) : (
-                        <Badge>Fasa {n.phase}</Badge>
+                        <Badge>Akan datang</Badge>
                       )}
                     </span>
                     <span className="block text-xs text-charcoal-400">{n.labelEn}</span>

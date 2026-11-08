@@ -3,7 +3,11 @@
 import type { Color } from 'chess.js';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import { CoachPanel } from '@/components/coach/CoachPanel';
 import { EnginePanel } from '@/components/engine/EnginePanel';
+import type { HighlightTone } from '@/components/board/Chessboard';
+import type { Square } from 'chess.js';
+import { bookMovesFor } from '@/lib/openings/book';
 import { GameWorkbench, NotationHelp } from '@/components/game/GameWorkbench';
 import { Badge, Button, Card, CardTitle } from '@/components/ui/primitives';
 import { LEVELS, chooseMove } from '@/lib/engine/strength';
@@ -18,9 +22,10 @@ type Settings = {
   human: Color;
   level: number;
   showEngine: boolean;
+  showCoach: boolean;
 };
 
-const DEFAULTS: Settings = { mode: 'ai', human: 'w', level: 1, showEngine: false };
+const DEFAULTS: Settings = { mode: 'ai', human: 'w', level: 1, showEngine: false, showCoach: true };
 const MIN_THINK_MS = 450;
 
 export function PlayView() {
@@ -64,6 +69,10 @@ export function PlayView() {
   }, [engineToMove, ready, fen, settings.level, engineRef, move, game]);
 
   const analysis = useAnalysis(g.fen, { enabled: settings.showEngine && !engineToMove, multiPv: 3, depth: 14 });
+  const coachOn = settings.showCoach && playing && !engineToMove && !thinking;
+  const [hl, setHl] = useState<{ fen: string; squares: Square[] }>({ fen: '', squares: [] });
+  const highlights: Partial<Record<Square, HighlightTone>> = {};
+  if (hl.fen === g.fen) for (const sq of hl.squares) highlights[sq] = 'gold';
 
   const newGame = (human?: Color) => {
     const side = human ?? settings.human;
@@ -149,6 +158,15 @@ export function PlayView() {
         />
         Tunjuk analisis enjin (cuba fikir sendiri dahulu!)
       </label>
+      <label className="flex min-h-11 items-center gap-2 text-sm text-charcoal-200">
+        <input
+          type="checkbox"
+          checked={settings.showCoach}
+          onChange={(e) => setSettings((s) => ({ ...s, showCoach: e.target.checked }))}
+          className="h-5 w-5 accent-emerald-500"
+        />
+        Jurulatih serangan (ancaman, petunjuk berperingkat)
+      </label>
     </Card>
   );
 
@@ -180,10 +198,20 @@ export function PlayView() {
       onUndo={vsAi ? undoVsAi : undefined}
       onRestart={vsAi ? () => newGame() : undefined}
       allowImport={!vsAi}
+      highlights={highlights}
       sideTop={
         <>
           {resultCard}
           {settingsCard}
+          {coachOn && (
+            <CoachPanel
+              fen={g.fen}
+              lastMove={g.lastMove}
+              depth={12}
+              book={bookMovesFor(g.fen)}
+              onHighlight={(squares) => setHl({ fen: g.fen, squares })}
+            />
+          )}
           {settings.showEngine && <EnginePanel {...analysis} />}
         </>
       }

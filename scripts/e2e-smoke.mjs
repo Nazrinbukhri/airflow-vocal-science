@@ -136,6 +136,43 @@ try {
     assert(msg.includes('Raja'), `fen message: ${msg}`);
   });
 
+  await step('coach: spots the f7 mate threat and explains candidates A–D', async () => {
+    await page.goto(BASE + '/prediction/');
+    await page.getByRole('button', { name: 'Ancaman pada f7 (Hitam bergerak)' }).click();
+    await page.getByTestId('coach-report').waitFor({ timeout: 60000 });
+    const threats = await page.getByTestId('coach-threats').textContent();
+    assert(threats.includes('Qxf7'), `threats: ${threats}`);
+    await page.getByTestId('coach-hint').click();
+    await page.getByTestId('coach-reveal').click();
+    assert((await page.getByTestId('coach-candidate').count()) === 3, 'expected 3 candidates');
+    const cats = await page.getByTestId('coach-categories').textContent();
+    for (const k of ['Langkah terbaik enjin', 'Alternatif agresif', 'Alternatif bertahan']) assert(cats.includes(k), `missing ${k}`);
+    assert(await page.getByTestId('coach-recommendation').isVisible(), 'no recommendation');
+    if (SHOTS) await page.screenshot({ path: `${SHOTS}/desktop-coach.png`, fullPage: true });
+  });
+
+  await step('openings: show mode explains moves; practice the Italian main line; variations unlock', async () => {
+    await page.goto(BASE + '/openings/');
+    assert(await page.getByTestId('line-italian-two-knights').isDisabled(), 'variation should start locked');
+    await page.getByTestId('opening-next').click();
+    assert((await page.getByTestId('opening-explain').textContent()).includes('e4'), 'no explanation');
+    await page.getByTestId('opening-practice').click();
+    const board = page.locator('[aria-label^="Papan pembukaan"]');
+    // A legal but non-book move is rejected with an explanation.
+    await board.locator('[data-square="a2"]').click();
+    await board.locator('[data-square="a3"]').click();
+    assert((await page.getByTestId('opening-feedback').textContent()).includes('langkah sah'), 'wrong-move feedback');
+    for (const uci of ['e2e4', 'g1f3', 'f1c4', 'c2c3', 'd2d4', 'c3d4', 'c1d2', 'b1d2', 'e4d5', 'd1b3', 'e1g1']) {
+      await board.locator(`[data-square="${uci.slice(0, 2)}"]:not([disabled])`).waitFor();
+      await page.waitForFunction((sq) => document.querySelector(`[aria-label^="Papan pembukaan"] [data-square="${sq}"]`)?.getAttribute('tabindex') === '0', uci.slice(0, 2), { timeout: 5000 });
+      await board.locator(`[data-square="${uci.slice(0, 2)}"]`).click();
+      await board.locator(`[data-square="${uci.slice(2, 4)}"]`).click();
+    }
+    await page.getByTestId('opening-finished').waitFor({ timeout: 5000 });
+    assert(await page.getByTestId('line-italian-two-knights').isEnabled(), 'variation still locked');
+    if (SHOTS) await page.screenshot({ path: `${SHOTS}/desktop-openings.png`, fullPage: true });
+  });
+
   await step('progress: completing hour 1 persists and resume points to hour 2', async () => {
     await page.goto(BASE + '/learn/');
     await page.getByTestId('complete-h01').click();
