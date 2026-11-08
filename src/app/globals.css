@@ -1,0 +1,83 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Playfair Display Variable', Georgia, 'Times New Roman', serif;
+
+  --color-charcoal-50: #f4f6f5;
+  --color-charcoal-100: #e2e7e5;
+  --color-charcoal-200: #c3ccc9;
+  --color-charcoal-300: #9ba8a4;
+  --color-charcoal-400: #74837e;
+  --color-charcoal-500: #576561;
+  --color-charcoal-600: #3f4b48;
+  --color-charcoal-700: #2c3533;
+  --color-charcoal-800: #1f2624;
+  --color-charcoal-900: #161b1a;
+  --color-charcoal-950: #0e1211;
+
+  --color-gold-100: #fbf3d9;
+  --color-gold-200: #f6e5ad;
+  --color-gold-300: #efd27a;
+  --color-gold-400: #e4bd4f;
+  --color-gold-500: #d4a72c;
+  --color-gold-600: #b08620;
+  --color-gold-700: #86651a;
+
+  --color-board-light: #ece6cf;
+  --color-board-dark: #3e8a68;
+}
+
+:root {
+  color-scheme: dark;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-top: env(safe-area-inset-top, 0px);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  background: var(--color-charcoal-950);
+}
+
+body {
+  background:
+    radial-gradient(1200px 600px at 85% -10%, rgb(16 185 129 / 0.10), transparent 60%),
+    radial-gradient(900px 500px at -10% 110%, rgb(212 167 44 / 0.07), transparent 60%),
+    var(--color-charcoal-950);
+  color: var(--color-charcoal-100);
+  font-family: var(--font-sans);
+  min-height: 100dvh;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* iOS: stop long-press callouts / text selection on the board and its pieces. */
+.board,
+.board * {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* iOS zooms into inputs smaller than 16px – keep form controls at 16px. */
+input,
+textarea,
+select {
+  font-size: 16px;
+}
+
+@utility pb-safe {
+  padding-bottom: calc(var(--safe-bottom) + 0.5rem);
+}
+
+@utility pt-safe {
+  padding-top: var(--safe-top);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

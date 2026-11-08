@@ -1,0 +1,5 @@
+Chess piece artwork ("cburnett" set)
+Author: Colin M.L. Burnett (Wikimedia Commons: User:Cburnett)
+Licence: triple-licensed GPLv2+ / GFDL / BSD-3-Clause. This project uses it under the BSD licence.
+Source: https://commons.wikimedia.org/wiki/Category:SVG_chess_pieces
+The SVG markup was taken from the MIT-licensed react-chessboard package (v5.12.1), which ships this set.
