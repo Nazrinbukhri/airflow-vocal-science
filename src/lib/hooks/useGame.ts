@@ -64,6 +64,21 @@ export function useGame(storageKey?: string) {
     [bump],
   );
 
+  const actions = useMemo(
+    () => ({
+      move: (m: BoardMove | string) => act(() => game.move(m)),
+      undo: () => act(() => game.undo()),
+      redo: () => act(() => game.redo()),
+      goTo: (ply: number) => act(() => game.goTo(ply)),
+      /** Drop moves after the cursor (used when undoing against the AI). */
+      truncate: () => act(() => game.truncate()),
+      restart: () => act(() => game.restart()),
+      loadFen: (fen: string): LoadResult => act(() => game.loadFen(fen)),
+      loadPgn: (pgn: string): LoadResult => act(() => game.loadPgn(pgn)),
+    }),
+    [act, game],
+  );
+
   return {
     game,
     version,
@@ -73,12 +88,8 @@ export function useGame(storageKey?: string) {
     lastMove: game.lastMove(),
     checkSquare: game.checkedKingSquare(),
     status: game.status(),
-    move: (m: BoardMove | string) => act(() => game.move(m)),
-    undo: () => act(() => game.undo()),
-    redo: () => act(() => game.redo()),
-    goTo: (ply: number) => act(() => game.goTo(ply)),
-    restart: () => act(() => game.restart()),
-    loadFen: (fen: string): LoadResult => act(() => game.loadFen(fen)),
-    loadPgn: (pgn: string): LoadResult => act(() => game.loadPgn(pgn)),
+    ...actions,
   };
 }
+
+export type GameHandle = ReturnType<typeof useGame>;

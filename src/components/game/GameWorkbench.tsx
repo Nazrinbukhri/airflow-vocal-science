@@ -2,17 +2,36 @@
 
 import type { Color } from 'chess.js';
 import { useState, type ReactNode } from 'react';
-import { Chessboard } from '@/components/board/Chessboard';
+import { Chessboard, type HighlightTone } from '@/components/board/Chessboard';
 import { Icon, type IconName } from '@/components/ui/Icon';
 import { Badge, Button, Card, CardTitle } from '@/components/ui/primitives';
 import { describeMove } from '@/lib/chess/describe';
 import { describeStatus } from '@/lib/chess/game-controller';
-import { useGame } from '@/lib/hooks/useGame';
+import type { Square } from 'chess.js';
+import type { GameHandle } from '@/lib/hooks/useGame';
 
 type Props = {
-  storageKey: string;
+  /** Game state owned by the page (see useGame). */
+  game: GameHandle;
+  /** Unique id for form fields. */
+  id: string;
   /** Open the import panel by default (analysis page). */
   importFirst?: boolean;
+  /** Controlled orientation (otherwise the flip button manages it). */
+  orientation?: Color;
+  onFlip?: () => void;
+  /** Board does not accept moves (e.g. while the AI is thinking). */
+  lockBoard?: boolean;
+  /** Custom undo / restart (AI games undo two half-moves). */
+  onUndo?: () => void;
+  onRestart?: () => void;
+  /** Allow FEN/PGN import (off while playing the AI). */
+  allowImport?: boolean;
+  highlights?: Partial<Record<Square, HighlightTone>>;
+  /** Shown above the status card, e.g. game settings or the engine panel. */
+  sideTop?: ReactNode;
+  /** Shown under the board controls. */
+  belowBoard?: ReactNode;
   aside?: ReactNode;
 };
 
@@ -42,9 +61,24 @@ function ToolButton({
   );
 }
 
-export function GameWorkbench({ storageKey, importFirst = false, aside }: Props) {
-  const g = useGame(storageKey);
-  const [orientation, setOrientation] = useState<Color>('w');
+export function GameWorkbench({
+  game: g,
+  id,
+  importFirst = false,
+  orientation: controlledOrientation,
+  onFlip,
+  lockBoard = false,
+  onUndo,
+  onRestart,
+  allowImport = true,
+  highlights,
+  sideTop,
+  belowBoard,
+  aside,
+}: Props) {
+  const storageKey = id;
+  const [ownOrientation, setOrientation] = useState<Color>('w');
+  const orientation = controlledOrientation ?? ownOrientation;
   const [panel, setPanel] = useState<'moves' | 'import'>(importFirst ? 'import' : 'moves');
   const [fenInput, setFenInput] = useState('');
   const [pgnInput, setPgnInput] = useState('');
@@ -94,7 +128,8 @@ export function GameWorkbench({ storageKey, importFirst = false, aside }: Props)
         <Chessboard
           fen={g.fen}
           orientation={orientation}
-          legalMoves={g.legalMoves}
+          legalMoves={lockBoard ? undefined : g.legalMoves}
+          highlights={highlights}
           onMove={(m) => {
             setMessage(null);
             g.move(m);
@@ -104,21 +139,26 @@ export function GameWorkbench({ storageKey, importFirst = false, aside }: Props)
         />
         <div className="mt-3 flex gap-2" role="toolbar" aria-label="Kawalan papan">
           <ToolButton icon="first" label="Mula" onClick={() => g.goTo(0)} disabled={ply === 0} />
-          <ToolButton icon="undo" label="Undur" onClick={g.undo} disabled={!g.game.canUndo()} />
+          <ToolButton icon="undo" label="Undur" onClick={onUndo ?? g.undo} disabled={!g.game.canUndo()} />
           <ToolButton icon="redo" label="Ulang" onClick={g.redo} disabled={!g.game.canRedo()} />
           <ToolButton icon="last" label="Akhir" onClick={() => g.goTo(history.length)} disabled={!g.game.canRedo()} />
-          <ToolButton icon="flip" label="Pusing" onClick={() => setOrientation((o) => (o === 'w' ? 'b' : 'w'))} />
+          <ToolButton icon="flip" label="Pusing" onClick={onFlip ?? (() => setOrientation((o) => (o === 'w' ? 'b' : 'w')))} />
           <ToolButton
             icon="restart"
             label="Mula semula"
             onClick={() => {
-              if (history.length === 0 || window.confirm('Mula semula permainan? Semua langkah akan dipadam.')) g.restart();
+              if (history.length === 0 || window.confirm('Mula semula permainan? Semua langkah akan dipadam.')) {
+                if (onRestart) onRestart();
+                else g.restart();
+              }
             }}
           />
         </div>
+        {belowBoard}
       </div>
 
       <div className="space-y-4">
+        {sideTop}
         <Card>
           <div className="mb-2 flex items-center justify-between gap-2">
             <h2 className="font-display text-lg text-gold-200">Status</h2>
@@ -145,7 +185,7 @@ export function GameWorkbench({ storageKey, importFirst = false, aside }: Props)
 
         <Card>
           <div className="mb-3 flex gap-2" role="tablist">
-            {(['moves', 'import'] as const).map((p) => (
+            {(allowImport ? (['moves', 'import'] as const) : (['moves'] as const)).map((p) => (
               <button
                 key={p}
                 type="button"
@@ -161,7 +201,7 @@ export function GameWorkbench({ storageKey, importFirst = false, aside }: Props)
             ))}
           </div>
 
-          {panel === 'moves' ? (
+          {panel === 'moves' || !allowImport ? (
             <div>
               {history.length === 0 ? (
                 <p className="text-sm text-charcoal-300">

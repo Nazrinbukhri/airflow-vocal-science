@@ -158,6 +158,11 @@ export class GameController {
     return true;
   }
 
+  /** Forget the moves after the cursor (the redo stack). */
+  truncate(): void {
+    this.moves = this.moves.slice(0, this.cursor);
+  }
+
   /** Jump to a ply (0 = start position, length() = latest move). */
   goTo(ply: number): void {
     const target = Math.max(0, Math.min(ply, this.moves.length));

@@ -63,6 +63,7 @@ try {
 
   await step('play: click-to-move e2→e4, mouse drag g8→f6, illegal drop rejected', async () => {
     await page.goto(BASE + '/play/');
+    await page.getByRole('radio', { name: 'Dua pemain' }).click();
     await page.click('[data-square="e2"]');
     await page.click('[data-square="e4"]');
     assert((await piece(page, 'e4')) === 'wp', 'e4 pawn missing');
@@ -95,6 +96,30 @@ try {
     await page.reload();
     await page.waitForFunction(() => document.querySelector('[data-square="f6"]')?.dataset.piece === 'bn', null, { timeout: 5000 });
     if (SHOTS) await page.screenshot({ path: `${SHOTS}/desktop-play.png` });
+  });
+
+  await step('play vs Stockfish: the engine answers a move', async () => {
+    await page.goto(BASE + '/play/');
+    await page.getByRole('radio', { name: 'Lawan Stockfish' }).click();
+    await page.getByRole('button', { name: 'Baharu: saya Putih' }).click();
+    await page.click('[data-square="e2"]');
+    await page.click('[data-square="e4"]');
+    await page.waitForFunction(() => document.querySelectorAll('[data-testid="move-list"] button').length === 2, null, { timeout: 20000 });
+    const status = await page.getByTestId('status').textContent();
+    assert(status.includes('Putih'), `status after AI reply: ${status}`);
+    // Undo takes back both half-moves.
+    await page.getByRole('button', { name: 'Undur' }).click();
+    assert((await piece(page, 'e2')) === 'wp', 'undo vs AI failed');
+  });
+
+  await step('analysis: Stockfish finds mate in one with several candidate lines', async () => {
+    await page.goto(BASE + '/analysis/');
+    await page.fill('#game\\:analysis-fen', 'r1bqkb1r/pppp1ppp/2n2n2/4p2Q/2B1P3/8/PPPP1PPP/RNB1K1NR w KQkq - 4 4');
+    await page.getByRole('button', { name: 'Muat FEN' }).click();
+    await page.waitForSelector('[data-testid="engine-status"][data-status="done"]', { timeout: 30000 });
+    const lines = await page.getByTestId('engine-lines').locator('li').allTextContents();
+    assert(lines.length === 3, `expected 3 lines, got ${lines.length}`);
+    assert(lines[0].includes('#1') && lines[0].includes('Qxf7#'), `first line: ${lines[0]}`);
   });
 
   await step('analysis: PGN import reaches checkmate; bad FEN shows an error', async () => {
@@ -137,6 +162,9 @@ try {
     await page.click('[data-square="d2"]');
     await page.click('[data-square="d4"]');
     assert((await piece(page, 'd4')) === 'wp', 'offline move failed');
+    // Stockfish (WASM) also runs offline.
+    await page.goto(BASE + '/analysis/');
+    await page.waitForSelector('[data-testid="engine-status"][data-status="done"]', { timeout: 30000 });
     await desktop.setOffline(false);
   });
   await desktop.close();
@@ -167,6 +195,7 @@ try {
 
   await step('touch: tap-to-move and finger drag', async () => {
     await m.goto(BASE + '/play/');
+    await m.getByRole('radio', { name: 'Dua pemain' }).tap();
     await m.tap('[data-square="d2"]');
     await m.tap('[data-square="d4"]');
     assert((await piece(m, 'd4')) === 'wp', 'tap move failed');

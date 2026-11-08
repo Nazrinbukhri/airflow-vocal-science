@@ -4,7 +4,10 @@
   "private": true,
   "description": "CHESS MASTER AI – Aggressive Chess Academy. Zero to hero chess training in Bahasa Melayu.",
   "scripts": {
+    "postinstall": "node scripts/copy-engine.mjs",
+    "predev": "node scripts/copy-engine.mjs",
     "dev": "next dev",
+    "prebuild": "node scripts/copy-engine.mjs",
     "build": "next build && node scripts/build-sw.mjs",
     "start": "node scripts/serve.mjs",
     "lint": "eslint .",
@@ -21,7 +24,8 @@
     "idb": "^8.0.4",
     "next": "^16.4.5",
     "react": "^19.3.1",
-    "react-dom": "^19.3.1"
+    "react-dom": "^19.3.1",
+    "stockfish": "^19.0.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.5",

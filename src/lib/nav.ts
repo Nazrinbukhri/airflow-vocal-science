@@ -15,7 +15,7 @@ export type NavItem = {
 };
 
 /** The latest phase that has been delivered. Used for "ready / coming" badges. */
-export const CURRENT_PHASE = 2;
+export const CURRENT_PHASE = 3;
 
 export const NAV: NavItem[] = [
   { href: '/', short: 'Utama', label: 'Papan Utama', labelEn: 'Dashboard', icon: 'home', phase: 1, description: 'Ringkasan kemajuan dan sambung belajar.' },
@@ -25,7 +25,7 @@ export const NAV: NavItem[] = [
   { href: '/tactics', short: 'Taktik', label: 'Taktik Agresif', labelEn: 'Aggressive Tactics', icon: 'bolt', phase: 7, description: 'Fork, pin, skewer, pengorbanan dan corak mat.' },
   { href: '/formations', short: 'Formasi', label: 'Perpustakaan Formasi', labelEn: 'Formation Library', icon: 'grid', phase: 7, description: 'Struktur Pion dan cara menyerangnya.' },
   { href: '/prediction', short: 'Ramalan', label: 'Ramalan AI', labelEn: 'AI Prediction', icon: 'spark', phase: 4, description: 'Langkah calon Stockfish dengan penjelasan.' },
-  { href: '/play', short: 'Main', label: 'Lawan AI', labelEn: 'Play Against AI', icon: 'play', phase: 3, description: 'Main lawan Stockfish.', availableNow: 'Papan dua pemain' },
+  { href: '/play', short: 'Main', label: 'Lawan AI', labelEn: 'Play Against AI', icon: 'play', phase: 3, description: 'Main lawan Stockfish pada 8 tahap, atau mod dua pemain.' },
   { href: '/masterclass', short: 'GM', label: 'Kelas Grandmaster', labelEn: 'Grandmaster Masterclass', icon: 'crown', phase: 8, description: 'Permainan serangan Tal, Kasparov, Polgár dan lain-lain.' },
   { href: '/analysis', short: 'Analisis', label: 'Analisis Permainan', labelEn: 'Game Analysis', icon: 'chart', phase: 8, description: 'Semak permainan dengan enjin: kesilapan, blunder, ketepatan.', availableNow: 'Import PGN/FEN' },
   { href: '/progress', short: 'Kemajuan', label: 'Kemajuan Saya', labelEn: 'My Progress', icon: 'trophy', phase: 1, description: 'Sesi selesai, masa belajar dan laporan.' },
