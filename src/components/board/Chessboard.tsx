@@ -22,6 +22,10 @@ export type ChessboardProps = {
   label?: string;
   /** For exercises such as "find the square": called on any tap when the board is not in move mode. */
   onSquareTap?: (square: Square) => void;
+  /** Mouse hover over a square, or the piece selected by a tap (phones). null when leaving the board. */
+  onFocusSquare?: (square: Square | null) => void;
+  /** Coloured overlays, e.g. the move map: rgba colour plus a label for screen readers/tests. */
+  heat?: Partial<Record<Square, { color: string; kind: string; label?: string }>>;
 };
 
 type Drag = {
@@ -66,6 +70,8 @@ export function Chessboard({
   showCoordinates = true,
   label = 'Papan catur',
   onSquareTap,
+  onFocusSquare,
+  heat,
 }: ChessboardProps) {
   const pieces = useMemo(() => parsePlacement(fen), [fen]);
   const squares = useMemo(() => orderedSquares(orientation), [orientation]);
@@ -74,7 +80,10 @@ export function Chessboard({
   // Selection is tied to the position it was made in, so it clears itself when the position changes.
   const [selection, setSelection] = useState<{ fen: string; square: Square } | null>(null);
   const selected = selection?.fen === fen ? selection.square : null;
-  const select = (sq: Square | null) => setSelection(sq ? { fen, square: sq } : null);
+  const select = (sq: Square | null) => {
+    setSelection(sq ? { fen, square: sq } : null);
+    if (sq) onFocusSquare?.(sq);
+  };
 
   const [promotion, setPromotion] = useState<{ fen: string; from: Square; to: Square } | null>(null);
   const pendingPromotion = promotion?.fen === fen ? promotion : null;
@@ -258,6 +267,7 @@ export function Chessboard({
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}
         onPointerCancel={onPointerCancel}
+        onPointerLeave={(e) => e.pointerType === 'mouse' && !drag.current && onFocusSquare?.(null)}
         onContextMenu={(e) => e.preventDefault()}
       >
         {squares.map((sq, i) => {
@@ -285,6 +295,9 @@ export function Chessboard({
               data-selected={selected === sq || undefined}
               aria-label={name}
               tabIndex={interactive || onSquareTap ? 0 : -1}
+              data-heat={heat?.[sq]?.kind}
+              title={heat?.[sq]?.label}
+              onPointerEnter={(e) => e.pointerType === 'mouse' && !drag.current && onFocusSquare?.(sq)}
               onClick={(e) => onSquareClick(e, sq)}
               onKeyDown={onSquareKey}
               className={`relative flex items-center justify-center outline-none focus-visible:z-10 focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-sky-300 ${
@@ -295,6 +308,7 @@ export function Chessboard({
                 <span className="absolute inset-0 bg-gold-300/40" aria-hidden />
               )}
               {tone && <span className={`absolute inset-0 ${TONE_CLASS[tone]}`} aria-hidden />}
+              {heat?.[sq] && <span className="absolute inset-[6%] rounded-md" style={{ background: heat[sq]!.color }} aria-hidden />}
               {selected === sq && <span className="absolute inset-0 bg-gold-400/60" aria-hidden />}
               {hover === sq && dragFrom && <span className="absolute inset-0 ring-4 ring-inset ring-white/70" aria-hidden />}
               {checkSquare === sq && (

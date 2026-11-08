@@ -9,6 +9,7 @@ import { describeMove } from '@/lib/chess/describe';
 import { describeStatus } from '@/lib/chess/game-controller';
 import type { Square } from 'chess.js';
 import type { GameHandle } from '@/lib/hooks/useGame';
+import { useMoveMapOverlay } from '@/components/coach/MoveMap';
 
 type Props = {
   /** Game state owned by the page (see useGame). */
@@ -32,6 +33,10 @@ type Props = {
   sideTop?: ReactNode;
   /** Shown under the board controls. */
   belowBoard?: ReactNode;
+  /** Colour each move of the pointed/tapped piece by engine quality. */
+  moveMap?: boolean;
+  /** Only show the move map when this side is to move (e.g. the learner against the AI). */
+  moveMapSide?: Color;
   aside?: ReactNode;
 };
 
@@ -75,10 +80,13 @@ export function GameWorkbench({
   sideTop,
   belowBoard,
   aside,
+  moveMap = false,
+  moveMapSide,
 }: Props) {
   const storageKey = id;
   const [ownOrientation, setOrientation] = useState<Color>('w');
   const orientation = controlledOrientation ?? ownOrientation;
+  const mm = useMoveMapOverlay(g.fen, moveMap && !lockBoard && g.status.kind === 'playing', moveMapSide);
   const [panel, setPanel] = useState<'moves' | 'import'>(importFirst ? 'import' : 'moves');
   const [fenInput, setFenInput] = useState('');
   const [pgnInput, setPgnInput] = useState('');
@@ -130,6 +138,8 @@ export function GameWorkbench({
           orientation={orientation}
           legalMoves={lockBoard ? undefined : g.legalMoves}
           highlights={highlights}
+          heat={mm.heat}
+          onFocusSquare={mm.onFocusSquare}
           onMove={(m) => {
             setMessage(null);
             g.move(m);
@@ -154,10 +164,11 @@ export function GameWorkbench({
             }}
           />
         </div>
+        {mm.info}
         {belowBoard}
       </div>
 
-      <div className="space-y-4">
+      <div className="space-y-4 lg:sticky lg:top-4 lg:max-h-[calc(100dvh-2rem)] lg:self-start lg:overflow-y-auto lg:pr-1">
         {sideTop}
         <Card>
           <div className="mb-2 flex items-center justify-between gap-2">
