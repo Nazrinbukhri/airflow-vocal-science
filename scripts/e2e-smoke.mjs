@@ -143,13 +143,28 @@ try {
     await page.getByTestId('coach-report').waitFor({ timeout: 60000 });
     const threats = await page.getByTestId('coach-threats').textContent();
     assert(threats.includes('Qxf7'), `threats: ${threats}`);
+    await page.getByRole('tab', { name: 'Petunjuk' }).click();
     await page.getByTestId('coach-hint').click();
     await page.getByTestId('coach-reveal').click();
     assert((await page.getByTestId('coach-candidate').count()) === 3, 'expected 3 candidates');
+    await page.getByRole('tab', { name: 'Terbaik' }).click();
     const cats = await page.getByTestId('coach-categories').textContent();
     for (const k of ['Langkah terbaik enjin', 'Alternatif agresif', 'Alternatif bertahan']) assert(cats.includes(k), `missing ${k}`);
     assert(await page.getByTestId('coach-recommendation').isVisible(), 'no recommendation');
     if (SHOTS) await page.screenshot({ path: `${SHOTS}/desktop-coach.png`, fullPage: true });
+  });
+
+  await step('move map: pointing at a piece colours its moves; a losing move is red with the reason', async () => {
+    await page.goto(BASE + '/prediction/');
+    await page.getByRole('button', { name: 'Ancaman pada f7 (Hitam bergerak)' }).click();
+    const board = page.getByTestId('chessboard');
+    await board.locator('[data-square="g8"]').hover();
+    await page.waitForSelector('[data-square="f6"][data-heat="bad"]', { timeout: 60000 });
+    assert(await board.locator('[data-square="h6"][data-heat]').count() === 1, 'h6 not rated');
+    await board.locator('[data-square="f6"]').hover();
+    const info = await page.getByTestId('move-map-info').textContent();
+    assert(info.includes('checkmate') && info.includes('Qxf7#'), `move map info: ${info}`);
+    if (SHOTS) await page.screenshot({ path: `${SHOTS}/desktop-movemap.png` });
   });
 
   await step('openings: show mode explains moves; practice the Italian main line; variations unlock', async () => {

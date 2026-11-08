@@ -175,7 +175,8 @@ export class Engine {
     }
     if (legalCount === 0) return result; // checkmate or stalemate: nothing to search
 
-    const multiPv = Math.max(1, Math.min(opts.multiPv ?? 1, 5, legalCount));
+    // Up to 5 lines normally; more when evaluating a chosen set of moves (e.g. every move of one piece).
+    const multiPv = Math.max(1, Math.min(opts.multiPv ?? 1, opts.searchMoves?.length ? 40 : 5, legalCount));
     this.setOption('MultiPV', multiPv);
     this.setOption('Skill Level', Math.max(0, Math.min(20, Math.round(opts.skill ?? 20))));
     await this.isReady();

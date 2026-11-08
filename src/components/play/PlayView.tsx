@@ -23,11 +23,12 @@ type Settings = {
   level: number;
   showEngine: boolean;
   showCoach: boolean;
+  showMoveMap: boolean;
 };
 
 export type PlayResult = { key: string; at: number; result: 'win' | 'loss' | 'draw'; level: number; color: Color; moves: number };
 
-const DEFAULTS: Settings = { mode: 'ai', human: 'w', level: 1, showEngine: false, showCoach: true };
+const DEFAULTS: Settings = { mode: 'ai', human: 'w', level: 1, showEngine: false, showCoach: true, showMoveMap: true };
 const MIN_THINK_MS = 450;
 
 export function PlayView() {
@@ -169,6 +170,15 @@ export function PlayView() {
         />
         Jurulatih serangan (ancaman, petunjuk berperingkat)
       </label>
+      <label className="flex min-h-11 items-center gap-2 text-sm text-charcoal-200">
+        <input
+          type="checkbox"
+          checked={settings.showMoveMap}
+          onChange={(e) => setSettings((s) => ({ ...s, showMoveMap: e.target.checked }))}
+          className="h-5 w-5 accent-emerald-500"
+        />
+        Peta langkah (tuding buah: hijau = baik, merah = bahaya)
+      </label>
     </Card>
   );
 
@@ -216,10 +226,11 @@ export function PlayView() {
       onRestart={vsAi ? () => newGame() : undefined}
       allowImport={!vsAi}
       highlights={highlights}
+      moveMap={settings.showMoveMap}
+      moveMapSide={vsAi ? settings.human : undefined}
       sideTop={
         <>
           {resultCard}
-          {settingsCard}
           {coachOn && (
             <CoachPanel
               fen={g.fen}
@@ -229,6 +240,7 @@ export function PlayView() {
               onHighlight={(squares) => setHl({ fen: g.fen, squares })}
             />
           )}
+          {settingsCard}
           {settings.showEngine && <EnginePanel {...analysis} />}
         </>
       }

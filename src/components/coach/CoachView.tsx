@@ -43,6 +43,7 @@ export function CoachView() {
         game={g}
         id="game:coach"
         highlights={highlights}
+        moveMap
         sideTop={
           <CoachPanel
             fen={g.fen}
