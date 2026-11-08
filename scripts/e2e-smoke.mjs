@@ -171,6 +171,12 @@ try {
     }
     await page.getByTestId('opening-finished').waitFor({ timeout: 5000 });
     assert(await page.getByTestId('line-italian-two-knights').isEnabled(), 'variation still locked');
+    // Regression: after a reload the saved progress must not crash the page, and the Fried Liver trap plays to the end.
+    await page.waitForTimeout(300);
+    await page.reload();
+    await page.getByTestId('line-italian-fried-liver').click();
+    for (let k = 0; k < 30 && (await page.getByTestId('opening-next').isEnabled()); k++) await page.getByTestId('opening-next').click();
+    assert((await page.getByTestId('opening-finished').textContent()).includes('Pengajaran'), 'fried liver lesson');
     if (SHOTS) await page.screenshot({ path: `${SHOTS}/desktop-openings.png`, fullPage: true });
   });
 
