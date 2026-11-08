@@ -42,7 +42,7 @@ Requires Node.js 20+.
 | `npm test` | Unit, component and real-engine tests (Vitest) |
 | `npm run test:e2e` | End-to-end test of the built site (desktop + iPhone emulation, offline) – run `npm run build` first |
 | `npm run lint` / `npm run typecheck` | ESLint / TypeScript |
-| `npx tsx scripts/puzzles/generate.ts` | Regenerate and re-verify the puzzle set (slow; uses Stockfish) |
+| `npx tsx scripts/puzzles/generate.ts --out=a.json` then `node scripts/puzzles/merge.mjs src/lib/tactics/puzzles.json a.json …` | Generate engine-verified puzzles (slow; options `--only=fork/2,pin/2`, `--seed=N`, `--extra=K`) and merge files (dedupe, renumber, mate-aware wording) |
 | `npm run icons` | Re-render PWA icons |
 
 ## Deployment

@@ -115,7 +115,7 @@ function legalStart(fen: string): Chess | null {
 }
 
 // ------------------------------------------------------------------ templates (White to move)
-type Template = { theme: Theme; level: Puzzle['level']; goal: Puzzle['goal']; maxMate?: number; pattern?: MatePattern; build: () => string | null; quota: number };
+type Template = { id?: string; theme: Theme; level: Puzzle['level']; goal: Puzzle['goal']; maxMate?: number; pattern?: MatePattern; build: () => string | null; quota: number };
 
 function kings(b: Board, wRanks: [number, number] = [1, 2], bRanks: [number, number] = [7, 8]) {
   for (;;) {
@@ -298,6 +298,34 @@ const TEMPLATES: Template[] = [
       put(b, defender, 'b', pick(['n', 'b', 'r'] as const));
       put(b, randomFree(b, [2, 6]), 'w', pick(['r', 'q', 'b'] as const));
       put(b, randomFree(b, [2, 6]), 'w', pick(['r', 'b', 'n'] as const));
+      addPawns(b, 'w', int(1, 3));
+      addPawns(b, 'b', int(1, 3));
+      balance(b);
+      return fenOf(b);
+    },
+  },
+  {
+    // Targeted "remove the defender": a black rook/queen X is defended only by D; White can take D, then X.
+    id: 'deflection-targeted', theme: 'deflection', level: 3, goal: 'material', quota: 0,
+    build() {
+      const b: Board = new Map();
+      kings(b, [1, 1], [8, 8]);
+      const x = randomFree(b, [4, 6], [1, 6]);
+      put(b, x, 'b', pick(['r', 'q', 'r'] as const));
+      const [xf, xr] = fr(x);
+      // D: a knight or bishop that defends X.
+      const dType = pick(['n', 'b'] as const);
+      const dSquares = (dType === 'n'
+        ? [[1, 2], [2, 1], [2, -1], [1, -2], [-1, -2], [-2, -1], [-2, 1], [-1, 2]]
+        : [[1, 1], [1, -1], [-1, 1], [-1, -1]]
+      ).map(([a, c]) => sq(xf + a!, xr + c!)).filter((s) => s && !b.has(s)) as Square[];
+      if (!dSquares.length) return null;
+      const d = pick(dSquares);
+      put(b, d, 'b', dType);
+      // A attacks X (a rook on X's file or rank, far enough away); C attacks D.
+      const aSquares = [1, 2, 3, 4, 5, 6, 7, 8].map((r) => sq(xf, r)).concat([0, 1, 2, 3, 4, 5, 6, 7].map((f) => sq(f, xr))).filter((s) => s && !b.has(s) && s !== x) as Square[];
+      put(b, pick(aSquares), 'w', 'r');
+      put(b, randomFree(b, [1, 5]), 'w', pick(['b', 'n', 'q'] as const));
       addPawns(b, 'w', int(1, 3));
       addPawns(b, 'b', int(1, 3));
       balance(b);
@@ -641,7 +669,7 @@ export async function buildPuzzle(fen: string, t: { theme: Theme; level: Puzzle[
     evalAfter: best.score.type === 'mate' ? `#${best.score.value}` : formatScore(best.score),
     wrong,
     explanation,
-    defence: san[1] ? `Pertahanan terbaik lawan menurut enjin: ${san[1]}.` : 'Lawan tiada pertahanan – permainan tamat.',
+    defence: san[1] ? `Pertahanan terbaik lawan menurut enjin: ${san[1]}.` : t.goal === 'mate' ? 'Lawan tiada pertahanan – checkmate.' : 'Lawan tidak dapat mendapatkan semula bahan dengan baik.',
     followUp: san[2] ? `Susulan: ${san.slice(2).join(' ')}.` : 'Tiada susulan diperlukan.',
     hints: {
       threat: THEME_INFO[t.theme].hint,
@@ -674,13 +702,16 @@ async function main() {
     return true;
   };
 
-  for (const s of append ? [] : SEEDS) {
+  const only = process.argv.find((a) => a.startsWith('--only='))?.slice(7).split(',');
+  const outFile = process.argv.find((a) => a.startsWith('--out='))?.slice(6) ?? 'src/lib/tactics/puzzles.json';
+  const key = (t: { id?: string; theme: string; level: number; pattern?: string }) => t.id ?? `${t.theme}/${t.level}${t.pattern ? '/' + t.pattern : ''}`;
+  for (const s of append || only ? [] : SEEDS) {
     const p = await buildPuzzle(s.fen, s, `p${String(++n).padStart(3, '0')}`);
     console.log(`seed ${s.theme} ${s.fen} → ${p ? 'OK' : 'rejected'}`);
     if (!add(p)) n--;
   }
 
-  for (const t of TEMPLATES) {
+  for (const t of TEMPLATES.filter((x) => !only || only.includes(key(x)))) {
     let got = out.filter((p) => p.theme === t.theme && p.level === t.level && (!t.pattern || p.pattern === t.pattern)).length;
     const quota = t.quota + extra;
     let tries = 0;
@@ -699,12 +730,12 @@ async function main() {
       }
     }
     if (got < quota) console.log(`!! ${t.theme} L${t.level} ${t.pattern ?? ''}: only ${got}/${quota}`);
-    writeFileSync('scripts/puzzles/partial.json', JSON.stringify(out));
+    writeFileSync(`${outFile}.partial`, JSON.stringify(out));
   }
 
   out.sort((a, b) => a.level - b.level || a.theme.localeCompare(b.theme));
   out.forEach((p, i) => (p.id = `p${String(i + 1).padStart(3, '0')}`));
-  writeFileSync('src/lib/tactics/puzzles.json', `${JSON.stringify(out, null, 1)}\n`);
+  writeFileSync(outFile, `${JSON.stringify(out, null, 1)}\n`);
   console.log(`\nWrote ${out.length} puzzles`);
   const by: Record<string, number> = {};
   for (const p of out) by[`L${p.level} ${p.theme}`] = (by[`L${p.level} ${p.theme}`] ?? 0) + 1;

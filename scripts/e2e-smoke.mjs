@@ -182,6 +182,8 @@ try {
     await tests.nth(0).getByRole('button', { name: 'Memberi checkmate kepada Raja lawan' }).click();
     await tests.nth(1).getByRole('button', { name: 'Tidak – anda mesti bergerak setiap giliran' }).click();
     assert((await page.getByTestId('lesson-score').textContent()).includes('2/2'), 'lesson score');
+    await page.getByText('Ujian: 2/2').waitFor({ timeout: 5000 }); // saved result shown in the lesson header
+    await page.waitForTimeout(300); // let the IndexedDB write finish before a full page load
     await page.goto(BASE + '/fundamentals/');
     await page.getByText('✓ Ujian 2/2').waitFor({ timeout: 5000 });
   });
@@ -243,6 +245,7 @@ try {
   await step('progress: completing hour 1 persists and resume points to hour 2', async () => {
     await page.goto(BASE + '/learn/');
     await page.getByTestId('complete-h01').click();
+    await page.locator('#h01').getByText('Selesai', { exact: true }).waitFor({ timeout: 5000 });
     await page.goto(BASE + '/');
     await page.getByText('Sambung Jam 2').waitFor({ timeout: 5000 });
     await page.reload();
@@ -253,6 +256,7 @@ try {
     await page.goto(BASE + '/learn/');
     await page.getByTestId('timer-start-h02').click();
     await page.getByRole('timer').getByRole('button', { name: 'Tamat sesi' }).click();
+    await page.locator('#h02').getByText('Selesai', { exact: true }).waitFor({ timeout: 5000 });
     await page.goto(BASE + '/');
     await page.getByText('Sambung Jam 3').waitFor({ timeout: 5000 });
   });

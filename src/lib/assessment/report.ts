@@ -19,7 +19,7 @@ export type ReportInput = {
   assessments: Partial<Record<'day1' | 'final', AssessmentResult>>;
 };
 
-export type Skill = { name: string; percent: number; detail: string };
+export type Skill = { name: string; percent: number; detail: string; attempted: boolean };
 export type PerformanceReport = {
   overall: number;
   level: string;
@@ -41,17 +41,20 @@ export function buildPerformanceReport(i: ReportInput): PerformanceReport {
     const done = list.filter((l) => i.lessons[l.id]?.completed);
     const right = done.reduce((n, l) => n + i.lessons[l.id]!.score, 0);
     const total = done.reduce((n, l) => n + i.lessons[l.id]!.total, 0);
-    skills.push({ name: `Pelajaran: ${MODULE_INFO[m].name}`, percent: Math.round(pct(done.length, list.length) * 0.5 + pct(right, total) * 0.5), detail: `${done.length}/${list.length} pelajaran, ujian ${right}/${total}` });
+    skills.push({ name: `Pelajaran: ${MODULE_INFO[m].name}`, percent: Math.round(pct(done.length, list.length) * 0.5 + pct(right, total) * 0.5), detail: `${done.length}/${list.length} pelajaran, ujian ${right}/${total}`, attempted: done.length > 0 });
   }
 
   const ts = themeStats(i.puzzles);
   for (const t of ts) {
-    skills.push({ name: `Taktik: ${THEME_INFO[t.theme].ms}`, percent: pct(t.solved, t.total), detail: `${t.solved}/${t.total} diselesaikan, ${t.firstTry} pada cubaan pertama` });
+    const attempted = PUZZLES.some((p) => p.theme === t.theme && i.puzzles[p.id]);
+    // Score a theme by the puzzles tried (solved ones count fully, first-try ones are a bonus in the detail).
+    const tried = PUZZLES.filter((p) => p.theme === t.theme && i.puzzles[p.id]).length;
+    skills.push({ name: `Taktik: ${THEME_INFO[t.theme].ms}`, percent: pct(t.solved, Math.max(tried, 1)), detail: `${t.solved}/${t.total} diselesaikan (${tried} dicuba), ${t.firstTry} pada cubaan pertama`, attempted });
   }
 
   const lines = OPENINGS.flatMap((o) => o.lines.filter((l) => l.kind !== 'trap'));
-  skills.push({ name: 'Pembukaan', percent: pct(i.openingsDone.filter((id) => lines.some((l) => l.id === id)).length, lines.length), detail: `${i.openingsDone.length}/${lines.length} garis dilatih` });
-  skills.push({ name: 'Formasi', percent: pct(i.formationsDone.length, FORMATIONS.length), detail: `${i.formationsDone.length}/${FORMATIONS.length} latihan formasi` });
+  skills.push({ name: 'Pembukaan', percent: pct(i.openingsDone.filter((id) => lines.some((l) => l.id === id)).length, lines.length), detail: `${i.openingsDone.length}/${lines.length} garis dilatih`, attempted: i.openingsDone.length > 0 });
+  skills.push({ name: 'Formasi', percent: pct(i.formationsDone.length, FORMATIONS.length), detail: `${i.formationsDone.length}/${FORMATIONS.length} latihan formasi`, attempted: i.formationsDone.length > 0 });
 
   const cat: Partial<Record<Category, { right: number; total: number }>> = {};
   for (const a of Object.values(i.assessments).filter(Boolean)) {
@@ -62,7 +65,7 @@ export function buildPerformanceReport(i: ReportInput): PerformanceReport {
     }
   }
   for (const [k, v] of Object.entries(cat) as [Category, { right: number; total: number }][]) {
-    skills.push({ name: `Penilaian: ${CATEGORY_MS[k]}`, percent: pct(v.right, v.total), detail: `${v.right}/${v.total} betul` });
+    skills.push({ name: `Penilaian: ${CATEGORY_MS[k]}`, percent: pct(v.right, v.total), detail: `${v.right}/${v.total} betul`, attempted: v.total > 0 });
   }
 
   const solved = Object.values(i.puzzles).filter((r) => r.solved).length;
@@ -81,7 +84,7 @@ export function buildPerformanceReport(i: ReportInput): PerformanceReport {
     overall >= 30 ? 'Pemula yang maju – peraturan difahami, teruskan latihan taktik.' :
     'Permulaan perjalanan – teruskan program sesi demi sesi.';
 
-  const measured = skills.filter((s) => !s.detail.startsWith('0/'));
+  const measured = skills.filter((s) => s.attempted);
   const sorted = [...measured].sort((a, b) => b.percent - a.percent);
   const strengths = sorted.filter((s) => s.percent >= 70).slice(0, 4).map((s) => `${s.name} (${s.percent}%)`);
   const weaknesses = [...sorted].reverse().filter((s) => s.percent < 60).slice(0, 4).map((s) => `${s.name} (${s.percent}%)`);
